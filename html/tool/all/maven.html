@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>프로덕트 품질지표</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a>
+                                        </li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항
+                                            체크리스트</a></li>
+                                        <li><a href="../../quality/assurance/testinspection_standard01.html">테스트
+                                            체크리스트</a></li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a>
+                                        </li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic
+                                            개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a>
+                                        </li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile
+                                            방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li>
+                                            <a href="../../download/company/international_development.html">대외SW개발방법론</a>
+                                        </li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../tool/summary/summary01.html">개요</a>
+                <li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a class="active on" href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a class="active on" href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a></li>
+                        <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+
+    <!-- START main -->
+    <main id="main">
+        <!-- START container -->
+        <div class="container">
+            <!-- START top-nav -->
+            <div class="top-nav">
+                <div class="container">
+                    <h1>Maven</h1>
+                    <!-- breadcrumb -->
+                    <ol class="breadcrumb">
+                        <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                        <li><a href="../../tool/summary/summary01.html">개발도구</a></li>
+                        <li><a href="../../tool/all/maven.html">빌드</a></li>
+                        <li class="active">Maven</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- END top-nav -->
+
+            <div class="tab-nav-warp">
+                <ul class="tab-nav">
+                    <li><a href="javascript:;" class="active">개요</a></li>
+                    <li><a href="javascript:;">설치</a></li>
+                    <li><a href="javascript:;">주요기능</a></li>
+                    <li><a href="javascript:;">활용예제</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab-content">
+                    <div id="개요" style="">
+                        <h3>도구 소개</h3>
+                        <div class="content">
+                            <table class="table table-styled">
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width="30%">
+                                    <col width="20%">
+                                    <col width="30%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>도구명</th>
+                                    <th>Maven<br/>(<a href="http://maven.apache.org/">http://maven.apache.org/</a>)</th>
+                                    <th>라이센스</th>
+                                    <th>Apache License, Version 2.0</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th>소개</th>
+                                    <td colspan="3">자바 기반 프로젝트를 빌드하고, 구성요소 및 라이브러리 의존성을 관리하는 도구이다.</td>
+                                </tr>
+                                <tr>
+                                    <th>특징</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>프로젝트에 필요한 라이브러리를 POM 파일 만으로 쉽게 구성이 가능하다.</li>
+                                            <li>Convention over Configuration 개념으로 일반적인 프로젝트 폴더 구조를 사용한다.</li>
+                                            <li>Jenkins 같은 CI 도구와 연계하여 빌드 과정 자동화가 가능하다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 기능</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>빌드 로직의 재사용 및 빌드 관리</li>
+                                            <li>의존성 관리</li>
+                                            <li>원격 리파지토리 제공</li>
+                                            <li>빌드, 패키지, 로컬 설치, 원격 배포</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>실행 환경</th>
+                                    <td>Windows, Linux, MacOS</td>
+                                    <th>사전 설치 도구</th>
+                                    <td>JDK 1.7 이상K</td>
+                                </tr>
+                                <tr>
+                                    <th>카테 고리</th>
+                                    <td>빌드</td>
+                                    <th>최신 버전</th>
+                                    <td>v3.5.4 (2018.06.21)</td>
+                                </tr>
+                                <tr>
+                                    <th>관련 도구</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>Ant (<a href="http://ant.apache.org/">http://ant.apache.org/</a>)</li>
+                                            <li>Gradle (<a href="https://gradle.org/">https://gradle.org/</a>)</li>
+                                            <li>Jenkins (<a href="https://jenkins.io/">https://jenkins.io/</a>)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>주요 기능</h3>
+                        <div class="content">
+                            <p>JAVA 기반 프로젝트 빌드 관련 자동화 도구</p>
+                            <p>원격 저장소를 통한 라이브러리 및 클래스 패스 자동 구성</p>
+                            <p>라이브러리 의존성 관리</p>
+                            <div class="img-box">
+                                <a href="../../../img/tool/maven/image2018-10-5_9-26-43.png"
+                                   data-lightbox="tab01-1">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-5_9-26-43.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="설치" style="display: none;">
+                        <h3>설치 환경</h3>
+                        <div class="content">
+                            <p>windows, Linux, MacOS 별로 별도의 설치 파일 다운 및 설치를 진행한다.</p>
+                            <p>사전 JDK 1.7이상의 도구 설치 필요(<a
+                                    href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">https://www.oracle.com/technetwork/java/javase/downloads/index.html</a>)
+                            </p>
+                        </div>
+
+                        <h3>설치 단계</h3>
+                        <div class="content">
+                            <h4>1. Maven 다운</h4>
+                            <div class="content">
+                                <p>다운로드 사이트 : <a
+                                        href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a>
+                                </p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/maven/image2018-10-13_15-42-25.png"
+                                            data-lightbox="tab02-1">
+                                        <img width="526"
+                                             src="../../../img/tool/maven/image2018-10-13_15-42-25.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>2. 시스템 등록</h4>
+                            <div class="content">
+                                <p>다운받은 maven 파일 압축 해제 후 시스템 등록을 한다.</p>
+                                <ul class="list-unstyled">
+                                    <li>제어판&nbsp;→ 시스템(단축키 : windows key + break)&nbsp;→ 고급&nbsp;→ 환경변수</li>
+                                </ul>
+                                <p>신규 시스템 변수 등록</p>
+                                <ul class="list-unstyled">
+                                    <li>새로만들기&nbsp;→ 변수명 (MAVEN_HOME), 변수값 (압축 해제 경로)을 입력한다.</li>
+                                </ul>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/maven/image2018-10-13_15-48-1.png"
+                                            data-lightbox="tab02-1">
+                                        <img width="526"
+                                             src="../../../img/tool/maven/image2018-10-13_15-48-1.png" alt=""/>
+                                    </a>
+                                </div>
+
+                                <p>사용자 변수 편집</p>
+                                <ul class="list-unstyled">
+                                    <li> 새로만들기&nbsp;→ 변수명(PATH), 변수값(%MAVEN_HOME%\bin)</li>
+                                </ul>
+                                <p class="refer">※ PATH가 사전에 있을 경우 기존 항목 뒤 ;%MAVEN_HOME%\bin을 입력한다.</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/maven/image2018-10-13_15-50-48.png"
+                                            data-lightbox="tab02-1">
+                                        <img width="526"
+                                             src="../../../img/tool/maven/image2018-10-13_15-50-48.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>3. 설치 확인</h4>
+                            <div class="content">
+                                <p>windows 명령창 (windows key + R&nbsp;→ cmd) 열기&nbsp;→ mvn -version을 실행한다.</p>
+                                <p>maven과 java platform, 운영체제 명 및 버전을 확인한다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="주요기능" style="display: none;">
+                        <h3>Template Java application 프로젝트 생성</h3>
+                        <div class="content">
+                            <p>각 프로젝트의 성격에 맞도록 Template 프로젝트를 제공 : archetype</p>
+                            <ul class="list-unstyled">
+                                <li> 프로젝트의 생성
+                                    <ul class="list-unstyled">
+                                        <li>시작 → 실행 → “cmd”입력 → 사용자가 원하는 작업공간 디렉토리로 이동한다.</li>
+                                        <li>Prompt에서 “mvn archetype:create
+                                            -DgroupId=[groupId]-DartifactId=[artifactId]”을 입력한다.
+                                            <p class="refer">※ 본 매뉴얼은 groupId를 SMU로 지정, artifactId를 gbuddhajavapp로
+                                                정의한다.</p>
+                                        </li>
+                                        <li>프로젝트 생성 후 디렉토리 구조 확인</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_15-57-20.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="150"
+                                         src="../../../img/tool/maven/image2018-10-13_15-57-20.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Template Web application 프로젝트 생성</h3>
+                        <div class="content">
+                            <p>웹 어플리케이션 개발을 위한 template Archetype을 제공한다.</p>
+                            <ul class="list-unstyled">
+                                <li>&nbsp;Prompt에서 “mvn archetype:create -DgroupId=[groupId]
+                                    -DartifactId=[artifactId] -DarchetypeArtifactId=maven-archetype-webapp ”을 입력한다.
+                                    <ul class="list-unstyled">
+                                        <li>Archetype의 지정을 위해 “DarchetypeArtifactId=maven-archetype-webapp”를 추가한다.</li>
+                                        <li>프로젝트 생성 후 디렉토리 구조</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_15-59-52.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="150"
+                                         src="../../../img/tool/maven/image2018-10-13_15-59-52.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>POM 설정 파일</h3>
+                        <div class="content">
+                            <p>POM 설정 파일 : Archetype을 이용하여 Maven 기반 프로젝트 생성 시 필요하다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-1-39.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-1-39.png" alt=""/>
+                                </a>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li>&nbsp;Project
+                                    <ul class="list-unstyled">
+                                        <li>pom.xml파일의 최상위 엘리먼트</li>
+                                        <li>modelVersion
+                                            <ul class="list-unstyled inner">
+                                                <li>POM model의 버전</li>
+                                            </ul>
+                                        </li>
+                                        <li>groupId
+                                            <ul class="list-unstyled inner">
+                                                <li>프로젝트를 생성하는 조직의 고유 아이디, 일반적으로 Full도메인</li>
+                                            </ul>
+                                        </li>
+                                        <li>artifactId
+                                            <ul class="list-unstyled inner">
+                                                <li>해당 프로젝트에 의하여 생성되는 artifact의 고유 ID</li>
+                                                <li>Maven을 이용하여 pom.xml을 빌드할 경우<br/>
+                                                    [artifactid]-[version].[packaging]의 규칙으로 artifact가 생성. 예시의 경우 빌드 시
+                                                    gbuddhajavapp-1.0-SNAPSHOT.jar 파일이 생성된다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Packaging
+                                            <ul class="list-unstyled inner">
+                                                <li>해당 프로젝트를 어떤 형태로 packaging할 것인지 결정한다.(jar, war, ear 등)</li>
+                                            </ul>
+                                        </li>
+                                        <li>Version
+                                            <ul class="list-unstyled inner">
+                                                <li>프로젝트의 현재 버전, 개발 중 일시, SNAPSHOT을 접미사로 사용한다.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Name
+                                            <ul class="list-unstyled inner">
+                                                <li>프로젝트 이름</li>
+                                            </ul>
+                                        </li>
+                                        <li>url
+                                            <ul class="list-unstyled inner">
+                                                <li>프로젝트 사이트가 있는 경우 사이트 URL 등록이 가능하다.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Dependency
+                                            <ul class="list-unstyled inner">
+                                                <li>현재 생성한 프로젝트와 의존관계가 있는 프로젝트의 패키지 정보</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>Compile</h3>
+                        <div class="content">
+                            <p>프로젝트를 build하고 관리 - 컴파일 build phase : compile</p>
+                            <ul class="list-unstyled">
+                                <li>Maven에서 여러 종류의 Build Phase들을 지원하며 관리한다.</li>
+                                <li>콘솔 창에서 해당 프로젝트의 위치로 이동 → “mvn compile”입력
+                                    <ul class="list-unstyled">
+                                        <li>Compile 명령은 프로젝트의 디렉토리에서 “src\main\java”에 위치한 코드만을 컴파일한다.</li>
+                                        <li>Compile 후에는 프로젝트 디렉토리 아래 target 디렉토리가 생성된다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-8-59.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-8-59.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>test-compile</h3>
+                        <div class="content">
+                            <p>테스트코드의 컴파일 - build phase : test-compile</p>
+                            <ul class="list-unstyled">
+                                <li>콘솔 창에서 해당 프로젝트의 위치로 이동 → “mvn test-compile”을 입력한다.
+                                    <ul class="list-unstyled">
+                                        <li>test-compile명령은 프로젝트의 디렉토리에서 “src\test\java”에 위치한 코드만을 컴파일한다.</li>
+                                        <li>test-compile후에는 프로젝트 디렉토리 아래 target\test-classes디렉토리가 생성된다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-10-48.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-10-48.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>test</h3>
+                        <div class="content">
+                            <p>구현코드를 테스트 - build phase : test</p>
+                            <ul class="list-unstyled">
+                                <li>콘솔 창에서 해당 프로젝트로 이동 → “mvn test”입력
+                                    <ul class="list-unstyled">
+                                        <li>Test명령은 프로젝트의 디렉토리에서 “target\test-classes”의 junit의 단위 테스트 클래스를 이용하여
+                                            “target\classes”에 위치한 구현 클래스를 테스트한다.
+                                        </li>
+                                        <li>Test한 결과 정보는 프로젝트 디렉토리 아래 target\surefire-reports디렉토리에 생성된다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-12-19.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-12-19.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>package</h3>
+                        <div class="content">
+                            <p>구현 코드를 압축(jar, war) - build phase : package</p>
+                            <ul class="list-unstyled">
+                                <li>콘솔 창에서 해당 프로젝트로 이동 →“mvn package”입력
+                                    <ul class="list-unstyled">
+                                        <li>Package명령을 실행하면 compile, test-compile, test, package순으로 명령이 실행 → jar, war
+                                            파일이
+                                            target 디렉토리에 생성된다.
+                                        </li>
+                                        <li>Pom 파일의 artifactId, version, packaging 정보가 package파일의 파일명으로 지정
+                                            <p class="refer">※ 생성된 jar, war의 파일명 형식은
+                                                [artifactId]-[version].[packaging]</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-15-4.png"
+                                        data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-15-4.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Install</h3>
+                        <div class="content">
+                            <p>Local Repository에 등록 - build phase : install</p>
+                            <ul class="list-unstyled">
+                                <li>콘솔 창에서 해당 프로젝트로 이동 →“mvn install”을 입력한다.
+                                    <ul class="list-unstyled">
+                                        <li>compile, test-compile → test → package → install → Local Repository에 프로젝트 등록
+                                        </li>
+                                        <li>윈도우 기본 지정 위치 : “C:\Documents and
+                                            Settings\[사용자이름]\.m2\repository\[groupID]”
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-16-33.png"
+                                        data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-16-33.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Deploy</h3>
+                        <div class="content">
+                            <p>Package파일을 Remote Repository에 등록 - build phase : deploy</p>
+                            <ul class="list-unstyled">
+                                <li>compile → test-compile → test → package → install → deploy → Remote Repository에 등록
+                                    <ul class="list-unstyled">
+                                        <li>emote Repository의 설정 : pom 파일 추가하여 설정 가능 : Distribution : 설정 섹션 생성 필요
+                                            <ul class="list-unstyled inner">
+                                                <li>id : 저장소의 아이디 설정</li>
+                                                <li>name : 저장소의 이름을 결정</li>
+                                                <li>url : 저장소의 url을 지정</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-18-20.png"
+                                        data-lightbox="tab03-9">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-18-20.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3> Dependency Library 관리</h3>
+                        <div class="content">
+                            <p>애플리케이션 개발 시 기존의 외부 라이브러리 관리 방법의 문제점</p>
+                            <ul class="list-unstyled">
+                                <li>라이브러리의 추가 및 버전 변경이 불편하다.</li>
+                                <li>버전관리시스템(CVS, SVN)을 이용하여 관리할 때 공유할 파일 크기가 커진다.</li>
+                                <li>현재 사용하고 있는 라이브러리의 버전을 파악하기 힘들다.</li>
+                                <li>컴파일, 배포, 테스트할 때만 사용하는 라이브러리를 분리하기 힘들다.</li>
+                                <li>WTP(Web Tool Platform)의 경우 자동 클래스 패스 기능이 너무 느리다.</li>
+                            </ul>
+                            <p>기존의 외부 라이브러리의 수정 과정</p>
+                            <ul class="list-unstyled">
+                                <li>라이브러리간의 의존도가 많아지면서 라이브러리의 수정이 더욱 힘들어진다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-21-0.png"
+                                        data-lightbox="tab03-10">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-21-0.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Maven의 의존성 관리 : POM 설정 파일</p>
+                            <ul class="list-unstyled">
+                                <li>POM 설정 파일의 &lt;dependencies&gt;섹션을 변경하여 관리</li>
+                                <li>pom.xml파일을 아래와 같이 설정 → “mvn compile” 명령 실행한다.
+                                    <ul class="list-unstyled">
+                                        <li>junit 3.8.1 버전의 jar파일이 자동으로 Local Repository에 다운받는다.</li>
+                                    </ul>
+                                </li>
+                                <li>Jar파일이 관리되는 원칙 : Maven Local Repository의 변경 없이 디폴트 디렉토리를 사용하고
+                                    있다면 USER_HOME]\.m2\repository 디렉토리에 모든 Dependency 라이브러리를 다운받는다.
+                                    <ul class="list-unstyled">
+                                        <li>윈도우의경우USER_HOME은“C:\Documents and Settings\[사용자아이디]”</li>
+                                    </ul>
+                                </li>
+                                <li>아래와 같이 pom.xml 파일을 설정 → 다음 위치에 라이브러리의 jar 파일이 다운된다.
+                                    <ul class="list-unstyled">
+                                        <li>USER_HOME\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar</li>
+                                    </ul>
+                                </li>
+                                <li>라이브러리를 관리하는 디렉토리의 규칙 :
+                                    <ul class="list-unstyled">
+                                        <li>USER_HOME\.m2\repository\[groupId]\[artifactId]\[artifactId-version.jar]
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>라이브러리의 버전 변경은 pom.xml파일에서 &lt;version&gt;부분을 수정하여 변경한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-24-22.png"
+                                        data-lightbox="tab03-10">
+                                    <img width="298"
+                                         src="../../../img/tool/maven/image2018-10-13_16-24-22.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>라이브러리의 성격에 따라 각 라이브러리의 Scope 지정이 가능하다.</p>
+                            <ul class="list-unstyled">
+                                <li>기본적으로 프로젝트의 생성 시 지원되는 junit은 단순히 테스트를 목적으로만 사용되는 라이브러리
+                                    <ul class="list-unstyled">
+                                        <li>pom.xml 파일에는 junit의 dependency설정 내부의 scope설정 : test</li>
+                                    </ul>
+                                </li>
+                                <li>Scope설정 및 기능
+                                    <ul class="list-unstyled">
+                                        <li>compile : 기본값은 scope, 컴파일 시 사용, 배포 시에도 같이 배포되어야 하는 라이브러리</li>
+                                        <li>provided : JDK가 컨테이너에 의하여 제공되는 라이브러리
+                                            <ul class="list-unstyled inner">
+                                                <li>servlet.jar의 경우 Servlet 컨테이너에 의하여 제공되기 때문에 provided scope를 사용한다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>runtime : 컴파일 시에는 사용되지 않지만 애플리케이션을 실행할 때 사용되는 라이브러리
+                                            <ul class="list-unstyled inner">
+                                                <li>test : 테스트를 위해서만 사용하는 라이브러리</li>
+                                                <li>system : provided와 비슷하지만, 직접 jar파일을 제공해야 한다.</li>
+                                                <li>단, repository에서 관리되지 않을수도 있다.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-27-17.png"
+                                        data-lightbox="tab03-10">
+                                    <img width="298"
+                                         src="../../../img/tool/maven/image2018-10-13_16-27-17.png" alt=""/>
+                                </a>
+                            </div>
+                            <p>의존 관계 중 특정 라이브러리 배제 기능&lt;exclusions&gt;</p>
+                            <ul class="list-unstyled">
+                                <li>사용자가 사용할 라이브러리X가 라이브러리A, 라이브러리B에 의존성이 있을 경우, pom.xml 파일에는 X만
+                                    명시해도 A와 B는 Maven이 가져온다.
+                                </li>
+                                <li>X의 A에 대한 의존성이 버전 문제 등으로 제대로 동작하지 않을 수 있는데, 이 경우 &lt;exclusions&gt;
+                                    태그를 사용해서 A를 배제하고 사용자가 직접 A를 가져와서 의존성 문제 해결이 가능하다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-29-10.png"
+                                        data-lightbox="tab03-10">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-29-10.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>부모 프로젝트의 버전 범위 지정</p>
+                            <ul class="list-unstyled">
+                                <li>프로젝트X가 다른 프로젝트인 프로젝트A에 의존성이 있을 경우, &lt;parent&gt;를 통해 A의 설정 사항을 X가 상속받을 수 있다.</li>
+                                <li>이 때, A의 특정 버전 범위를 명시해서, 해당 조건을 만족하는 경우에 대해서만 상속 받을 수 있도록 설정 가능하다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-30-51.png"
+                                        data-lightbox="tab03-10">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-30-51.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3> 인코딩 지정</h3>
+                        <div class="content">
+                            <p>소스 인코딩 지정</p>
+                            <ul class="list-unstyled">
+                                <li>Eclipse 등 IDE에서 JUnit 단위 테스트를 실행하면 파라미터나 결과값이 한글이라도 문제가 없으나 시스템 플랫폼
+                                    <ul class="list-unstyled">
+                                        <li>encoding이 MS949로 되어 있는 윈도우에서 maven test로 수행하면 Failure나 Error가 발생한다.</li>
+                                    </ul>
+                                </li>
+                                <li>pom.xml에 아래와 같이 소스 컴파일, 테스트 컴파일, 빌드, 빌드 리포팅에 인코딩 지정 설정</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-32-21.png"
+                                        data-lightbox="tab03-11">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-32-21.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>surefire plugin에 대한 인코딩 지정</p>
+                            <ul class="list-unstyled">
+                                <li>pom.xml에 mvn test를 실제 수행하는 surefire plugin의 인코딩을 지정한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-33-20.png"
+                                        data-lightbox="tab03-11">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-33-20.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Eclipse Plug-in 활용</h3>
+                        <div class="content">
+                            <p>Eclipse에서의 프로젝트 생성</p>
+                            <ul class="list-unstyled">
+                                <li>프로젝트 디렉토리로 이동 → "mvn eclipse:eclipse" 명령어 실행 → Eclipse기반 프로젝트로 변경된다.
+                                    <ul class="list-unstyled">
+                                        <li>Eclipse프로젝트에 필요한 .project, .classpath 파일들이 자동적으로 생성된다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-35-6.png"
+                                        data-lightbox="tab03-12">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-35-6.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Java application의 Eclipse프로젝트를 생성</p>
+                            <ul class="list-unstyled">
+                                <li>.classpath 파일에 pom.xml파일에 정의된 의존 관계에 있는 라이브러리가 자동으로 추가된다.
+                                    <ul class="list-unstyled">
+                                        <li>라이브러리를 배포할 때 자바 소스까지 분리해서 배포하는 것이 가능하도록 지원한다.</li>
+                                        <li>기존의 외부 라이브러리에 대한 소스 코드가 존재하지 않아 소스코드를 분석하는데 한계가 있었지만, Maven을 이용하여
+                                            <ul class="list-unstyled inner">
+                                                <li>소스 코드를 배포하는 모든 라이브러리의 소스 코드는 자동적으로 Local Repository에 다운받아지기 때문에
+                                                    Eclipse에서 외부 라이브러리 소스코드 접근이 용이하다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-37-7.png"
+                                        data-lightbox="tab03-12">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-37-7.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>WTP(Web Tool Project) 기반의 Eclipse프로젝트를 생성</p>
+                            <ul class="list-unstyled">
+                                <li>pom.xml에 다음과 같이&lt;plugins&gt;에 maven-eclipse-plugin 설정을 추가하여 해결한다.
+                                    <ul class="list-unstyled">
+                                        이 설정을 적용하여 “mvn eclipse:eclipse”명령을 실행하면, WTP기반의 Web application프로젝트를 Eclipse
+                                        프로젝트로
+                                        생성 가능하다.
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_16-38-26.png"
+                                        data-lightbox="tab03-12">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_16-38-26.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="활용예제" style="display: none;">
+                        <h3>예제 소개</h3>
+                        <div class="content">
+                            <p>예제 시스템 배경</p>
+                            <p>A사는 WTP 기반 Maven 기반의 프로젝트 준비 중</p>
+                            <ul class="list-unstyled">
+                                <li>프로젝트 진행에 JDK이외의 외부 라이브러리를 사용하기로 결정</li>
+                                <li>해당 application을 위해 다음의 프레임워크 라이브러리들을 사용
+                                    <ul class="list-unstyled">
+                                        <li>Struts, Spring Framework, Hibernate</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>A사의 프로젝트 준비 중 이전 진행 프로젝트를 돌아본 결과 예상되는 문제점</p>
+                            <ul class="list-unstyled">
+                                <li>프로젝트 준비를 위해 WTP구조의 환경을 설정하는 작업에 많은 도구와 시간이 소요 될 것으로 예상</li>
+                                <li>라이브러리간의 의존성 복잡도로 인해 프로젝트 설정이 늦어질 것으로 예상</li>
+                                <li>통합 개발 도구와 연동에 대해 개발자들의 불편함을 보일 것으로 예상</li>
+                                <li>프로젝트의 빌드 과정에 따른 많은 반복적인 작업에 대한 불편함이 예상</li>
+                            </ul>
+                            <p>A사는 Maven을 사용하여 문제를 해결</p>
+                            <ul class="list-unstyled">
+                                <li>Maven의 archetype을 이용한 WTP기반의 Web application프로젝트 설정</li>
+                                <li>Dependency Library기능을 통하여 손쉽게 라이브러리를 관리</li>
+                                <li>Eclipse Plug-in을 이용하여 Eclipse기반의 WTP프로젝트를 생성하고 Maven과 연동</li>
+                                <li>Build phase 기능을 사용하여 일괄적이며 번거로운 작업들의 반복을 피함</li>
+                            </ul>
+                        </div>
+
+                        <h3>프로젝트 설정</h3>
+                        <div class="content">
+                            <p>프로젝트 설정 : 프로젝트(Aproject), 디폴트 프로젝트(Web application)</p>
+                            <ul class="list-unstyled">
+                                <li>콘솔 창에서 원하는 위치의 작업공간 위치로 이동 → archetype 기반의 Web application 생성
+                                    <ul class="list-unstyled">
+                                        <li>mvn archetype:create -DgroupId=teamA
+                                            -DartifactId=Aproject -DarchetypeArtifactId=maven-archetype-webapp
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트의 생성 여부를 확인 → pom.xml파일을 수정</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_17-12-54.png"
+                                        data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_17-12-54.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Dependency Library 관리</h3>
+                        <div class="content">
+                            <p>프로젝트에 사용할 의존성 라이브러리 설정</p>
+                            <ul class="list-unstyled">
+                                <li>라이브러리 의존성 예시</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_17-13-49.png"
+                                        data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_17-13-49.png" alt=""/>
+                                </a>
+                            </div>
+                            <p>POM설정을 바탕으로 프로젝트의 pom.xml 파일의&lt;dependency&gt;섹션에 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Pom.xml파일을 수정 → 프로젝트를 compile → 라이브러리 자동으로 repository에 추가한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/maven/image2018-10-13_17-14-42.png"
+                                        data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/maven/image2018-10-13_17-14-42.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Eclipse 연동</h3>
+                        <div class="content">
+                            <p>Eclipse에서 사용할 수 있는 프로젝트로 변경</p>
+                            <ul class="list-unstyled">
+                                <li>작업 공간으로 이동하여 콘솔 창에서 Eclipse Plugin 명령
+                                    <ul class="list-unstyled">
+                                        <li>mvn eclipse: eclipse
+                                            <p class="refer">※ 만약 라이브러리에 대한 소스경로를 찾지 못한다는 메시지가 출력될 시 이를 위해 Eclipse를 실행
+                                                → 프로젝트를 Import → Eclipse의 classpath 변수를 추가한다.</p></li>
+                                        <li>변수 명 : M2_REPO</li>
+                                        <li>경 로 : 프로젝트의 Repository</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>Build Phase</h3>
+                        <div class="content">
+                            <p>Build Phase를 이용하여 각 Build Phase의 목적에 맞는 Goal을 설정</p>
+                            <p>build phase의 lifecycle</p>
+                            <ul class="list-unstyled">
+                                <li>Clean lifecycle
+                                    <ul class="list-unstyled">
+                                        <li>pre-clean : 프로젝트의 제거 전에 필요한 과정을 수행</li>
+                                        <li>Clean : 이전 빌드로 생성된 모든 파일을 제거</li>
+                                        <li>post-clean : 프로젝트 제거의 마무리 과정을 수행</li>
+                                        <li>Package lifecycle</li>
+                                        <li>Compile : 프로젝트의 소스코드를 컴파일</li>
+                                        <li>est-compile : test 소스코드를 컴파일</li>
+                                        <li>Test : test framework를 이용하여 test를 수행, Package나 deploy시에는 필요 없음</li>
+                                        <li>Package : 프로젝트를 jar, war, ear등 package파일로 생성</li>
+                                        <li>Install : local repository에 해당 package를 설치</li>
+                                        <li>Deploy : 원격의 repository에 패키지를 다른 개발자와 공유할 수 있도록 설치</li>
+                                    </ul>
+                                </li>
+                                <li>Site lifecycle
+                                    <ul class="list-unstyled">
+                                        <li>pre-site : 프로젝트의 사이트를 생성하기 전의 과정을 수행</li>
+                                        <li>Site : 프로젝트 사이트 문서를 생성</li>
+                                        <li>post-site : 프로젝트의 사이트 생성의 마무리 과정을 수행하고 사이트 배치를 준비</li>
+                                        <li>site-deploy : 웹 브라우저에서 프로젝트의 사이트를 확인할 수 있도록 사이트를 배치</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 최상단 이동 btn -->
+            <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+    </main>
+    <!-- END main -->
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+<script src="../../../js/lightbox-plus-jquery.js"></script>
+</body>
+</html>

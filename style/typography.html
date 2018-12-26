@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../css/code-box-copy.css" rel="stylesheet">
+    <script src="../js/prism.min.js"></script>
+    <script src="../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../index.html">
+                <img src="../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../html/development/summary01.html">개요</a></li>
+                                        <li><a href="../html/methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../html/methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../html/methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../html/methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../html/methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../html/guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../html/guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../html/guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../html/guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../html/guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../html/guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../html/guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../html/guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../html/guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../html/guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a>
+                                        </li>
+                                        <li><a href="../html/guide/coding_guide/hardcoding_guide.html">HardCoding 적용
+                                            Guide</a></li>
+                                        <li><a href="../html/guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../html/guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../html/tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../html/tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../html/tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../html/tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../html/tool/all/git.html">Git</a></li>
+                                        <li><a href="../html/tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../html/tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../html/tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../html/tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../html/tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../html/tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../html/tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../html/quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../html/quality/assurance/testinspection_standard02.html">요구사항
+                                            체크리스트</a></li>
+                                        <li><a href="../html/quality/assurance/testinspection_standard01.html">테스트
+                                            체크리스트</a></li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../html/quality/indicator/quality_indicator01.html">프로세스 품질지표</a>
+                                        </li>
+                                        <li><a href="../html/quality/indicator/quality_indicator02.html">프로덕트 품질지표</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../html/download/methodology/development_template.html">swBasic
+                                            개발방법론</a></li>
+                                        <li><a href="../html/download/methodology/test_template.html">swBasic 테스트방법론</a>
+                                        </li>
+                                        <li><a href="../html/download/methodology/agile_template.html">swBasic Agile
+                                            방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../html/download/company/our_development.html">자체개발방법론</a></li>
+                                        <li>
+                                            <a href="../html/download/company/international_development.html">대외SW개발방법론</a>
+                                        </li>
+                                        <li><a href="../html/download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../html/download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <div id="nav">
+        <ul class="menu-list accordion active">
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">StyleGuide</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu" style="display: block;">
+                <li>
+                    <a class="active" href="./typography.html">Typography</a>
+                </li>
+                <li>
+                    <a href="./button.html">Button</a>
+                </li>
+                <li>
+                    <a href="./table.html">Table</a>
+                </li>
+                <li>
+                    <a href="./panel.html">Panel</a>
+                </li>
+                <li>
+                    <a href="./tab_accordion.html">Tab & Accordion</a>
+                </li>
+
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>Typography</h1>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container" style="margin-top: -50px;">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    제목
+                </div>
+                <div class="panel-body">
+                    <h1>헤더 1
+                        <small>서브헤더</small>
+                    </h1>
+                    <h2>헤더 2
+                        <small>서브헤더</small>
+                    </h2>
+                    <h3>헤더 3
+                        <small>서브헤더</small>
+                    </h3>
+                    <h4>헤더 4
+                        <small>서브헤더</small>
+                    </h4>
+                    <h5>헤더 5
+                        <small>서브헤더</small>
+                    </h5>
+                    <h6>헤더 6
+                        <small>서브헤더</small>
+                    </h6>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    문단
+                </div>
+                <div class="panel-body">
+                    <p>일반 문단 예시. <a href="#">링크</a> 예시.</p>
+                    <p>
+                        <small>small 텍스트 예시.</small>
+                    </p>
+                    <p>
+                        <strong>strong, bold 텍스트 예시.</strong>
+                    </p>
+                    <p>
+                        <em>emphasized, italic 텍스트 예시.</em>
+                    </p>
+                    <br>
+                    <h4>정렬</h4>
+                    <p class="text-left">왼쪽 정렬</p>
+                    <p class="text-center">가운데 정렬</p>
+                    <p class="text-right">오른쪽 정렬</p>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    텍스트 상태
+                </div>
+                <div class="panel-body">
+                    <p class="text-muted">muted 텍스트 예시.</p>
+                    <p class="text-primary">primary 텍스트 예시.</p>
+                    <p class="text-success">success 텍스트 예시.</p>
+                    <p class="text-info">info 텍스트 예시.</p>
+                    <p class="text-warning">warning 텍스트 예시.</p>
+                    <p class="text-danger">danger 텍스트 예시.</p>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    리스트
+                </div>
+                <div class="panel-body">
+                    <h4>리스트</h4>
+                    <ul class="list-unstyled">
+                        <li>List Item</li>
+                        <li>List Item
+                            <ul>
+                                <li>List Item</li>
+                                <li>List Item</li>
+                                <li>List Item</li>
+                            </ul>
+                        </li>
+                        <li>List Item</li>
+                    </ul>
+                    <h4>순서 리스트</h4>
+                    <ol>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                    </ol>
+                    <h4>인라인 리스트</h4>
+                    <ul class="list-inline">
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    정의 리스트
+                </div>
+                <div class="panel-body">
+                    <dl>
+                        <dt>기본 설명 리스트</dt>
+                        <dd>설명 텍스트</dd>
+                        <dt>설명 리스트 제목</dt>
+                        <dd>설명 리스트 텍스트</dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>수평 설명 리스트</dt>
+                        <dd>설명 텍스트</dd>
+                        <dt>설명 리스트 제목</dt>
+                        <dd>설명 리스트 텍스트</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    코드
+                </div>
+                <div class="panel-body">
+                    <p>
+                        본문 내 인라인 코드 요소의 예시. <code>&lt;code&gt;...&lt;/code&gt;</code>태그 사이에 작성을 한다.
+                    </p>
+                    <pre> pre 태그 예시.</pre>
+
+                    <div class="code-box-copy">
+                        <pre><code class="language-js">return {
+  stuff: 'candy',
+  method() {
+    return this.stuff;  // Returns 'candy'
+  },
+};
+       </code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- END main -->
+</div>
+<!-- END wrap -->
+</body>
+</html>

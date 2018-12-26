@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>프로덕트 품질지표</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">                         <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>                         <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>                         <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>                     </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a class="active on" href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a class="active on" href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <!-- START container -->
+        <div class="container">
+            <!-- START top-nav -->
+            <div class="top-nav">
+                <div class="container">
+                    <h1>FitNesse</h1>
+                    <!-- breadcrumb -->
+                    <ol class="breadcrumb">
+                        <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                        <li><a href="../../tool/summary/summary01.html">개발도구</a></li>
+                        <li><a href="../../tool/all/fitnesse.html">통합테스트</a></li>
+                        <li class="active">FitNesse</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- END top-nav -->
+
+            <div class="tab-nav-warp">
+                <ul class="tab-nav">
+                    <li><a href="javascript:;" class="active">개요</a></li>
+                    <li><a href="javascript:;">설치</a></li>
+                    <li><a href="javascript:;">주요기능</a></li>
+                    <li><a href="javascript:;">활용예제</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab-content">
+                    <div id="개요">
+                        <h3>도구 소개</h3>
+                        <div class="content">
+                            <table class="table table-styled">
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width="30%">
+                                    <col width="20%">
+                                    <col width="30%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>도구명</th>
+                                    <th>FitNesse (<a href="http://fitnesse.org/FrontPage">http://fitnesse.org/</a>)
+                                    </th>
+                                    <th>라이센스</th>
+                                    <th>CPL / 무료</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th>소개</th>
+                                    <td colspan="3">자동화된 테스팅을 위한 프레임 워크인 Fit (Framework for Integrated Tests)을 기반으로 하여
+                                        테스트를
+                                        수행하고, Fit의 테이블 구조를 통한 웹상에서 테스트 결과를 관리하는 도구이다.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>특징</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>자동화된 테스팅을 위한 강력한 프레임워크</li>
+                                            <li>테이블 기반 웹 리포팅</li>
+                                            <li>테스트 실행 및 결과 관리(롤백, 백업 등) 및 보고
+                                                <ul class="list-unstyled">
+                                                    <li>Regression Test</li>
+                                                    <li>Acceptance Testing</li>
+                                                    <li>Function Testing</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 기능</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>컴파일 된 파일 (.Class) 을 바탕으로 테스트 수행</li>
+                                            <li>테스트 관리 및 보고</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>실행 환경</th>
+                                    <td>Windows, Linux, MacOS</td>
+                                    <th>사전 설치 도구</th>
+                                    <td>JDK 1.7 이상</td>
+                                </tr>
+                                <tr>
+                                    <th>카테 고리</th>
+                                    <td>테스트</td>
+                                    <th>최신 버전</th>
+                                    <td>v20180127 (2018.01.27)</td>
+                                </tr>
+                                <tr>
+                                    <th>관련 도구</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>Fit Engine</li>
+                                            <li>SLIM Engine</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>주요 기능</h3>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li>Wiki Page</li>
+                                <li>Regression Test</li>
+                                <li>Eclipse Plug-in</li>
+                                <li>외부 Client 접근 / 테스트</li>
+                                <li>테스트 결과 웹 보고</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="설치" style="display: none;">
+                        <h3>설치 환경</h3>
+                        <div class="content">
+                            <p>다양한 OS를 지원한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Windows : Windows XP / Windows 7 (32, 64-bit 모두 지원)</li>
+                                <li>Linux : 32, 64-bit 지원</li>
+                                <li>Mac OS X : 32, 64-bit 지원</li>
+                                <li>UNIX : 32, 64-bit 지원</li>
+                            </ul>
+                            <p>JDK, 자바 기반 도구(IDE 등)이 필요하다.</p>
+                            <ul class="list-unstyled">
+                                <li>코드 및 플러그인 형태, 도구에 포함되어 있는 형태로 제공된다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a href="../../../img/tool/fitnesse/image2018-10-15_16-31-25.png"
+                                   data-lightbox="tab02-1">
+                                    <img width="526" src="../../../img/tool/fitnesse/image2018-10-15_16-31-25.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>설치 단계</h3>
+                        <div class="content">
+                            <h4>1. FitNesse 다운</h4>
+                            <div class="content">
+                                <p><a href="http://www.fitnesse.org/">http://www.fitnesse.org/</a>에서 FitNesse를
+                                    다운 받는다.
+                                </p>
+                                <ul class="list-unstyled">
+                                    <li>“Download FitNesse” 링크를 실행하여 다운로드 페이지로 이동한다.</li>
+                                </ul>
+                                <div class="img-box">
+                                    <a href="../../../img/tool/fitnesse/image2018-10-18_18-10-6.png"
+                                       data-lightbox="tab02-2">
+                                        <img width="526" src="../../../img/tool/fitnesse/image2018-10-18_18-10-6.png"
+                                             alt=""/>
+                                    </a>
+                                </div>
+
+                                <p>fitnesse-standalone.jar를 선택하여 원하는 위치에 다운로드 한다.</p>
+                                <ul class="list-unstyled">
+                                    <li>저장 위치 및 사용 방법에 따라 설치 방법이 달라진다.</li>
+                                </ul>
+                            </div>
+
+                            <h4>2. FitNesse 실행</h4>
+                            <div class="content">
+                                <p>FitNesse Classpath를 설정한다.</p>
+                                <ul class="list-unstyled">
+                                    <li>시스템(Ctrl+Break) → 시스템속성 → 고급 탭 환경변수 → CLASSPATH항목 → 설치위치 지정</li>
+                                </ul>
+                                <div class="img-box">
+                                    <a href="../../../img/tool/fitnesse/image2018-10-18_19-4-52.png"
+                                       data-lightbox="tab02-2">
+                                        <img width="526" src="../../../img/tool/fitnesse/image2018-10-18_19-4-52.png"
+                                             alt=""/>
+                                    </a>
+                                </div>
+
+                                <p>FitNess 서버를 실행 한다.</p>
+                                <ul class="list-unstyled">
+                                    <li>“Java –jar fitnesse.jar -p 8080”명령어 입력 → 가동상태 확인</li>
+                                </ul>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/fitnesse/image2018-10-18_19-23-39.png"
+                                            data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-18_19-23-39.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>3. FitNesse 실행 결과</h4>
+                            <div class="content">
+                                <p>웹 사이트 접속 : http://localhost:8080/</p>
+                                <ul class="list-unstyled">
+                                    <li>FitNesse 초기 접속화면 확인이 가능하다.</li>
+                                </ul>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/fitnesse/image2018-10-18_19-57-46.png"
+                                            data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-18_19-57-46.png" alt=""/>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="주요기능" style="display: none;">
+                        <h3>Fit, FitNesse</h3>
+                        <div class="content">
+                            <p>Fit(Framework for integrated)이란?</p>
+                            <ul class="list-unstyled">
+                                <li>자동화 테스팅 프레임워크이다.</li>
+                                <li>테스트들을 보여주고 테스트들의 자동 체킹 결과를 보고하기 위한 테이블 사용
+                                    <ul class="list-unstyled">
+                                        <li>비즈니스 관점에서 테스팅</li>
+                                        <li>테이블식 구성을 통해 프로그래밍에 대한 배경지식 없이 테스트를 수행할 수 있도록 한다.
+                                            <ul class="list-unstyled inner">
+                                                <li>이로 인해 전반적으로 필요한 시스템 개발 편의를 제공한다.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>범용으로 사용하기 위한 개방적인 프레임 워크로, 여러 가지 방법으로 보여주기 위한 확장을 제공한다.</li>
+                            </ul>
+
+                            <p>FitNess</p>
+                            <ul class="list-unstyled">
+                                <li>자동화 테스팅 프레임워크 Fit을 손쉽게 사용할 수 있도록 구현한 것이다.</li>
+                                <li>FitNesse의 장점
+                                    <ul class="list-unstyled">
+                                        <li>개발 커뮤니케이션 향상에 용이하다.(개발팀에게 손쉽게 재현 요청 처리 가능)</li>
+                                        <li>테스트 케이스 추가 작업이 용이하다.</li>
+                                        <li>Suite로써 Regression Test가 가능하다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>Fit Table 이점</h3>
+                        <div class="content">
+                            <p>Communication : 필요한 것에 대하여 토론 및 의사 소통 할 수 있는 구체적인 방법 제공한다.</p>
+                            <ul class="list-unstyled">
+                                <li>개발된 소프트웨어의 목적 및 필요성, 가능성에 대한 이해를 돕는다.</li>
+                                <li>현실적인 예제를 기반으로 구체적인 테스트를 함으로써 개발 요구사항에 대한 공감대를 형성할 수 있다.</li>
+                            </ul>
+                            <p>Agility : 요구 변경 및 피드백을 제공 한다.</p>
+                            <ul class="list-unstyled">
+                                <li>자동화된 테스트는 변경되는 모든 항목을 정의하는 것을 도와주며 소프트웨어의 변경에 대해서도 이전에 만족했던 요구 항목이 잘못되지 않도록 한다.
+                                </li>
+                                <li>Fit 테스트는 가장 최근의 문제와 솔루션의 이해에 따라 가장 유용한 피드백을 제공 한다.</li>
+                            </ul>
+                            <p>Balance : 초기문제 해소 및 변경에 의한 문제 재발 방지를 위한 균형 유지에 용이하다.</p>
+                            <ul class="list-unstyled">
+                                <li>Fit 테스트들은 변경을 할 필요가 있으나 균형을 잃은 소프트웨어 제품에도 도입될 수 있다.</li>
+                            </ul>
+                        </div>
+
+                        <h3>FitNesse 메인 페이지</h3>
+                        <div class="content">
+                            <h4>FitNess메인 페이지</h4>
+                            <div class="content">
+                                <ul class="list-unstyled">
+                                    <li>Edit, Properties, Where Used, Search, Files, Versions, Recent Change, User
+                                        Guide,
+                                        Test History
+                                    </li>
+                                </ul>
+                                <div class="img-box">
+                                    <a href="../../../img/tool/fitnesse/image2018-10-19_18-15-54.png"
+                                       data-lightbox="tab03-1">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-19_18-15-54.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>1. Edit</h4>
+                            <div class="content">
+                                <p>첫 페이지(Wiki)페이지를 편집하고, 새로운 테스트 페이지를 생성한다.</p>
+                                <ul class="list-unstyled">
+                                    <li>">Test”를 입력 → Save</li>
+                                </ul>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/fitnesse/image2018-10-19_18-17-36.png"
+                                            data-lightbox="tab03-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-19_18-17-36.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>2. Properties</h4>
+                            <div class="content">
+                                <p>페이지 설정 화면, 각 테스트의 Type, Action 및 기타 환경을 설정한다.</p>
+                                <div class="img-box">
+                                    <a href="../../../img/tool/fitnesse/image2018-10-19_18-19-2.png"
+                                       data-lightbox="tab03-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-19_18-19-2.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>3. Search</h4>
+                            <div class="content">
+                                <p>제목별, 내용별, property별 검색이 가능하다.</p>
+                                <div class="img-box">
+                                    <a href="../../../img/tool/fitnesse/image2018-10-19_18-20-5.png"
+                                       data-lightbox="tab03-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-19_18-20-5.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>4. Files</h4>
+                            <div class="content">
+                                <p>FitNesse 폴더에 대해 파일 탐색 및 업로드/다운로드가 가능하다.</p>
+                                <div class="img-box">
+                                    <a href="../../../img/tool/fitnesse/image2018-10-19_18-20-54.png"
+                                       data-lightbox="tab03-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-19_18-20-54.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>5. Versions</h4>
+                            <div class="content">
+                                <p>테스트 및 페이지 수정 등에 대해 이전 버전(연/월/일/시) 선택이 가능하다.</p>
+                                <div class="img-box">
+                                    <a href="../../../img/tool/fitnesse/image2018-10-19_18-21-47.png"
+                                       data-lightbox="tab03-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-19_18-21-47.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>6. RecentChanges</h4>
+                            <div class="content">
+                                <p>FitNesse 내부 변화 로그를 출력한다.</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/fitnesse/image2018-10-19_18-29-49.png"
+                                            data-lightbox="tab03-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-19_18-29-49.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>7. User Guide</h4>
+                            <div class="content">
+                                <p>FitNesse의 매뉴얼 페이지이다.</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/fitnesse/image2018-10-19_18-31-18.png"
+                                            data-lightbox="tab03-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-19_18-31-18.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>8. Test History</h4>
+                            <div class="content">
+                                <p>시간별로 테스트 수행 내역을 테이블을 바탕으로하여 출력한다.</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/fitnesse/image2018-10-19_18-39-29.png"
+                                            data-lightbox="tab03-2">
+                                        <img width="526"
+                                             src="../../../img/tool/fitnesse/image2018-10-19_18-39-29.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="활용예제" style="display: none;">
+                        <h3>예제 소개</h3>
+                        <div class="content">
+                            <p>예제 시스템 : 텍스트 출력</p>
+                            <ul class="list-unstyled">
+                                <li>간단한 자바 코드와 소켓 통신을 통한 문자를 출력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a href="../../../img/tool/fitnesse/image2018-10-19_18-48-22.png"
+                                   data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/fitnesse/image2018-10-19_18-48-22.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>테스트 페이지 생성</h3>
+                        <div class="content">
+                            <p>Edit를 눌러 새로운 테스트 페이지를 Wiki 페이지에 추가 한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Edit 선택 → 테스트명(&gt;EchoTestFixture) 입력 → Save</li>
+                            </ul>
+                            <div class="img-box">
+                                <a href="../../../img/tool/fitnesse/image2018-10-19_18-49-43.png"
+                                   data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/fitnesse/image2018-10-19_18-49-43.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>FIT Table 설계</h3>
+                        <div class="content">
+                            <p>추가된 Wiki 페이지에서 테스트 페이지로 이동한다.</p>
+                            <ul class="list-unstyled">
+                                <li>추가된 EchoTestFixture에서 ?를 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/fitnesse/image2018-10-19_18-51-29.png"
+                                        data-lightbox="tab04-3"
+                                        data-title="Click the right half of the image to move forward.">
+                                    <img width="526"
+                                         src="../../../img/tool/fitnesse/image2018-10-19_18-51-29.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>FIT Table 생성</p>
+                            <ul class="list-unstyled">
+                                <li>엑셀에서 작성하여 복사 → Spreadsheet to FitNesse 선택 → Save</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/fitnesse/image2018-10-19_18-53-37.png"
+                                        data-lightbox="tab04-3"
+                                        data-title="Click the right half of the image to move forward.">
+                                    <img width="526"
+                                         src="../../../img/tool/fitnesse/image2018-10-19_18-53-37.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>FIT Table 생성 결과</p>
+                            <ul class="list-unstyled">
+                                <li>엑셀에서 작성된 테이블이 적용된 모습이다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/fitnesse/image2018-10-19_18-54-39.png"
+                                        data-lightbox="tab04-3"
+                                        data-title="Click the right half of the image to move forward.">
+                                    <img width="526"
+                                         src="../../../img/tool/fitnesse/image2018-10-19_18-54-39.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Fixture 생성</h3>
+                        <div class="content">
+                            <p>EchoTestFixture.java 생성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>테스트 대상이 될 코드 작성 및 컴파일</li>
+                            </ul>
+                            <div class="img-box">
+                                <a href="../../../img/tool/fitnesse/image2018-10-19_19-0-24.png"
+                                   data-lightbox="tab04-4">
+                                    <img width="526"
+                                         src="../../../img/tool/fitnesse/image2018-10-19_19-0-24.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>클래스 파일 연결</h3>
+                        <div class="content">
+                            <p>테스트할 클래스 위치를 연결(EchoTestFixture.class) 한다.</p>
+                            <ul class="list-unstyled">
+                                <li>클래스 파일이 사용한 라이브러리(!path fitnesse.jar)와 클래스(!path !path C:\FitNesse\test)를 추가
+                                    한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a href="../../../img/tool/fitnesse/image2018-10-19_19-4-8.png"
+                                   data-lightbox="tab04-5">
+                                    <img width="526"
+                                         src="../../../img/tool/fitnesse/image2018-10-19_19-4-8.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>예제 테스트</h3>
+                        <div class="content">
+                            <p>Test를 눌러 테스트를 수행한다.</p>
+                            <ul class="list-unstyled">
+                                <li>노란 삼각형을 선택하여 정보 확인 및 디버깅이 가능하다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/fitnesse/image2018-10-19_19-5-16.png"
+                                        data-lightbox="tab04-6"
+                                        data-title="Click the right half of the image to move forward.">
+                                    <img width="526"
+                                         src="../../../img/tool/fitnesse/image2018-10-19_19-5-16.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트 케이스를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>특수기호, 긴 메시지 등 여러가지 형태로 테스트를 수행한 결과이다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/fitnesse/image2018-10-19_19-6-2.png"
+                                        data-lightbox="tab04-6"
+                                        data-title="Click the right half of the image to move forward.">
+                                    <img width="526"
+                                         src="../../../img/tool/fitnesse/image2018-10-19_19-6-2.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 최상단 이동 btn -->
+            <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+            </div>
+            <!--</div>-->
+
+            <!--</div>-->
+        </div>
+        <!-- END container -->
+    </main>
+    <!-- END main -->
+</div>
+<!-- END wrap -->
+
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+
+</body>
+</html>

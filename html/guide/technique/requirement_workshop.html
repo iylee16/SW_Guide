@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 기법 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a class="active on" href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a class="active on" href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발표준 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>요구사항 도출</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/guide/technique.html">개발 가이드</a></li>
+                    <li><a href="../../guide/technique/summary01.html">개발 기법</a></li>
+                    <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                    <li class="active">워크샵</li>
+                </ol>
+
+                <ul class="top-nav-menu">
+                    <li><a href="summary01.html">개요</a></li>
+                    <li><a href="requirement_interview.html">인터뷰</a></li>
+                    <li><a href="requirement_brainstorming.html">브레인스토밍</a></li>
+                    <li><a href="requirement_survey.html">설문</a></li>
+                    <li class="active"><a href="requirement_workshop.html">워크샵</a></li>
+                    <li><a href="requirement_doxygen.html">Doxygen</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container">
+            <h2>워크샵 개요</h2>
+            <div class="content">
+
+                <h3>1. 정의</h3>
+                <div class="content">
+                    <p>본디 ‘일터’나 ‘작업장’을 뜻하는 말이었으나, 지금은 ‘협의회’나 ‘공개교육’, ‘상호교육’을 뜻하는 교육용어로 사용된다. 집단사고나 집단 작업을 통하여 성장을 꾀하고
+                        문제를 해결하려는 두 가지 목적을 동시에 달성할 수 있다. 1960년대 무렵부터 새로운 형태의 연극을 창 조하는 모체로서 관심을 끌기 시작하였으며 고정된 이론이나 방법론을
+                        가진 학교 방식 수업의 장이 아니고, 참가자 전원이 새로운 이념 과 기술을 함께 모색하면서 훈련을 쌓는 것을 특징으로 한다.</p>
+                </div>
+
+                <h3>2. 목적</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>워크샵의 목적은 사용자가 개발자간의 직접적이고 연속적 면담과 정보교환을 통해서 오해의 소지를 배제하고, 단기간에 집중적인 노력을 들여 목적을 달성하는 것이다.
+                        </li>
+                        <li>워크샵은 간단한 모임이나 회의에서 얻을 수 있는 것 이상을 요구하는 상황에서 사용되며, 다양한 원천으로부터 정보를 얻고 이를 모두 공유할 수 있으며, 프로젝트 성공을
+                            방해하는 정치적, 개인적 장애물을 타파할 수 있다.
+                        </li>
+                        <li>워크샵 기법을 사용함으로써 질적, 양적으로 많은 효과를 기대할 수 있다. 실제 사용자가 중요 현안들을 토의하여 개선된 의사결정, 책임의식과 의견 일치를 얻을 수
+                            있고, 산출물 품질의 개선과 효율적인 프로젝트 팀의 운영, 기간 단축, 비용절감 등을 이룰 수 있다.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>3. 적용 업무</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>관련 업무시스템의 분석과 재설계를 위한 워크샵</li>
+                        <li>분석 산출물의 최종 정리를 위한 워크샵</li>
+                        <li>핵심 기능의 설계를 위한 워크샵</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>구성요소</h2>
+            <div class="content">
+                <p>본 기법서에서는 사용자 요구사항을 워크샵에서 통해서 획득하기 위한 JRP(Joing Requirement Planning)을 중심으로 소개한다.
+
+                <h3>1. JRP(Joint Requirement Planning)의 개요</h3>
+                <div class="content">
+                    <p>JRP 세션은 개발할 시스템에 대한 범위, 요건, 정당성을 설정하며 시스템의 개략적인 설계를 하기 위해 실시한다.</p>
+                    <p>JRP 워크샵은 전반 적인 업무요건을 이해하고 이에 대한 권한을 가지고 있는 상위레벨의 사람들이 참여한다.</p>
+                    <p>경우에 따라 JRP는 새로운 정보기술을 기업 에 어떻게 적용시킬지 결정하기 위해 수행하며, 이 경우 JRP는 특정 시스템에 대한 상세한 비전이 수립되기 전에 수행한다.</p>
+                </div>
+
+                <h3>2. 효과</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>
+                            <strong>JRP세션을 통해서</strong>
+                            <div class="content-des">
+                                <p>업무분석과 시스템계획수립 프로세스에 최고경영 임원진의 지식을 반영할 수 있도록 해주며 시스템 계획 시 목표, 문제점들, 주요
+                                    성공요인, 시스템의 전략적 기회에 대한 상위레벨의 분석과 연계가 가능하도록 해준다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>JRP 진행 시</strong>
+                            <div class="content-des">
+                                <p>브레인스토밍 등을 통하여 가장 가치있는 시스템 기능이 도출되고, 의문점 있는 기능들은 제거되며, 업무시스템을 사용하여 사업기 회를 창출할 수 있도록
+                                    임원진들에게
+                                    창조적인 사고의 기회를 제공하고,
+                                    한번에 정확한 요건을 도출하여 설계 또는 구현된 시스템 을 수정하는데 드는 시간과 비용을 절감할 수 있다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>JRP와 통합 CASE</strong>
+                            <div class="content-des">
+                                <p>JRP에 통합 CASE도구를 사용함으로써 재사용성과 일관성 검사와 같은 추가적 효과를 얻을 수 있다. 기존에 저장되어 있는 객체, 유 스케이스모형을
+                                    사용할 수 있고, 새로운 모형과 기존 모형의 일관성을 자동으로 검사할 수 있다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>적용지침</h2>
+            <div class="content">
+
+                <h3>1. 회의실 설비와 레이아웃</h3>
+                <div class="content">
+                    <p>회의실은 참석자 모두가 U 자형 테이블에 앉을 수 있을 정도로 충분히 커야 한다. 휴식테이블, 옵저버테이블, 휴식공간 등의 별도의 공간이 있어야 하며, 참석자나 사회자가 구속
+                        또는
+                        산만한 느낌을 받지 않아야 한다.</p>
+                    <p>조명은 슬라이드, OHP, PC-화면영상 프로젝터 등의 사용에 적당해야 한다. 워크샵에는 관리층, 최종사용자 그리고 정보시스템전문가 의 참여가 필요하다.</p>
+                </div>
+
+                <h3>2. 위치와 기간</h3>
+                <div class="content">
+                    <h4>1.1. 위치</h4>
+                    <p>워크샵은 업무와 시스템 참석자의 일상적 작업위치가 아닌 외부에서 진행하는 것이 좋다. 대부분의 호텔과 회의실 대여 센터는 위에 열거한 장비일체를 준비하고 있다.</p>
+                    <p>만일 사내에서 진행한다면, 업무로 인해 그룹활동이 중단 또는 방해 받지 않게 주의하여야 한다.</p>
+                    <h4>1.2. 기간</h4>
+                    <p>워크샵의 기간은 상황에 따라 변할 수 있는데, JRP워크샵의 경우는 적어도 3일 정도하는 것이 좋다. 일반적으로 2회의 *JAD워크샵을 수행하는데, 대개 4일씩 2번, 또는
+                        5일과
+                        3일로 세션을 나누어 진행한다.</p>
+                    <p>최소한 하루이상의 시간은 워크샵에 할당해야 하며, 또한 먼곳에서 온 참가자의 출장기간을 고려해야 하므로 4일 또는 3일 세션이 가 장 일반적인 형태이다.</p>
+                    <p>복잡한 시스템 애플리케이션이나 여러 조직에서 수행되는 애플리케이션은 복수의 워크샵 세션을 수행할 필요가 있다.</p>
+                    <ol class="ol-styled">
+                        <li>
+                            <strong>특정시간</strong>
+                            <div class="content-des">
+                                <p>각 워크샵 수행시간은 평상적인 업무 또는 작업시간이어야 한다(오전 9시부터 오후 5시 또는 6시). 어떤 세션은 밤 늦게까지 진행될 경우가 있는데 이러한
+                                    일정은
+                                    상식적으로
+                                    결정한다. 워크샵은 집중이 필요한 이벤트이며 참석자의 동기부여와 자세는 최대의 효과를 위하여 적절히 관리하여야 한다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>온종일 또는 반나절의 세션</strong>
+                            <div class="content-des">
+                                <p>온종일 세션이 좋지만, 어떤 문화와 제약에 의해 반나절만 세션을 진행해야 할 경우가 있다. 반나절 세션의 장점은 사회자가 다음 세 션을 위한 준비시간을
+                                    가질 수 있다는 것과 서기나 팀에 의해 통합 CASE의 성과물의 검토, 수정, 작성할 수 있다는 것이다. 반나절 세 션에도 반드시 워크샵 주도의
+                                    미팅관리와 행동통제기법을 적용하여야 한다.</p>
+                                <p>또한 그룹효과를 유지할 필요가 있다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>마라톤세션</strong>
+                            <div class="content-des">
+                                <p>마라톤세션으로 놀라운 성과를 달성할 수 있지만, 경험적으로 참석자(또는 사회자)들은 다음날에는 작업효율이 상당히 저하된다. 고 객의 문화, 참석자수준,
+                                    워크샵 유형 등의 요인이 워크샵 일정에 영향을 줄 수 있다.</p>
+                            </div>
+                        </li>
+                    </ol>
+                    <dl class="definition">
+                        <dt>JAD(Joint Application Design)란?</dt>
+                        <dd>현업, 관리자, 분석가, 개발자 들이 세부 시스템/소프트웨어 요구사항 및 설계사항들을 규정하거나 검토하기 위해 집중적인 회의를 하 는 구조화된 프로세스이다. 신속한
+                            의사결정을 가능하게 하여 프로젝트의 리스크와 일정 손실을 줄이게 해 준다.
+                        </dd>
+                    </dl>
+                    <h4>1.3. 워크샵 프로젝트의 구성</h4>
+                    <p>워크샵을 위해서는 실제 워크샵 시간보다 더 많은 시간이 소요된다. 워크샵 동안 최대의 성공을 위하여 JRP, JAD 세션에 앞서 준비시간 을 많이 할당한다. 문서작성, 마감,
+                        다음 단계준비 등의 워크샵 후속조치가 있어야 한다.</p>
+                    <p>다음은 일반적인 워크샵의 사전, 실행, 사후 활동들이다.</p>
+                    <ol class="ol-styled">
+                        <li>
+                            <strong>워크샵 사전활동</strong>
+                            <div class="content-des">
+                                <p>일반적으로 3일간의 각 JRP세션(2회)에 대하여 사회자는 2 ~ 5일의 준비가 필요하다. 초기 JAD세션은 5일의 워크샵 일정 중 워크샵 사 전활동에
+                                    1 ~
+                                    4일이
+                                    필요하다. 후속 JAD워크샵은 추가적 준비에 1 ~ 2일정도 필요하다.</p>
+                                <ul class="list-unstyled">
+                                    <li>계획 수립과 프로젝트 범위설정</li>
+                                    <li>조사 및 배경</li>
+                                    <li>참석자 선정, 브리핑, 교육훈련(객체지향 모형화 기법에 대한 교육 포함)</li>
+                                    <li>후원임원의 결정과 프로젝트 시작</li>
+                                    <li>물자 배열, 워크샵 문제 설정과 준비</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>워크샵 실행</strong>
+                            <div class="content-des">
+                                <p>모든 워크샵은 시작, 작업, 마감을 갖는다. 작업은 선정된 주제에 따라 하위작업 또는 구조적 활동들로 구성된다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>워크샵 후속 점검</strong>
+                            <div class="content-des">
+                                <p>워크샵 결과의 소유의식과 적절한 종결을 위하여, 다음 사항을 점검한다. </p>
+                                <ul class="list-unstyled">
+                                    <li>성과물의 완료와 타당성 조사</li>
+                                    <li>프로토타입의 확장(JAD 사용자워크샵의 경우)</li>
+                                    <li>기대수준 관리 및 현안 해결</li>
+                                    <li>진행에 대한 승인권자의 승인과 의사결정</li>
+                                </ul>
+                                <p>성과물 제작과 발표를 위하여 1 ~ 3일이 필요하다.</p>
+                            </div>
+                        </li>
+                    </ol>
+                    <h4>1.4 참석자선정과 참여 </h4>
+                    <ol class="ol-styled">
+                        <li>
+                            <strong>선정</strong>
+                            <div class="content-des">
+                                <p>온종일 세션이든 반나절 세션이든, 참석자는 워크샵 동안 풀타임으로 참여하여야 한다. 현업부문의 참석자(사용자측)들은 워크샵 성과물의 작성에 기여할 수
+                                    있는 가치와 능력에 따라 선정한다. 실제 워크샵은 중요 핵심 참여자 모두가 참여해야 한다. 따라서 가장 능력있는 사용자가 참여할 수 있도록 해당
+                                    사용자의 소속
+                                    직책보임자에게 사전에 충분한 동의를 얻어야 한다. 방문 참석자는 발언권이 없는 참관인 또는 주제영역전문자의 자격으로 워크샵에 참여할 수 있다.
+                                    주제영역전문가는
+                                    파트타임으로 참여할 수 있고, 특정 워크샵 모듈 또는 특정 활동에만 참여한다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>준비</strong>
+                            <div class="content-des">
+                                <p>참석자들에 대하여 워크샵 참여 전에 간단한 설명을 실시한다. 공식적 브리핑 미팅은 킥오프-미팅에서 진행하거나 따로 진행할 수 있다. 프로젝트에서 사용할
+                                    주제목록이나 복사물을 준비하고, 기존의 모형이 있다면 이를 배포할 수도 있다.</p>
+                                <p>참석자들은 워크샵에서 사용하는 모든 다이아그램(클래스도, 유스케이스도) 작성 약속을 이해하여야 한다.</p>
+                                <p>이상의 준비는 반나절의 브리핑세션으로 가능하며, 워크샵의 성공을 위하여 참석자 개인에 대하여 역할이 주어질 수도 있다. 참가자 의 역할과 책임, 워크샵
+                                    목적, 워크샵 개념을 설명하고, 공식적 브리핑 자료를 모든 참석자들에게 배포한다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>킥오프미팅의 실행</strong>
+                            <div class="content-des">
+                                <p>공식적 킥오프 미팅의 수행은 워크샵 기법의 성공에 대한 중요요인 중의 하나이다. 킥오프 미팅시 브리핑과 참석자 교육을 동시에 진 행하거나 별도로 진행할
+                                    수 있다.
+                                    자원동원이나 비용 등의 여건이 허용된다면 실제 워크샵이 진행되기 전에 수일간 진행하는 것이 바 람직하다.</p>
+                                <P>주관자는 모임을 시작한 다음 사회자에게 진행을 넘긴다. 사용자들과 시스템 전문가 등 모든 참석자에게 워크샵에 대한 기대를 가질 수 있도록 하는 것은 매우
+                                    중요하다.
+                                    킥오프미팅은 최대 2시간을 초과하지 말아야 한다. 브리핑 세션을 동시에 진행할 경우에는 온종 일 세션으로 할 수 있다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>자료 구성</strong>
+                            <div class="content-des">
+                                <p>공식적 브리핑자료는 브리핑 또는 킥오프세션 참석자 모두에게 배포되어야 하며, 후속 문서나 (지난 워크샵 이후) CASE에 저장된 자 료도 후속
+                                    JAD워크샵에 앞서 참석자에게 배포한다.</p>
+                                <p>또한 주관자를 위한 특별한 자료를 준비하고, OHP자료, 워크쓰루 연습, Dummy Model과 같은 워크샵 수행에 필요한 자료는 사회자와 서기가
+                                    책임지고 준비한다.</p>
+                            </div>
+                        </li>
+                    </ol>
+                    <h4>1.5 워크샵 일정 </h4>
+                    <ol class="ol-styled">
+                        <li>
+                            <strong>시작모듈</strong>
+                            <div class="content-des">
+                                <ul class="list-unstyled">
+                                    <li>프로젝트관리자나 사회자의 환영인사</li>
+                                    <li>편의시설의 알림(화장실 위치, 메세지 시스템, 흡연구역 등)</li>
+                                    <li>일정 리뷰</li>
+                                    <li>주관자의 킥오프 연설(선택적임: 워크샵 사전활동에서 수행할 수 있다)</li>
+                                    <li>시작에 관한 사항은 10 ~ 20 분 정도한다.</li>
+                                </ul>
+                                <dl class="definition">
+                                    <dt>Dummy Model이란?</dt>
+                                    <dd>제품 및 시스템의 최종모습을 짐작하고 이에 대한 요구사항을 상세화할 수 있도록 만든 일종의 ProtoType이다. 기능성을 배제하고 외형적인
+                                        측면과
+                                        체품의 인터페이스를 강조한 것으로서, HW에서는 Mockup(목업)이라 칭하기도 한다.<br/>
+                                        소프트웨어 개발시에는 제품 의 UI를 분석하기 위해 작성한 UI 모형이나, 사용자와의 인터페이스 및 요구사항을 분석하기 위해 사용되는 UML등의
+                                        여러가지 Modeling Language로 작성된 모델/Diagram등이 여기에 해당된다.
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>작업의 준비</strong>
+                            <div class="content-des">
+                                <ul class="list-unstyled">
+                                    <li>사용자워크샵기법(JAD)을 소개한다. 여기서는 편안한 수준으로 진행하고 다음 모듈의 수행 작업들을 정한다. 이 단계는 30분정도 진행한다.
+                                    </li>
+                                    <li>안건을 검토하고 변경요구시 내용을 변경한다(그룹의 친화감을 조성)</li>
+                                    <li>수행의 규칙을 정하고 검토한다.</li>
+                                    <li>범위와 목적을 검토한다(기대의 조사). 오전과 오후 세션 시작시나 워크샵 진행 종료시(각 진행일마다)에는 일정을 검토하고 기대를 조사한다.
+                                    </li>
+                                    <li>시작예행연습을 실시한다(선택적).</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>작업모듈</strong>
+                            <div class="content-des">
+                                <p>작업모듈안건은 워크샵의 유형에 따라 조정한다(특정 목적 또는 고객의 요구). 조정자는 이 모듈동안 수행할 작업을 관리하기 위해 워 크샵주도기법을
+                                    사용한다. 일정은 반드시 지켜야 하나, 경우에따라 유연하게 대처한다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>종료모듈</strong>
+                            <div class="content-des">
+                                <p>아래 사항에 대하여 15분정도 진행한다.</p>
+                                <ul class="list-unstyled">
+                                    <li>각 워크샵 작업일 종료 시 [안건 검토, 진척사항의 요약, 필요 시 수정, 참석자의 피드백 유도 및 기대 조사, 참석자들의 참석과 기여에 대한
+                                        감사]
+                                    </li>
+                                    <li>워크샵의 종료 시 [목표, 목적, 안건 등을 항상 검토, 요약결과의 소유의식 형성, 주관자의 종료발언(5분, 선택적), 미결 현안 검토 및 할당
+                                        검사, 실행계획 준비, 평가와 종료(1 ~ 2장의 워크샵평가양식을 모든 참석자에게 배포하여, 워크샵 기법의 개선과 추가적인 정보 를 얻을 수
+                                        있다)]
+                                    </li>
+                                    <li>워크샵 종료에 적어도 1시간 이상 진행한다.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                    <h4>1.6 운영 및 미결현안 처리규칙 </h4>
+                    <ol class="ol-styled">
+                        <li><strong>운영규칙</strong>
+                            <p>이 기법은 워크샵 동안 참석자가 어떻게 운영할 것인가를 결정할 때 가장 적합한 작업이 된다. 일반적으로 사회자는 규칙을 1 ~ 2 개 정 도 제시하고
+                                다음과 같은 것을 토의하여 추가적인 규칙 제시를 권유한다.</p>
+                            <p>전에 참여했던 최악의 회의를 생각해 보십시오. 보다 나은 회의 관리를 위해 필요한 지침은 어떤 것이 있습니까?</p>
+                            <ul class="list-unstyled">
+                                <li>규칙
+                                    <ul class="list-unstyled">
+                                        <li>모든 참석자는 평등하며, 전원이 참가한다.</li>
+                                        <li>한번에 한가지 주제를 토의한다.</li>
+                                        <li>의견을 비평하고, 사람을 비평하지 않는다.</li>
+                                        <li>현안 토의에 5분규칙을 적용한다.</li>
+                                        <li>참관자는 사회자의 요청이 있을 때만 발언 할 수 있고, 휴식 시간에만 자리를 비울 수 있다.</li>
+                                        <li>시간을 준수한다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>미결 현안의 처리</strong>
+                            <p>워크샵은 적당한 속도와 빠른 의사결정으로 진행하여야 하며, 상정된 현안이 적당한 시간 내에 해결할 수 없다면 다음의 회의로 넘긴다.</p>
+                            <p>만일 5분규칙을 사용하여 워크샵을 운영할 때 토의가 수렁에 빠지거나 논의가 길어지는 경우 사회자뿐만 아니라 참석자도 이 규칙을 적 용하도록 해야 한다.</p>
+                            <p>위와 같은 경우 사회자는 다음과 같이 이야기한다.</p>
+                            <p>해결할 현안은 XXX 입니다. 이 현안들을 5분간에 결론지울 수 없다면, 적어놓고 다음으로 넘어 갑시다.</p>
+
+                            <ul class="list-unstyled">
+                                <li><strong>범위</strong>
+                                    <p>현안들은 워크샵 목적 또는 프로젝트 범위 내에 있을 수 있고, 범위 밖에 있을 수도 있다. 모든 현안들은 후속 활동에 대하여 제시 되어야
+                                        한다.</p>
+                                </li>
+                                <li><strong>규칙</strong>
+                                    <p>명확하고 요약된 문장이나 질문으로 현안을 표현하고, 참석자와 적당한 표현을 정한다. 현안을 화이트보드나 플립차트에 게시한다. 현안목록을
+                                        벽에 붙인다. 각 현안에 대하여 다음을 나열한다.</p>
+                                    <ul class="list-unstyled">
+                                        <li>현안번호</li>
+                                        <li>현안내용</li>
+                                        <li>현안해결에 책임이 부여된 참석자명</li>
+                                        <li>해결일자</li>
+                                        <li>제안해결안</li>
+                                    </ul>
+                                    <p>매일 현안목록을 검토하고, 워크샵 종료시점에도 검토한다. 다음 워크샵에서 다룰 현안들의 순위를 결정한다.</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h4>1.7 문서화 규칙</h4>
+                    <p>산출물은 방법론, 워크샵 목적과 특정 고객 요구들에 의하여 산출한다. 워크샵 문서화는 다음을 포함한다.</p>
+                    <ul class="list-unstyled">
+                        <li>목적의 나열(프로젝트 또는 시스템)</li>
+                        <li>시스템/애플리케이션 범위</li>
+                        <li>시스템 기능의 예비/최종 목록</li>
+                        <li>유형, 무형의 효과</li>
+                        <li>투자회수</li>
+                        <li>기능 우선순위</li>
+                        <li>다른 시스템과의 인터페이스</li>
+                        <li>화면, 장표, 메뉴 설명</li>
+                        <li>미결현안 목록</li>
+                        <li>실행계획과 목표일자</li>
+                        <li>주관자 요약</li>
+                    </ul>
+                    <p>8 ~ 10 시간정도의 워크샵에는 문서화에 약 1 ~ 2일의 시간이 소요되며, 워크샵 진행과 워크샵의 문서작성에 충분한 자원을 할당해야 한다.</p>
+                </div>
+            </div>
+
+            <h2>고려사항</h2>
+            <div class="content">
+
+                <h3>1. 성공요인</h3>
+                <div class="content">
+                    <p>워크샵의 성공적 수행에 영향을 주는 주요 요인은 다음과 같다.</p>
+                    <ul class="list-unstyled">
+                        <li>임원의 위임(자원, 시간, 인원)</li>
+                        <li>숙련되고, 경험있는 사회자 또는 조정자</li>
+                        <li>적당한 범위</li>
+                        <li>참석자들의 신임과 준비</li>
+                        <li>적합한 참석자와 풀타임 참여</li>
+                    </ul>
+                </div>
+
+                <h3>2. JRP와 JAD</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>업무 중심</li>
+                        <li>방법론의 개념, 원리, 약속의 적용</li>
+                        <li>쉽게 이해할 수 있는 다이어그램 작성 규칙</li>
+                        <li>적당한 환경 및 회의실의 레이아웃과 설비들</li>
+                        <li>동등한 참여</li>
+                        <li>JRP, JAD세션과 같은 사용자워크샵은 사용자 조직에 의해 수행되는 프로젝트 또는 여러 소재지나 규칙에 영향을 주는 애플리케이션 에 매우 가치가 있다.</li>
+                        <li>워크샵 기법은 운영, 조직, 절차 상의 차이의 해결에 유용하고, 정치적 요인을 관리할 수 있다.</li>
+                        <li>상당히 큰 애플리케이션은 객체모형의 일관성과 각 하위시스템간의 정확한 인터페이스가 보장되는 설계도구를 이용하여 하위시스 템으로 나눌 필요가 있다.
+                            <div class="content-des">
+                                <dl class="definition">
+                                    <dt>JRP와 JAD의 관계?</dt>
+                                    <dd>JRP와 JAD는 구조적으로 유사한 형태를 지니되, JRP가 상위 수준의 요구사항을 최종 사용자와 함께 빠르게 정의하고자 하는 목적이 있다면,
+                                        JAD는 그
+                                        이후의 상세 요구사항과 설계에 대한 내용을 정의함에 그 목적이 있다. 시간적으로 JRP가 JAD에 앞서며 JRP가 올바 르게 수행되어 그
+                                        산출물이 JAD의
+                                        입력으로
+                                        전달되어야 한다.
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>3. 준비</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>논의할 정치적 현안들은 워크샵 전에 인식될 수 있다. 적당한 지위의 후임임원은 워크샵 진행동안 각 부문대표들을 만나고 현안의 컨센서스를 유도하며, 컨센서스를 도출하기
+                            위해 각 부문에 동기부여함으로써 현안을 처리한다.
+                        </li>
+                        <li>팀은 때때로 다른 사람들과 편안히 작업을 하기 위하여 교육기간이 필요하다. 적당한 준비시간을 갖을 수 없거나 브리핑 미팅을 수 행하지 않았다면 워크샵 진행이 첫날에는
+                            천천히 진행될 것이다. 몇몇 팀들은 보다 친숙해지기 위해 팀웍 구축실습이 필요한 경우 도 있다.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>4. 성공지침</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>참석자들은 그들의 전문영역별로 사회자와 함께 임시적 리더쉽과 팀협력을 연습한다.</li>
+                        <li>프로젝트 관리자와 후원임원은 프로젝트 결과에 이해관계가 있을 수 있기때문에 워크샵의 사회자가 되면 안되며, 사회자의 중립성 과 공평성이 보장되어야 한다.</li>
+                        <li>명확성을 위해 전문적인 용어는 사용하지 않는다.</li>
+                        <li>워크샵 프로세스의 결과로 예측할 수 있는 문화적 변화에 대처해야 한다.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 최상단 이동 btn -->
+            <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+
+    </main>
+    <!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

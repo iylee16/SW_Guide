@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>프로덕트 품질지표</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a>
+                                        </li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항
+                                            체크리스트</a></li>
+                                        <li><a href="../../quality/assurance/testinspection_standard01.html">테스트
+                                            체크리스트</a></li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a>
+                                        </li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic
+                                            개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a>
+                                        </li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile
+                                            방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li>
+                                            <a href="../../download/company/international_development.html">대외SW개발방법론</a>
+                                        </li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../tool/summary/summary01.html">개요</a>
+                <li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a class="active on" href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a class="active on" href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a></li>
+                        <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <!-- START container -->
+        <div class="container">
+            <!-- START top-nav -->
+            <div class="top-nav">
+                <div class="container">
+                    <h1>Junit</h1>
+                    <!-- breadcrumb -->
+                    <ol class="breadcrumb">
+                        <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                        <li><a href="../../tool/summary/summary01.html">개발도구</a></li>
+                        <li><a href="../../tool/all/junit.html">단위테스트</a></li>
+                        <li class="active">Junit</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- END top-nav -->
+
+            <div class="tab-nav-warp">
+                <ul class="tab-nav">
+                    <li><a href="javascript:;" class="active">개요</a></li>
+                    <li><a href="javascript:;">설치</a></li>
+                    <li><a href="javascript:;">주요기능</a></li>
+                    <li><a href="javascript:;">활용예제</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab-content">
+                    <div id="개요" style="">
+                        <h3>도구 소개</h3>
+                        <div class="content">
+                            <table class="table table-styled">
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width="30%">
+                                    <col width="20%">
+                                    <col width="30%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>도구명</th>
+                                    <th>Junit<br/>(<a href="http://www.junit.org/">http://www.junit.org</a>)</th>
+                                    <th>라이센스</th>
+                                    <th>Common Public License</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th>소개</th>
+                                    <td colspan="3">Java 기반 단위 모듈 시험 확인 도구이다.</td>
+                                </tr>
+                                <tr>
+                                    <th>특징</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>메소드와 같은 단위 모듈 별 테스팅을 가능케 함으로써 코드 품질을 보장</li>
+                                            <li>정확한 단위 테스팅을 가능케 함으로써 통합 테스팅 시 회귀 결함을 감소</li>
+                                            <li>다른 모듈에 의존하지 않고, 원하는 모듈만 임의의 순서대로 수행</li>
+                                            <li>JFeature(요구사항개발도구)와 통합되어 요구사항의 정확한 구현 비율 확인</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 기능</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>Test case 생성 및 실행</li>
+                                            <li>버그 추적</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>실행 환경</th>
+                                    <td>Windows, Linux, MacOS</td>
+                                    <th>사전 설치 도구</th>
+                                    <td>자바 기반 IDE, JDK</td>
+                                </tr>
+                                <tr>
+                                    <th>카테 고리</th>
+                                    <td>단위 테스트</td>
+                                    <th>최신 버전</th>
+                                    <td>V5.3.1 (2018.09)</td>
+                                </tr>
+                                <tr>
+                                    <th>관련 도구</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>CppUnit (<a href="https://sourceforge.net/projects/cppunit/">https://sourceforge.net/projects/cppunit/</a>)
+                                            </li>
+                                            <li>Httpunit (<a
+                                                    href="http://www.httpunit.org/">http://www.httpunit.org/</a>)
+                                            </li>
+                                            <li>TestLink (
+                                                <a href="https://sourceforge.net/projects/testlink/files/">https://sourceforge.net/projects/testlink/files/</a>)
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>주요 기능</h3>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li>단위 테스트 지원</li>
+                                <li>TDD 환경 지원</li>
+                                <li>UI Report</li>
+                                <li>실시간 code trace 지원</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="설치" style="display: none;">
+                        <h3>설치 환경</h3>
+                        <div class="content">
+                            <p>다양한 OS를 지원</p>
+                            <ul class="list-unstyled">
+                                <li>Windows : Windows XP / Windows 7 (32, 64-bit 모두 지원)</li>
+                                <li>Linux : 32, 64-bit 지원</li>
+                                <li>Mac OS X : 32, 64-bit 지원</li>
+                                <li>UNIX : 32, 64-bit 지원</li>
+                            </ul>
+                            <p>JDK, 자바 기반 도구(IDE 등)이 필요하다.</p>
+                            <ul class="list-unstyled">
+                                <li>코드 및 플러그인 형태, 도구에 포함되어 있는 형태로 제공한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a href="../../../img/tool/junit/image2018-10-15_16-31-25.png"
+                                   data-lightbox="tab02-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-15_16-31-25.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>설치 단계</h3>
+                        <div class="content">
+                            <h4>1. Junit 다운</h4>
+                            <div class="content">
+                                <p>
+                                    <a href="https://github.com/junit-team/junit5/">https://github.com/junit-team/junit5/</a>
+                                    에서 JUnit을 다운 받는다.</p>
+                                <p>대부분의 JAVA기반 IDE는 JUnit이 탑재(JUnit 미 탑재, 업데이트, 베타버전을 사용시 주로 다운)</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/junit/image2018-10-15_16-43-43.png"
+                                            data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/junit/image2018-10-15_16-43-43.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>2. Junit 설치</h4>
+                            <div class="content">
+                                <p>압축을 풀고, junit4.10을 Eclipse가 설치된 폴더 내의 plugins 폴더에 복사한다.</p>
+                                <p class="refer">※ 본 매뉴얼에서는 Eclipse기준으로 설명한다.</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/junit/image2018-10-15_16-45-21.png"
+                                            data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/junit/image2018-10-15_16-45-21.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="주요기능" style="display: none;">
+                        <h3>Continuous Integration이란?</h3>
+                        <div class="content">
+                            <p class="refer">※ Test 수행 단계 기능을 설명하기 위해 계산기 프로젝트를 예로들어 사용한다.</p>
+                            <p>계산기는 다음과 같은 기능을 가지고 있다.</p>
+                            <ul class="list-unstyled">
+                                <li>sum : 두수의 더하기 연산을 수행한다.</li>
+                                <li>subtract : 두수의 빼기 연산을 수행한다.</li>
+                                <li>multiply : 두수의 곱하기 연산을 수행한다.</li>
+                                <li>divide : 두수의 나누기 연산을 수행한다.</li>
+                                <li>ceil : 지정된 숫자를 올림 하는 연산을 수행한다. (ex - 3.2의 ceil연산 : 4)</li>
+                                <li>floor : 지정된 숫자보다 작거나 같은 가장 작은 정수를 double형태로 반환하는 연산을 수행한다.<br>
+                                    (ex - 1.2의 floor연산 : 1, 1.7의 floor연산 : 1)
+                                </li>
+                                <li>abs : 지정된 숫자의 절대값을 계산하고 반환하는 연산을 수행한다.</li>
+                            </ul>
+                        </div>
+
+                        <h3>Test Case 작성</h3>
+                        <div class="content">
+                            <p>테스트하고자 하는 클래스를 생성 : Calculator</p>
+                            <ul class="list-unstyled">
+                                <li>프로젝트선택 → 마우스 우 선택 메뉴의 New → Class → Class이름 설정(Calculator) → Finish</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-15_16-48-46.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-15_16-48-46.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Calculator 클래스의 코드를 작성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>계산기의 주요 기능을 구현(sample code)</li>
+                            </ul>
+
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-15_16-50-16.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-15_16-50-16.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트하고자 하는 클래스에 대해 Test Case를 생성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>테스트를 실행할 클래스 선택 → 마우스 우 선택 메뉴의 New-&gt; JUnit Test Case</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-15_16-51-20.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-15_16-51-20.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Source folder, Package, Name, Superclass등을 그대로 두고 NEXT</p>
+                            <ul class="list-unstyled">
+                                <li>Source folder : Test Case 클래스 파일이 저장되는 폴더를 말한다.</li>
+                                <li>Package : Java의 패키지를 의미한다.</li>
+                                <li>Name : Test Case 클래스의 이름을 의미(기본값 : 테스트대상클래스명 + Test)한다.</li>
+                                <li>Superclass : Test Case 클래스가 상속받을 클래스를 의미(기본값 : junit.framework.TestCase)한다.</li>
+                            </ul>
+
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_9-27-44.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_9-27-44.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Calculator클래스 내의 테스트하고자 하는 메소드 체크 → Finish</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_11-38-24.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_11-38-24.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트하고자 하는 메소드의 내용을 구현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>테스트 케이스 메소드를 구현하기 : 오른쪽의 assert 메소드 이용</li>
+                                <li>JUnit에서 가장 많이 이용되는 단정(assert) 메소드
+                                    <ul class="list-unstyled">
+                                        <li>assertEquals(x, y) : x와y가 같으면 테스트 통과</li>
+                                        <li>assertFalse(b) : b가 false이면 테스트 통과</li>
+                                        <li>assertTrue(b) : b가 true이면 테스트 통과</li>
+                                        <li>assertNull(o) : 객체o가 null이면 테스트 통과</li>
+                                        <li>assertNotNull(o) : 객체o가 null이 아니면 테스트 통과</li>
+                                        <li>assertSame(ox, oy) : ox와 oy가 같은 객체를 참조하고 있으면 테스트 통과</li>
+                                        <li>assertNotSame(ox, oy) : ox와 oy가 같은 객체를 참조하고 있지 않으면 통과</li>
+                                        <li>assertfail : 테스트를 바로 실패처리</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_16-34-18.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_16-34-18.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트하고자 하는 메소드의 내용을 구현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Sum의 테스트 예시
+                                    <ul class="list-unstyled">
+                                        <li>Calculator.sum(a,b)를 통해서 두수를 더한 값을 반환한다.</li>
+                                        <li>예시 값으로 임의의 값 사용 – a:4, b:5</li>
+                                        <li>assertTrue를 통해 result가9 인지 확인한다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_16-40-25.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_16-40-25.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트하고자 하는 메소드의 내용을 구현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>전체 메소드에 대해서 구현한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_16-41-54.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_16-41-54.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Test Suite 작성</h3>
+                        <div class="content">
+                            <p>메뉴바의 File → New → Other → JUnit선택 → JUnitTestSuite → Next</p>
+                            <ul class="list-unstyled">
+                                <li>Test클래스를 한데 묶어서 테스트(본 예시), 특정 메소드만 실행하거나 하지않을 때 사용한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_16-43-44.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_16-43-44.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트할 클래스를 선택 → Finish</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_16-44-53.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_16-44-53.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Test Suite 작성 결과</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_16-45-36.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_16-45-36.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>테스트 실행 및 결과</h3>
+                        <div class="content">
+                            <p>JUnit 테스트의 실행 : Test Case선택 → RUN → Run As → JUnit Test</p>
+                            <ul class="list-unstyled">
+                                <li>JUnit Test 실행화면 : 모든 단위테스트에 성공(녹색막대), 실패(붉은색 막대) 표시한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_16-46-33.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_16-46-33.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>JUnit 테스트 실행 화면</p>
+                            <ul class="list-unstyled">
+                                <li>테스트 메소드 옆에 성공한 테스트는 v 표, 실패한 테스트의 목록은 x 표로 표시한다.</li>
+                                <li>상단메뉴
+                                    <ul class="list-unstyled">
+                                        <li>Runs : 실행된 테스트의 개수이다.</li>
+                                        <li>Errors : 예외 상황이 발생한 테스트의 개수이다.</li>
+                                        <li>Failures: 실패한 테스트의 개수이다.</li>
+                                    </ul>
+                                </li>
+                                <li>상단 막대
+                                    <ul class="list-unstyled">
+                                        <li>빨간 막대 : 테스트 실패</li>
+                                        <li>초록 막대 : 테스트 성공</li>
+                                    </ul>
+                                </li>
+                                <li>Failure Trace
+                                    <ul class="list-unstyled">
+                                        <li>실패한 부분의 추적 정보를 보여준다.</li>
+                                        <li>실패한 테스트의 메소드 및 위치를 확인</li>
+                                        <li>실패메시지 선택 : 소스코드 위치로 이동</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_16-48-26.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_16-48-26.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>도구 기능</h3>
+                        <div class="content">
+                            <p>테스트 실행 메뉴 소개</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_16-49-57.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_16-49-57.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="활용예제" style="display: none;">
+                        <h3>예제 소개</h3>
+                        <div class="content">
+                            <p>예제 시스템 : 교통 신호등 프로그램을 구현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>교통 신호등 요구사항 : TDD(Test Driven Development)을 이용한 예제</li>
+                                <li>계산기 요구사항 : 빨강, 노랑, 초록 불을 가지고 있는 교통신호등 프로그램을 개발한다.</li>
+                            </ul>
+                            <p>신호등의 처음 상태는 빨간 불</p>
+                            <p>신호등의 상태 변화는 빨간 불, 빨간 불과 노란 불 동시에, 초록불, 노란불, 다시 빨간 불 순</p>
+                            <ul class="list-unstyled">
+                                <li>TDD는 정의된 요구사항을 기반으로 Test Case를 먼저 만들고, 이를 기반으로 구현한다.</li>
+                                <li>TDD는 처음부터 프로그램을 만드는 것이 아닌, 오류를 가정하고 오류를 해결해 나간다.
+                                    <ul class="list-unstyled">
+                                        <li>점차적으로 안정 된 프로그램을 만들어 가는 방식이다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>프로젝트 생성</h3>
+                        <div class="content">
+                            <p>요구사항 : “신호등의 처음 상태는 빨간 불”을 만족하는 코드를 작성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>File → New → Project → Java Project → Next</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-15-35.png"
+                                        data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-15-35.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Project 만들기 : TrafficLightModel</p>
+                            <ul class="list-unstyled">
+                                <li>Project name에 TrafficLightModel → Finish</li>
+                            </ul>
+
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-16-41.png"
+                                        data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-16-41.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>테스트 케이스 생성</h3>
+                        <div class="content">
+                            <p>패키지 생성 : TrafficLightmodel</p>
+                            <ul class="list-unstyled">
+                                <li>src 선택 → 오른쪽 버튼 선택 후 Package → Package이름을 Name으로 설정 → Finish</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-17-46.png"
+                                        data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-17-46.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Test Case생성 : TrafficLightmodelTest</p>
+                            <ul class="list-unstyled">
+                                <li>Trafficlightmodel 패키지선택 → New → JUnit Test Case → Finish</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-18-43.png"
+                                        data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-18-43.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Test Case 클래스에 테스트 할 내용을 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>“신호등의 처음 상태는 빨간 불”이라는 요구사항을 구현하기 위해, 테스트 케이스 중 assertEquals(true, a.getRed())를 통해서
+                                    검증한다.
+                                </li>
+                                <li>assertEquals(false, a.getYellow())와 assertEquals(false, a.getGreen())은 false로 설정함으로써
+                                    초기값이 노란색과 녹색이 아님을 검증한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-23-4.png"
+                                        data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-23-4.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>클래스 생성 : TrafficLightmodel&nbsp;</p>
+                            <ul class="list-unstyled">
+                                <li>TrafficLightmodel클래스가 존재하지 않기 때문에 좌측 화면과 같은 오류가 발생한다.</li>
+                                <li>Java 에디터에서 툴팁(전구) 아이콘 선택 → Create class ”TrafficLightmodel”을 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-24-35.png"
+                                        data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-24-35.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>TrafficLighmodel 클래스의 내용 작성 : 의도적 오류</p>
+                            <ul class="list-unstyled">
+                                <li>TestCase 클래스에서 getRed()를 true로 설정하였기 때문에, 요구사항이 정확히 구현되었는지 확인하기 위해서 Test 대상메소드를
+                                    false로
+                                    설정한다.
+                                </li>
+                                <li>False로 설정하였기에 이 메소드는 에러를 발생한다.</li>
+                                <li>발생된 에러를 통해 getRed()가 잘못 구현되었음을 알고, 그 결과를 바탕으로 getRed()를 수정한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-25-45.png"
+                                        data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-25-45.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>테스트 수행</h3>
+                        <div class="content">
+                            <p>테스트를 수행</p>
+                            <ul class="list-unstyled">
+                                <li>상단 메뉴바의 Run → Run As → JUnit Test</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-27-58.png"
+                                        data-lightbox="tab04-3">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-27-58.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>오류 수정</p>
+                            <ul class="list-unstyled">
+                                <li>JUnit뷰의 하단 Failure Trace부분을 선택한다.
+                                    <ul class="list-unstyled">
+                                        <li>테스트케이스 getRed() 호출 부분에 문제가 발생했다는 것을 알 수 있다.</li>
+                                        <li>커서를 접근 메소드 위로 옮겨 F3키를 눌러 구현부분 TrafficLightModel.java로 이동한다.</li>
+                                        <li>최초 요구사항인 “신호등의 초기 상태는 빨간 불”를 만족시키기 위해 getRed()의 리턴값이 true이여야 하므로 현재의 잘못된
+                                            리턴값인
+                                            false를 true로 변경한다.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-29-13.png"
+                                        data-lightbox="tab04-3">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-29-13.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트를 재 실행 : Run → Run As → JUnit Test</p>
+                            <ul class="list-unstyled">
+                                <li>실패 메시지 미 발생, 녹색 막대로 이상 없음을 표시한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/junit/image2018-10-18_17-35-23.png"
+                                        data-lightbox="tab04-3">
+                                    <img width="526"
+                                         src="../../../img/tool/junit/image2018-10-18_17-35-23.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 최상단 이동 btn -->
+            <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+    </main>
+    <!-- END main -->
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+<script src="../../../js/lightbox-plus-jquery.js"></script>
+</body>
+</html>

@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>프로덕트 품질지표</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">                         <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>                         <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>                         <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>                     </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a class="active on" href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a class="active on" href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <!-- START container -->
+        <div class="container">
+            <!-- START top-nav -->
+            <div class="top-nav">
+                <div class="container">
+                    <h1>StartUML</h1>
+                    <!-- breadcrumb -->
+                    <ol class="breadcrumb">
+                        <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                        <li><a href="../../tool/summary/summary01.html">개발도구</a></li>
+                        <li><a href="../../tool/all/startuml.html">설계/모델링</a></li>
+                        <li class="active">StartUML</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- END top-nav -->
+            
+            <div class="tab-nav-warp">
+                <ul class="tab-nav">
+                    <li><a href="javascript:;" class="active">개요</a></li>
+                    <li><a href="javascript:;">설치</a></li>
+                    <li><a href="javascript:;">주요기능</a></li>
+                    <li><a href="javascript:;">활용예제</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab-content">
+                    <div id="개요" style="">
+                        <h3>도구 소개</h3>
+                        <div class="content">
+                            <table class="table table-styled">
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width="30%">
+                                    <col width="20%">
+                                    <col width="30%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>도구명</th>
+                                    <th>StartUML<br/>(<a href="http://staruml.io/">http://staruml.io/</a>)
+                                    </th>
+                                    <th>라이센스</th>
+                                    <th>GPL</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th>소개</th>
+                                    <td colspan="3">UML 모델링도구로 Use Case Diagram, Class Diagram, Sequence Diagram등 다양한
+                                        Diagram을 간편한 UI를 이용하여 쉽고 빠르게 생성할 수 있도록 편리한 기능을 제공한다.</td>
+                                </tr>
+                                <tr>
+                                    <th>특징</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>UML 표준명세에 기반 모델 작성과 UML2.0 표기법을 지원</li>
+                                            <li>완전한 UML Profile 개념을 제공하여 플랫폼에 독립적인 모델을 작성할 수 있도록 지원</li>
+                                            <li>뛰어난 확장성과 유연성을 제공</li>
+                                            <li>심플한 인터페이스로 학습 및 사용이 용이하며 개발 효율을 높임</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 기능</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>Use Case Diagram • Class Diagram • Collaboration Diagram • Statechart
+                                                Diagram
+                                            </li>
+                                            <li>Activity Diagram • Sequence Diagram • Component Diagram • Deployment
+                                                Diagram
+                                            </li>
+                                            <li>Composite Diagram</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>실행 환경</th>
+                                    <td>Windows, Linux, MacOS</td>
+                                    <th>사전 설치 도구</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>카테 고리</th>
+                                    <td>설계 모델링</td>
+                                    <th>최신 버전</th>
+                                    <td>v3.0.2 (2018.08)</td>
+                                </tr>
+                                <tr>
+                                    <th>관련 도구</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>UMLet, VioletUMLEditor, Rational Rose, Together</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>주요 기능</h3>
+                        <div class="content">
+                            <p>UML 모델링 도구로 다양한 Diagram을 간편한 UI를 이용, 쉽고 빠르게 생성할 수 있도록 편리한 기능을 제공한다.</p>
+                            <div class="img-box">
+                                <a href="../../../img/tool/staruml/image2018-10-21_18-8-30.png"
+                                   data-lightbox="tab01-1">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-8-30.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="설치" style="display: none;">
+                        <h3>설치 환경</h3>
+                        <div class="content">
+                            <p>Windows XP / Windows 7(32-bit 프로그램으로 설치)</p>
+                            <p>독립적인 프로그램 (Eclipse 불필요)</p>
+                            <p>플러그인 아키텍처 제공으로 인한 개발환경 플러그-인으로 사용 가능하다.</p>
+                            <ul class="list-unstyled">
+                                <li>c++, java, c#, rose 등</li>
+                            </ul>
+                            <p>넓은 확장성으로 인한 넓은 사용 및 발전 가능성이 있다.</p>
+                            <ul class="list-unstyled">
+                                <li>Open API, Com-based plug-in Architecture, MFC와 J2EE등 모델 프레임워크를 지원한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-9-22.png"
+                                   data-lightbox="tab02-1">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-9-22.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>설치 단계</h3>
+                        <div class="content">
+                            <h4>1. StarUML 다운</h4>
+                            <div class="content">
+                                <p><a href="http://staruml.io/download">http://staruml.io/download</a>에 접속하여
+                                    StarUML 다운로드를 선택한다.</p>
+                                <div class="img-box">
+                                    <a
+                                       href="../../../img/tool/staruml/image2018-10-21_18-10-40.png"
+                                       data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/staruml/image2018-10-21_18-10-40.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h4>2. 설치</h4>
+                            <div class="content">
+                                <p>라이선스 및 사용자 약관을 확인 및 설치 위치, 시작메뉴를 지정한다.</p>
+                                <div class="img-box">
+                                    <a
+                                       href="../../../img/tool/staruml/image2018-10-21_18-11-29.png"
+                                       data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/staruml/image2018-10-21_18-11-29.png" alt=""/>
+                                    </a>
+                                </div>
+
+                                <div class="img-box">
+                                    <a
+                                       href="../../../img/tool/staruml/image2018-10-21_18-12-22.png"
+                                       data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/staruml/image2018-10-21_18-12-22.png" alt=""/>
+                                    </a>
+                                </div>
+
+                                <p>StarUML 설치 후 실행화면이다.</p>
+                                <div class="img-box">
+                                    <a
+                                       href="../../../img/tool/staruml/image2018-10-21_18-13-4.png"
+                                       data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/staruml/image2018-10-21_18-13-4.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="주요기능" style="display: none;">
+                        <h3>StarUML의 화면 소개</h3>
+                        <div class="content">
+                            <p>StarUML Editor은 아래 그림과 같이 6개 화면으로 구성되어있다.</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-14-12.png"
+                                   data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-14-12.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>공통 기능</h3>
+                        <div class="content">
+                            <p>StarUML 공통Tool Bar : 표준 도구 모음</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-15-26.png"
+                                   data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-15-26.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>StarUML 공통Tool Bar : 서식 도구 모음</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-16-7.png"
+                                   data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-16-7.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>StarUML 공통Tool Bar : 보기 도구 모음</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-16-37.png"
+                                   data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-16-37.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>StarUML 공통Tool Bar : 정렬 도구 모음</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-17-6.png"
+                                   data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-17-6.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>예제 소개</h3>
+                        <div class="content">
+                            <p>도구 기능 소개 예시 : 수강신청 시스템 구축</p>
+                            <ul class="list-unstyled">
+                                <li>수강신청 시스템 구축 요구사항 (일부)<br/>
+                                    <p>이 시스템은 수강 신청 페이지에 접속하여 수강 신청을 할 수 있도록 도와주는 것이다.<br>
+                                        시스템에 등록된 학교 학생이 수강 신청 페이지에 로그인 후 과목을 선택하고, 수업을 선택하여 잔여 좌석을 확인한다.<br>
+                                        만약, 잔여 좌석이 없을 경우 과목 선택부터 다시하고 잔여 좌석이 있을 경우 수강신청을 완료하게 된다.</p>
+                                </li>
+
+                                <li>수강신청 시스템의 구현 환경
+                                    <ul class="list-unstyled">
+                                        <li>운영체제환경
+                                            <ul class="list-unstyled inner">
+                                                <li>사용자는 PC 기반의 Windows XP를 운영체제로 사용한다.</li>
+                                                <li>Web Server, DB Server, Web Application Server는 Windows NT 기반의 운영체제를
+                                                    사용한다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>네트워크 환경
+                                            <ul class="list-unstyled inner">
+                                                <li>사용자와 Web Server간의 통신은 HTTP 방식을 사용한다.</li>
+                                                <li>사용자와 Web Application Server간의 통신은 TCP/IP 방식을 사용한다.</li>
+                                                <li>Web Server와 DB Server, DB Server와 Web Application Server간의 통신은
+                                                    TCP/IP 방식을 사용한다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>StarUML 사용하기</h3>
+                        <div class="content">
+                            <p>StarUML을 실행하고 새Project를 생성 : Test</p>
+                            <ul class="list-unstyled">
+                                <li>Approach는‘Default Approach’를 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-22-2.png"
+                                   data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-22-2.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>‘Default Approach’ 실행 결과</p>
+                            <ul class="list-unstyled">
+                                <li>기본적으로 5개의 모델에 대하여 UML 생성이 가능하다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-22-44.png"
+                                   data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-22-44.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Diagram 생성</p>
+                            <ul class="list-unstyled">
+                                <li>Model Explorer에서 각Diagram에 적합한 Model선정 → Add Diagram → Diagram선택 → 이름변경을 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-23-18.png"
+                                   data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-23-18.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>선택한 Diagram이 Model Explorer에 생성된다.</p>
+                            <p>Tool Box와 Main Window가 Diagram의 종류에 맞게 생성된다.</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-24-9.png"
+                                   data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-24-9.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Use Case Diagram 그리기</h3>
+                        <div class="content">
+                            <p>수강신청 시스템의 요구사항의 Use Case Diagram 표현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>대기 상태에서 수강 신청을 하기위해 수강신청 페이지에 접속한다.</li>
+                                <li>로그인을 하고 과목 목록을 확인한 뒤 과목을 선택한다.</li>
+                                <li>선택한 과목의 수업을 선택하면 수강 신청이 완료된다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-25-1.png"
+                                   data-lightbox="tab03-4">
+                                    <img width="250"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-25-1.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>수강신청 시스템의 요구사항의 Use Case Diagram 표현</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-25-40.png"
+                                   data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-25-40.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Use Case Diagram 그리기 : Diagram 생성</p>
+                            <ul class="list-unstyled">
+                                <li> Model Explorer &lt;&lt;usecaseModel&gt;&gt; Use Case Model 선택 → Add Diagram -&gt;
+                                    Use Case Diagram을 선택한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-26-15.png"
+                                   data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-26-15.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Actor를 식별</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 UseCase에서 Actor아이콘 선택 → 마우스로 크기지정 → Actor 이름을 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-26-46.png"
+                                   data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-26-46.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Use Case를 식별</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 UseCase에서 UseCase아이콘 선택 → 마우스로 크기지정 → Use Case 이름을 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-27-20.png"
+                                   data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-27-20.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Use case 추가 작성</p>
+                            <ul class="list-unstyled">
+                                <li>수강신청하기, 수강신청 취소하기, 수강인원 확인하기, 로그인 Use case를 추가한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-28-1.png"
+                                   data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-28-1.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>연관관계 표시</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 UseCase에서 Association 선택 → Actor와 UseCase 마우스 연결한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-28-36.png"
+                                   data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-28-36.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Include관계를 표시</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 UseCase에서 Include 선택 → Use Case와Use Case 마우스로 연결한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-29-41.png"
+                                   data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-29-41.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Class Diagram 그리기</h3>
+                        <div class="content">
+                            <p>수강신청시스템의 요구사항의 Class Diagram 표현하기</p>
+                            <ul class="list-unstyled">
+                                <li>학교는 0명 이상의 학생으로 구성된 집합연관, 학생은 여러 수업을, 수업은 여러 명의 학생을 수용할 수 있는 다대다 관계 교수 한 명당 0개 이상의
+                                    수업을 담당한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-31-2.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-31-2.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Class Diagram Tool Bar</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-31-45.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-31-45.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-32-17.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-32-17.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Use Case Diagram 그리기 : Diagram 생성</p>
+                            <ul class="list-unstyled">
+                                <li>Model Explorer의&lt;&lt;designModel&gt;&gt; Design Model 선택 → Add Diagram -&gt; Class
+                                    Diagram을 선택한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-32-54.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-32-54.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>시스템을 구성하는 학교클래스 표현</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Class에서 Class아이콘 → 마우스로 Class 크기지정 → Class 이름을 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-33-29.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-33-29.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>학교Class에 Attributes입력</p>
+                            <ul class="list-unstyled">
+                                <li>학교Class 선택 → 마우스 오른쪽 버튼 → Collection Editor… → Attributes 탭 → Insert 아이콘 →<br/>
+                                    Edit 선택 → 마우스오른쪽버튼 → Name 변경한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-34-4.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-34-4.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>학교Class에 Operations입력</p>
+                            <p>학교Class 선택 → 마우스오른쪽버튼 → Collection Editor… → Operations 탭 → Insert → Edit → 마우스오른쪽 버튼 →
+                                Name 변경한다.</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-34-51.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-34-51.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>학교 Class 생성 방법을 참고로 교수, 수업, 학생Class를 생성한다.</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-35-32.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-35-32.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>클래스간의 관계를 표현 : 집합 연관관계(한 클래스가 다른 클래스를 포함하는 관계)</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Class에서 Aggregation → Class와 Class 마우스로 연결(드래그)한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-36-5.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-36-5.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>클래스간의 관계를 표현 : 연관관계(한 클래스와 다른 클래스가 연관 관계가 있음)</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Class에서 Association → Class와 Class 마우스로 연결(드래그)한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-36-57.png"
+                                   data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-36-57.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Sequence Diagram 그리기</h3>
+                        <div class="content">
+                            <p>수강신청시스템의 요구사항의 Sequence Diagram 표현</p>
+                            <ul class="list-unstyled">
+                                <li>대기상태에서 수강신청을 하기 위해 수강신청 페이지에 접속한다.</li>
+                                <li>로그인을 하고 과목 목록을 확인한 뒤 과목을 선택한다.</li>
+                                <li>선택한 과목의 수업을 선택하면 수강신청이 완료된다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-38-2.png"
+                                   data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-38-2.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Sequence Diagram Tool Bar</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-38-45.png"
+                                   data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-38-45.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Sequence Diagram 그리기 : Diagram생성</p>
+                            <ul class="list-unstyled">
+                                <li>Model Explorer의 &lt;&lt;analysisModel&gt;&gt; Analysis Model → 마우스오른쪽버튼 → Add
+                                    Diagram → Sequence Diagram을 선택한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-39-20.png"
+                                   data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-39-20.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>상호작용에 참여하는 개체들을 표시</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Sequence에서 Object 아이콘 → 마우스로 크기지정 → 이름을 입력한다. </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-40-7.png"
+                                   data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-40-7.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>상호 작용에 참여하는 개체들을 표시</p>
+                            <ul class="list-unstyled">
+                                <li>Student Object 생성하는 방법을 참고하여 Login, application, application
+                                    management 개체를 표시한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-41-22.png"
+                                   data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-41-22.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>다른 객체로의 제어흐름의 이동과 호출 메소드를 표시</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Sequence에서 Stimulus아이콘 → Object와 Object선택 → Stimulus이름울 입력한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-42-0.png"
+                                   data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-42-0.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>다른 객체로의 제어흐름의 이동과 호출 메소드를 표시</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Sequence에서 Stimulus아이콘 → Object와 Object선택 → Stimulus이름을 입력한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-42-40.png"
+                                   data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-42-40.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                        <h3>Activity Diagram 그리기</h3>
+                        <div class="content">
+                            <p>수강신청 시스템의 요구사항의 Activity Diagram 표현</p>
+                            <ul class="list-unstyled">
+                                <li>수강신청 페이지에 접속하여 과목을 선택 한 뒤 수업을 선택하여 잔여 좌석을 확인한다.</li>
+                                <li>잔여 좌석이 없을경우 과목 선택부터 다시 시작한다.</li>
+                                <li>잔여 좌석이 있을경우 수업 등록을 하고 완료한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-43-48.png"
+                                   data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-43-48.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Activity Diagram Tool Bar</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-44-26.png"
+                                   data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-44-26.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Activity Diagram 그리기 : Diagram생성</p>
+                            <ul class="list-unstyled">
+                                <li>Model Explorer의 각 Diagram에 적합한 Model선정 → 오른쪽버튼 → Add Diagram → Activity Diagram를 선택한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-45-18.png"
+                                   data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-45-18.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>객체의 상태 변화가 시작됨을 알린다.</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Activity에서 InitialState아이콘 → 마우스로 크기를 조절한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-45-56.png"
+                                   data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-45-56.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>작업을 알림</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Activity에서 ActionState아이콘 → 마우스로 크기지정 → ActionState 내용을 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-46-30.png"
+                                   data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-46-30.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>하나의 상태에서 다른 상태로 변화되는 것을 표현</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Activity에서 Transition아이콘 → 위에서 아래로 드래그한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-47-4.png"
+                                   data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-47-4.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>ActionState과 Transition 생성 방법을 참고하여 작성한다.</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-47-35.png"
+                                   data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-47-35.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>논리식의 결과값에 따라 분기가 일어나는 곳을 표현</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Activity에서 Decision선택 → 마우스로 크기를 설정한다.</li>
+                                <li>Toolbox의 Activity에서 Transition선택 → 분기가 일어나는 곳과 Decision 부분을 연결한다. (EX : 과목선택)</li>
+                                <li>이어준 선을 선택하여 내용을 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-48-11.png"
+                                   data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-48-11.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>객체의 상태 변화가 끝나게됨을 알림</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Activity에서 FinalState아이콘 → 마우스로 크기를 지정한다.</li>
+                                <li>Toolbox의 Activity에서 Transition아이콘 → 위에서 아래로 드래그한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-48-55.png"
+                                   data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-48-55.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Statechart Diagram 그리기</h3>
+                        <div class="content">
+                            <p>수강신청 시스템의 요구사항의 Statechart Diagram 표현은 다음과 같다.</p>
+                            <ul class="list-unstyled">
+                                <li>대기 상태에서 수강 신청을 하기 위해 수강신청 페이지에 접속한다.</li>
+                                <li>로그인을 하고 과목 목록을 확인한 뒤 과목을 선택한다.</li>
+                                <li>선택한 과목의 수업을 선택하면 수강 신청이 완료된다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-50-32.png"
+                                   data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-50-32.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Statechart Diagram Tool Bar</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-51-13.png"
+                                   data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-51-13.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Statechart Diagram그리기 : Diagram 생성</p>
+                            <ul class="list-unstyled">
+                                <li>Model Explorer의 각 Diagram에 적합한 Model 선정 → 오른쪽버튼 → Add Diagram → Statechart
+                                    Diagram을 선택한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-51-55.png"
+                                   data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-51-55.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>객체의 상태 변화가 시작됨을 알린다.</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Statechart에서 InitialState아이콘 → 마우스로 크기를 지정한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-52-29.png"
+                                   data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-52-29.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>객체의 상태를 표현</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Statechart에서 State아이콘 → 마우스로 State 크기지정 → State 내용을 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-53-9.png"
+                                   data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-53-9.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>State 생성 방법을 참고하여 과목 목록 확인, 수업 목록 확인 객체의 상태를 표현한다.</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-53-45.png"
+                                   data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-53-45.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>하나의 상태에서 다른 상태로 변화되는 것을 표현</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Statechart에서 Transition아이콘 → 연결할 State와 State를 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-54-48.png"
+                                   data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-54-48.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>객체의 상태 변화가 끝나게 됨을 알림</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Statechart에서 FinalState아이콘 → 마우스로 크기를 지정한다.</li>
+                                <li>Toolbox의 Statechart에서 Transition아이콘 → State와 FinalState 연결한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-55-40.png"
+                                   data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-55-40.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>객체의 상태 변화를 표현</p>
+                            <ul class="list-unstyled">
+                                <li>화살표 선택 → 더블클릭 → 해당내용입력</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-56-19.png"
+                                   data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-56-19.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Collaboration Diagram 그리기</h3>
+                        <div class="content">
+                            <p>수강신청 시스템의 요구사항의 Collaboration Diagram표현</p>
+                            <ul class="list-unstyled">
+                                <li>수강신청 페이지에 접속하여 과목을 선택 한 뒤 수업을 선택하여 잔여 좌석을 확인한다.</li>
+                                <li>잔여 좌석이 없을경우 과목 선택부터 다시 시작한다.</li>
+                                <li>잔여 좌석이 있을경우 수업 등록을 하고 완료한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-57-38.png"
+                                   data-lightbox="tab03-9">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-57-38.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Collaboration Diagram Tool Bar</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-58-7.png"
+                                   data-lightbox="tab03-9">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-58-7.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Collaboration Diagram그리기 : Diagram생성</p>
+                            <ul class="list-unstyled">
+                                <li>Model Explorer의 각Diagram에 적합한 Model 선정 → 오른쪽버튼 → Add Diagram →
+                                    Collaboration Diagram을 선택한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-58-52.png"
+                                   data-lightbox="tab03-9">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-58-52.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>객체를 생성</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Collaboration에서 Object아이콘 → 마우스로 Object 크기 지정 → Object
+                                    내용을 입력한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_18-59-37.png"
+                                   data-lightbox="tab03-9">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_18-59-37.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>객체 생성하는 방법을 참고하여 과목선택, 수업선택, 수강처리, 수강인원확인, 수강완료 객체를 생성한다.</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-0-10.png"
+                                   data-lightbox="tab03-9">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-0-10.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>객체 사이의 링크를 생성</p>
+                            <ul class="list-unstyled">
+                                <li>Toolbox의 Collaboration에서 Link아이콘 → 연결할 Link와 Link사이를 드래그한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-0-44.png"
+                                   data-lightbox="tab03-9">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-0-44.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Link의 상태 변화를 표현</p>
+                            <ul class="list-unstyled">
+                                <li>Link 선택 더블클릭 → 해당내용입력</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-1-20.png"
+                                   data-lightbox="tab03-9">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-1-20.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="활용예제" style="display: none;">
+                        <h3>예제 소개</h3>
+                        <div class="content">
+                            <p>예제 시스템 : 생산관리시스템</p>
+                            <ul class="list-unstyled">
+                                <li>생산 관리 요구사항(일부)<br/>
+                                    <p>업무 담당자는 시스템에 접속하여 발주, 매입, 매출, 회계, 재고, 기준정보 관리가 가능하다.</p>
+                                    <p>승인자는 발주와 매입에 대한 승인을 하며, 시스템 관리자는 매출, 회계, 재고, 기준정보에</p>
+                                    <p>대한 시스템 관리를 수행한다.</p>
+                                    <p>발주가 등록되면 발주를 위한 준비를하여 재고여부 조사 후 상품을 배송한다.</p>
+                                </li>
+                                <li>생산 관리 시스템의 구현 환경
+                                    <ul class="list-unstyled">
+                                        <li>운영체제환경
+                                            <ul class="list-unstyled">
+                                                <li>사용자는 PC 기반의 Windows XP를 운영체제로 사용</li>
+                                                <li>Web Server, DB Server, Web Application Server는 Windows NT 기반의 운영체제를
+                                                    사용한다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>네트워크 환경
+                                            <ul class="list-unstyled">
+                                                <li>사용자와 Web Server간의 통신은 HTTP 방식을 사용한다.</li>
+                                                <li>사용자와 Web Application Server간의 통신은 TCP/IP 방식을 사용한다.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Web Server와 DB Server, DB Server와 Web Application Server간의 통신은 TCP/IP 방식을 사용한다.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>Use Case Diagram</h3>
+                        <div class="content">
+                            <p>생산관리시스템의 요구사항을 UseCase로 표현한다.</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-3-59.png"
+                                   data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-3-59.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>사용자인 업무 담당자자의 표현 : Actor</p>
+                            <ul class="list-unstyled">
+                                <li>Tool Bar에서 Actor 선택 → Main Window 영역에서 마우스왼쪽 버튼 → ‘업무담당자’를 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-4-45.png"
+                                   data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-4-45.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>발주관리 기능을 UseCase로 표현</p>
+                            <ul class="list-unstyled">
+                                <li>Tool Bar에서 UseCase 선택 → Main Window 영역에서 마우스 왼쪽 버튼 → ‘발주관리’를 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-5-19.png"
+                                   data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-5-19.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>업무담당자 Actor와 발주관리 UseCase의 관계를 표현</p>
+                            <ul class="list-unstyled">
+                                <li>Tool Bar에서 DirectedAssociation 선택 → Main Window 영역에서 마우스 왼쪽 버튼
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-5-50.png"
+                                   data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-5-50.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>매입관리, 매출관리 기능들에 대해서도 앞서 확인한 바와 같이 UseCase를 추가하고, 관계를 표현한다.</p>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-6-26.png"
+                                   data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-6-26.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>승인자와 시스템관리자 Actor를 생성하고, 관련 UseCase와의 관계를 통해 UseCase Diagram을 완성한다.</p>
+
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-6-57.png"
+                                   data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-6-57.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Class Diagram</h3>
+                        <div class="content">
+                            <p>생산 관리 시스템 요구사항을 Class Diagram으로 표현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>이전 Class Diagram Chapter 참조한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-7-35.png"
+                                   data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-7-35.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Sequence Diagram</h3>
+                        <div class="content">
+                            <p>생산 관리 시스템 요구사항을 Sequence Diagram으로 표현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>이전 Sequence Diagram Chapter 참조한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-8-16.png"
+                                   data-lightbox="tab04-3">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-8-16.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Collaboration Diagram</h3>
+                        <div class="content">
+                            <p>생산 관리 시스템 요구사항을 Collaboration Diagram으로 표현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>이전 Collaboration Diagram Chapter 참조한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-9-2.png"
+                                   data-lightbox="tab04-4">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-9-2.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Activity Diagram</h3>
+                        <div class="content">
+                            <p>생산 관리 시스템 요구사항을 Activity Diagram으로 표현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>이전 Activity Diagram Chapter 참조한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-9-45.png"
+                                   data-lightbox="tab04-5">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-9-45.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Statechart Diagram</h3>
+                        <div class="content">
+                            <p>생산 관리 시스템 요구사항을 Statechart Diagram으로 표현한다.</p>
+                            <ul class="list-unstyled">
+                                <li>이전 Activity Diagram Chapter 참조한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                   href="../../../img/tool/staruml/image2018-10-21_19-10-42.png"
+                                   data-lightbox="tab04-6">
+                                    <img width="526"
+                                         src="../../../img/tool/staruml/image2018-10-21_19-10-42.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 최상단 이동 btn -->
+            <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+    </main>
+    <!-- END main -->
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+<script src="../../../js/lightbox-plus-jquery.js"></script>
+</body>
+</html>

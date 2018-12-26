@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>프로덕트 품질지표</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a>
+                                        </li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항
+                                            체크리스트</a></li>
+                                        <li><a href="../../quality/assurance/testinspection_standard01.html">테스트
+                                            체크리스트</a></li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a>
+                                        </li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic
+                                            개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a>
+                                        </li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile
+                                            방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li>
+                                            <a href="../../download/company/international_development.html">대외SW개발방법론</a>
+                                        </li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../tool/summary/summary01.html">개요</a>
+                <li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a class="active on" href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a class="active on" href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a></li>
+                        <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <!-- START container -->
+        <div class="container">
+            <!-- START top-nav -->
+            <div class="top-nav">
+                <div class="container">
+                    <h1>Jmeter</h1>
+                    <!-- breadcrumb -->
+                    <ol class="breadcrumb">
+                        <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                        <li><a href="../../tool/summary/summary01.html">개발도구</a></li>
+                        <li><a href="../../tool/all/jmeter.html">부하테스트</a></li>
+                        <li class="active">Jmeter</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- END top-nav -->
+
+            <div class="tab-nav-warp">
+                <ul class="tab-nav">
+                    <li><a href="javascript:;" class="active">개요</a></li>
+                    <li><a href="javascript:;">설치</a></li>
+                    <li><a href="javascript:;">주요기능</a></li>
+                    <li><a href="javascript:;">활용예제</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab-content">
+                    <div id="개요" style="">
+                        <h3>도구 소개</h3>
+                        <div class="content">
+                            <table class="table table-styled">
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width="30%">
+                                    <col width="20%">
+                                    <col width="30%">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>도구명</th>
+                                    <th>Jmeter<br/>(<a href="http://jmeter.apache.org/">http://jmeter.apache.org/</a>)
+                                    </th>
+                                    <th>라이센스</th>
+                                    <th>APL2</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th>소개</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>부하 테스트 및 성능 측정을 위해서 개발된 100% 순수 자바 애플리케이션이다.</li>
+                                            <li>HTTP를 사용하여 사이트의 부하를 테스트 할 수 있으므로 정적이거나 동적인 자원 (파일, 서블릿, 자바객체들, 데이터베이스
+                                                등)에
+                                                대해서 테스트하는데 사용된다.
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>특징</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>HTTP, FTP, SMTP, POP3, LDAP, JMS, SOAP, TCP 등 다양한 프로토콜 지원</li>
+                                            <li>완벽한 Multi Threading 프레임 워크 지원</li>
+                                            <li>다수의 Thread가 동시에 테스트 데이터를 추출</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 기능</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>정적, 동적인 웹 페이지 부하 및 성능 테스트</li>
+                                            <li>Response Assertion</li>
+                                            <li>Duration Assertion</li>
+                                            <li>Size Assertion</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>실행 환경</th>
+                                    <td>Windows, Linux, MacOS</td>
+                                    <th>사전 설치 도구</th>
+                                    <td>Java 8 이상</td>
+                                </tr>
+                                <tr>
+                                    <th>카테 고리</th>
+                                    <td>웹 부하 테스트</td>
+                                    <th>최신 버전</th>
+                                    <td>v5.0 (2018.09)</td>
+                                </tr>
+                                <tr>
+                                    <th>관련 도구</th>
+                                    <td colspan="3">
+                                        <ul class="list-unstyled">
+                                            <li>Grinder, nGrinder, Gatling, TSung</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>주요 기능</h3>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li>HTTP, FTP, SMTP, POP3, LDAP, JMS, SOAP, TCP 등 다양한 프로토콜로 원격의 목적지 서버 및 웹 페이지를 대상으로 부하
+                                    테스트
+                                    수행
+                                </li>
+                                <li>멀티쓰레드 기반 샘플링</li>
+                                <li>테스트 녹화 및 테스트 결과 시각화</li>
+                            </ul>
+                            <div class="img-box">
+                                <a href="../../../img/tool/jmeter/image2018-10-21_12-25-11.png"
+                                   data-lightbox="tab01-1">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-25-11.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="설치" style="display: none;">
+                        <h3>설치 환경</h3>
+                        <div class="content">
+                            <p>Windows의 경우 아래와 같이 Command창에서 ‘java –version’을 실행하여 설치된 JDK 설치
+                                여부를 확인한다.</p>
+                            <p>Java 8.0 이상을 권장한다.</p>
+                            <div class="img-box">
+                                <a href="../../../img/tool/jmeter/image2018-10-21_12-27-52.png"
+                                   data-lightbox="tab02-1">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-27-52.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>설치 단계</h3>
+                        <div class="content">
+                            <h4>1. JMeter 다운</h4>
+                            <div class="content">
+                                <p>다음의 사이트에서 JMeter를 다운 받는다.</p>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="http://jmeter.apache.org/index.html">http://jmeter.apache.org/index.html</a>
+                                    </li>
+                                </ul>
+                                <p>왼쪽 Download에서 Download Release를 선택한다.</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/jmeter/image2018-10-21_12-29-21.png"
+                                            data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/jmeter/image2018-10-21_12-29-21.png" alt=""/>
+                                    </a>
+                                </div>
+
+                                <p>Binary 부분에서 Windows용 JMeter를 다운받는다.</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/jmeter/image2018-10-21_12-31-20.png"
+                                            data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/jmeter/image2018-10-21_12-31-20.png" alt=""/>
+                                    </a>
+                                </div>
+
+                                <p>다운받은 파일 압축을 해제한다.</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/jmeter/image2018-10-21_12-32-11.png"
+                                            data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/jmeter/image2018-10-21_12-32-11.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+                            <h4>2. JMeter 설치</h4>
+                            <div class="content">
+                                <p>JMeter 실행</p>
+                                <ul class="list-unstyled">
+                                    <li>bin/jmeter.bat 파일을 실행한다.</li>
+                                </ul>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/jmeter/image2018-10-21_12-33-2.png"
+                                            data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/jmeter/image2018-10-21_12-33-2.png" alt=""/>
+                                    </a>
+                                </div>
+
+                                <p>jmeter.bat 파일을 선택하면 다음과 같이 JMeter의 메인 화면이 보인다.</p>
+                                <div class="img-box">
+                                    <a
+                                            href="../../../img/tool/jmeter/image2018-10-21_12-33-46.png"
+                                            data-lightbox="tab02-2">
+                                        <img width="526"
+                                             src="../../../img/tool/jmeter/image2018-10-21_12-33-46.png" alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="주요기능" style="display: none;">
+                        <h3>예제 소개</h3>
+                        <div class="content">
+                            <p>JMeter의 기능을 확인하기 위해 아래 예제를 기반으로 기능을 확인한다.</p>
+                            <p>간단한 HTML 페이지를 사용하여 아래의 기능을 소개한다.</p>
+                            <ul class="list-unstyled">
+                                <li>웹 페이지 접속 가능 여부 확인 테스트 기능</li>
+                                <li>웹 페이지 부하 테스트 기능</li>
+                                <li>응답 결과를 검증하기 위한 Assertion 기능</li>
+                            </ul>
+                            <p>테스트를 위해 Apache 웹 서버를 구축한 후 테스트용 웹 페이지를 Apache 서버에 올려 테스트를 진행한다.</p>
+                            <p>테스트 웹 페이지는 Restaurant에 대한 정보를 입력하는 페이지이며 웹 페이지는 다음과 같이 구성된다.</p>
+                            <ul class="list-unstyled">
+                                <li>Restaurant Name</li>
+                                <li>Restaurant Type</li>
+                                <li>Location</li>
+                                <li>Credit Cards 사용가능 유/무</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-36-14.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-36-14.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트용 웹 페이지의 HTML 코드이다.</p>
+                            <ul class="list-unstyled">
+                                <li>파일명은 form.html</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-37-4.png"
+                                        data-lightbox="tab03-1">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-37-4.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>웹 페이지 접속 가능 여부 확인 테스트 기능</h3>
+                        <div class="content">
+                            <p>테스트 플랜을 작성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>테스트 플랜은 JMeter가 수행할 일련의 실행 코드의 집합이다.</li>
+                                <li>JMeter를 사용한 테스트는 이 실행 코드 집합을 알맞게 조합하는 것으로 표현한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-37-54.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-37-54.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Thread Group을 만든다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group이란 테스트 플랜이 수행할 하나의 Group</li>
+                                <li>왼쪽 Test Plan에서 우 선택 → Add → Threads (Users) → Thread Group 선택</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-38-39.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-38-39.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Thread Group 생성 후 오른쪽에 나오는 항목들을 작성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Name : Thread Group의 이름을 입력한다.</li>
+                                <li>Action to be taken after a sampler error : 테스트 수행 중 에러가 발생될 때의 상황을 설정한다.</li>
+                                <li>Thread Properties</li>
+                            </ul>
+                            <p>Number of Threads : 이 Thread Group에 생성될 Thread의 개수(가상 사용자의 수)를 지정한다.</p>
+                            <p>Ramp-up Period : 한 Thread가 시작한 후 다음 Thread가 시작될 때 까지의 대기 시간을 지정한다.</p>
+                            <p>Loop Count : 각 Thread가 Thread Group에 속한 작업의 반복 횟수를 지정한다.</p>
+                            <p>Scheduler : Thread Group의 시작 및 종료 스케줄을 설정할 것 인지 체크한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-39-34.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-39-34.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>HTTP Request Defaults를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group에서 마우스 우 선택 → Add → Config Element → Http Request Defaults</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-40-12.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-40-12.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <div class="img-box">
+                                <img src="../../../img/tool/jmeter/image2018-10-21_12-40-12.png" width="526" alt=""/>
+                            </div>
+
+                            <p>Http Request Defaults는 Config Element에 속한 요소로서 관련된 Http Requests가 사용할 기본 정보를 지정한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Http Request Defaults는 그 자체적으로 어떤 기능도 수행하지 않는다.</li>
+                                <li>Http Request Defaults는 관련 영역에 있는 모든 Http Requests 요소에 영향을 준다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-42-5.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-42-5.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request를 추가한다.</p>
+                            <p>Http Request 요소는 HTTP 요청을 서버에 전송하여 그 결과를 받아오는 부분이다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group에서 우 선택 → Add → Sampler → HTTP Request 선택</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-45-44.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-45-44.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request의 입력 정보이다.</p>
+                            <ul class="list-unstyled">
+                                <li>입력하지 않은 정보는 앞에서 작성한 Http Request Defaults에 작성된 내용이 반영된다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-46-25.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-46-25.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트 결과를 출력해 주는 Listener를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>테스트 결과를 출력하는 Listener로서 View Results Tree를 사용한다.</li>
+                                <li>Thread Group선택 후 마우스 우 선택 → Add → Listener → View Results Tree 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-47-7.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-47-7.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트를 실행한다.</p>
+                            <ul class="list-unstyled">
+                                <li>메뉴 바의 Run → Start</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-47-57.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-47-57.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Start를 선택 후 왼쪽 트리에서 View Results Tree를 선택한 다음 오른쪽에서 HTTP Request를 선택하면 테스트 결과가 출력된다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-48-44.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-48-44.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트 결과</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-49-24.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-49-24.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트 실패 시에는 다음과 같은 결과 출력된다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-49-57.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-49-57.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Request탭을 누르면 다음과 같은 화면 표시</p>
+                            <ul class="list-unstyled">
+                                <li>Request탭은 사용자가 테스트를 위해서 요청한 내용이 표시된다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-50-29.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-50-29.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Response data 탭을 누르면 다음과 같은 화면이 표시된다.</p>
+                            <ul class="list-unstyled">
+                                <li>Response data 탭은 응답한 data가 표시된다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-51-3.png"
+                                        data-lightbox="tab03-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-51-3.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>웹 페이지 부하 테스트 기능</h3>
+                        <div class="content">
+                            <p>부하 테스트란, 서비스가 작동될 서버에 의도적으로 일정량의 트래픽을 발생시켜 서버가 다운되지 않고 정상적으로 작동되는지를 테스트 하는것을 말한다.</p>
+                            <p>처음에 할 일은 테스트 플랜을 작성하는 것이다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-51-50.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-51-50.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Thread Group을 생성한다.</p>
+                            <p>Thread Group이란 테스트 플랜이 수행할 하나의 Group을 말한다.</p>
+                            <ul class="list-unstyled">
+                                <li>왼쪽 Test Plan에서 우 선택 → Add → Threads (Users) → Thread Group을 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-52-32.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-52-32.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>오른쪽에 나오는 항목들을 작성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>부하 테스트를 위해서 Loop Count 부분에서 10000을 입력한다.</li>
+                            </ul>
+                            <p>Loop Count는 웹 페이지 접속 횟수를 뜻한다.</p>
+                            <p>본 예제에서는 Loop Count에 10000을 입력하였으므로, 웹 페이지에 10000번 접속한다는 것이다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-53-20.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-53-20.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request Defaults를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Config Element → Http Request Defaults</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-53-52.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-53-52.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>아래의 항목들을 작성한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-54-32.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-54-32.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group에서 우 선택 → Add → Sampler → HTTP Request 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-55-15.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-55-15.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request의 입력 정보</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-56-4.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-56-4.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트 결과를 출력해 주는 Listener를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>2개의 Listener를 추가한다.</li>
+                            </ul>
+                            <p>View Results Tree</p>
+                            <p>Graph Results</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Listener → View Results Tree 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-56-47.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-56-47.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Thread Group선택 후 마우스 우 선택 → Add → Listener → Graph Results 선택한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-57-18.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-57-18.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>마지막으로 해야 할 일은 테스트를 실행하는 것이다.</p>
+                            <ul class="list-unstyled">
+                                <li>메뉴 바의 Run → Start</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-57-51.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-57-51.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Start 선택 후 왼쪽 트리에서 View Results Tree를 선택한다.</p>
+                            <ul class="list-unstyled">
+                                <li>선택 후 오른쪽에서 HTTP Request를 선택하면 테스트 결과가 출력된다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-58-30.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-58-30.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>왼쪽 트리에서 Graph Results를 선택하면 아래와 같은 화면이 출력된다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_12-59-10.png"
+                                        data-lightbox="tab03-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_12-59-10.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Response Assertion 테스트 기능</h3>
+                        <div class="content">
+                            <p>Response Assertion이란 해당 요청의 응답 결과가 지정한 문자열을 포함하고 있는 지의 여부를 검증할 때 사용하는 기능이다.</p>
+                            <p>처음에 할 일은 테스트 플랜을 작성하는 것이다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-0-40.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-0-40.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Thread Group을 생성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Test Plan에서 우 선택 → Add → Threads (Users) → Thread Group을 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-1-26.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-1-26.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>오른쪽에 나오는 항목들을 작성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Loop Count 부분에서 1을 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-2-6.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-2-6.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request Defaults를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Config Element → Http Request Defaults</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-2-36.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../img/tool/jmeter/image2018-10-21_13-2-36.pngg" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>아래의 항목들을 작성한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-3-12.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-3-12.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group에서 우 선택 → Add → Sampler → HTTP Request 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-3-47.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-3-47.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request의 정보를 입력한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Http Request에 작성되지 않는 부분은 자동으로 Http Request Defaults에 작성된 내용으로 대체된다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-4-39.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-4-39.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Response Assertion을 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Assertions → Response Assertion 수행한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-5-27.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-5-27.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Response Assertion 항목들을 입력한다.</p>
+                            <p>검사할 문자열을 입력한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Add 버튼 선택 → Pattern to Test에 검사할 문자열을 입력한다.</li>
+                                <li>본 자료에서는 테스트 웹 페이지에 Hong Gil Dong이라는 단어가 존재하는지 검사한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-6-14.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-6-14.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Assertion 테스트 결과를 보기 위해서 Listener를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Listener →Assertion Results 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-6-48.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-6-48.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>마지막으로 해야 할 일은 테스트를 실행하는 것이다.</p>
+                            <ul class="list-unstyled">
+                                <li>메뉴 바의 Run → Start</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-7-23.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-7-23.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트 실행 후 왼쪽 Assertion Results를 선택하면 다음과 같은 화면이 출력 된다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-7-58.png"
+                                        data-lightbox="tab03-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-7-58.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Duration Assertion 테스트 기능</h3>
+                        <div class="content">
+                            <p>Duration Assertion이란 Http Request가 지정한 시간 내에 응답 결과를 리턴하는지 여부를 검증한다.</p>
+                            <p>처음에 할 일은 테스트 플랜을 작성하는 것이다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-8-43.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-8-43.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Thread Group을 생성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>왼쪽 Test Plan 선택 후 마우스 우 선택 → Add → Threads(Users) → Thread Group</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-9-20.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-9-20.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>오른쪽에 나오는 항목들을 작성한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-9-53.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-9-53.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <ul class="list-unstyled">
+                                <li>테스트를 한 번 수행한다는 의미로 Loop Count 부분에서 1을 입력한다.</li>
+                            </ul>
+
+                            <p>오른쪽에 나오는 항목들을 작성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>테스트를 한 번 수행한다는 의미로 Loop Count 부분에서 1을 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-10-36.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-10-36.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request Defaults를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Config Element → Http Request Defaults</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-12-10.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-12-10.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>아래의 항목들을 작성한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-12-57.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-12-57.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group에서 우 선택 → Add → Sampler → HTTP Request 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-13-29.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-13-29.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request의 정보를 입력한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Http Request에 작성되지 않는 부분은 자동으로 Http Request Defaults에 작성된 내용으로 대체한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-14-5.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-14-5.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Duration Assertion을 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Assertions → Duration Assertion을 수행한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-14-42.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-14-42.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Duration Assertion 항목을 입력한다.</p>
+                            <p>Duration Assertion 부분에 원하는 시간을 Milliseconds 단위로 입력한다.</p>
+                            <ul class="list-unstyled">
+                                <li>본 매뉴얼에서는 원하는 시간으로 10 milliseconds로 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-15-19.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-15-19.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Assertion 테스트 결과를 보기 위해 Listener를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Listener → Assertion Results 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-15-51.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-15-51.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>마지막으로 해야 할 일은 테스트를 실행한다.</p>
+                            <ul class="list-unstyled">
+                                <li>메뉴 바의 Run → Start</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-16-24.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-16-24.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트 실행 후 왼쪽 Assertion Results를 선택하면 다음과 같은 화면 출력된다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-17-7.png"
+                                        data-lightbox="tab03-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-17-7.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Size Assertion 테스트 기능</h3>
+                        <div class="content">
+                            <p>Size Assertion이란 웹 페이지의 크기가 원래 목표한 웹 페이지의 크기를 준수하고 있는지를 확인하는 기능이다.</p>
+                            <p>처음에 할 일은 테스트 플랜을 작성하는 것이다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-18-6.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-18-6.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Thread Group을 생성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>왼쪽 Test Plan 선택 후 마우스 우 선택 → Add → Threads(Users) → Thread Group</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-18-53.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-18-53.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>오른쪽에 나오는 항목들을 작성한다.</p>
+                            <ul class="list-unstyled">
+                                <li>테스트를 한 번 수행한다는 의미로 Loop Count 부분에서 1을 입력한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-19-34.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-19-34.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request Defaults를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Config Element → Http Request Defaults</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-20-10.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-20-10.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>아래의 항목들을 작성한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-21-11.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-21-11.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group에서 우 선택 → Add → Sampler → HTTP Request 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-21-41.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-21-41.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request의 정보를 입력한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-22-15.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-22-15.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Size Assertion을 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Assertions → Size Assertion을 수행한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-22-49.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-22-49.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Size Assertion 항목을 입력한다.</p>
+                            <p>Size in bytes 부분에 원하는 바이트 단위로 값을 입력한 후 Type of comparison에서 비교 타입을 선택한다.</p>
+                            <ul class="list-unstyled">
+                                <li>본 매뉴얼에서는 Size in bytes : 1000을 입력하고 Type of comparison은 “=“을 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-23-29.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-23-29.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Assertion 테스트 결과를 보기위해 Listener를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Listener → Assertion Results 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-24-17.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-24-17.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>마지막으로 해야 할 일은 테스트를 실행하는 것이다.</p>
+                            <ul class="list-unstyled">
+                                <li>메뉴 바의 Run → Start</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-24-51.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-24-51.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>테스트 실행 후 왼쪽 Assertion Results를 선택하면 다음과 같은 화면이 출력된다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-25-26.png"
+                                        data-lightbox="tab03-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-25-26.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Critical Section Controller</h3>
+                        <div class="content">
+                            <p>Logic Controller에 Critical Section Controller 기능</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-26-35.png"
+                                        data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-26-35.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Critical Section Controller 아래에 있는 테스팅 항목들은 병렬 처리 되지 않고 순차적으로 한 개의 인스턴스 단위로 실행된다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-27-16.png"
+                                        data-lightbox="tab03-7">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-27-16.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>CSS/JQuery Extractor</h3>
+                        <div class="content">
+                            <p>CSS Selector로 웹 페이지 문서 항목의 추출이 가능하다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-28-45.png"
+                                        data-lightbox="tab03-8">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-28-45.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>ForEach Controller</h3>
+                        <div class="content">
+                            <p>Start/End index로 반복 범위 지정이 가능하다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-29-35.png"
+                                        data-lightbox="tab03-9">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-29-35.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Result Status Action Handler</h3>
+                        <div class="content">
+                            <p>테스트 샘플 에러 발생해도 다음 쓰레드를 실행하도록 설정 가능하다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-30-31.png"
+                                        data-lightbox="tab03-10">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-30-31.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>MongoDB 연결</h3>
+                        <div class="content">
+                            <p>MongoDB 연결 설정을 통해 MongoDB에 대한 부하 테스트도 가능하다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-31-27.png"
+                                        data-lightbox="tab03-11">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-31-27.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Async BackendListener</h3>
+                        <div class="content">
+                            <p>GraphiteBackendListenerClient를 이용해서 Dashboard가 구현된 Graphite 서버에 테스트 결과 값을 전달하고 Dashboard
+                                형식으로
+                                결과 확인이 가능하다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-32-14.png"
+                                        data-lightbox="tab03-12">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-32-14.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="활용예제" style="display: none;">
+                        <h3>예제 소개</h3>
+                        <div class="content">
+                            <p>웹 페이지를 사용하는 사용자들은 관리자 측에 계속해서 웹 페이지를 개선할 것을 요구한다.</p>
+                            <p>사용자들의 요구사항</p>
+                            <ul class="list-unstyled">
+                                <li>웹 페이지 접속에 너무 많은 시간이 걸린다.</li>
+                                <li>몇몇 웹 페이지는 존재하지 않는다.</li>
+                                <li>수강신청 기간에는 웹 페이지가 열리지 않는다.</li>
+                            </ul>
+                            <p>웹 페이지의 관리자인 홍길동씨는 자신의 관리하는 웹에 대해서 몇 가지의 테스트를 수행하기로 결정한다.</p>
+                            <ul class="list-unstyled">
+                                <li>웹 페이지에 대한 부하 테스트 기능</li>
+                                <li>응답 결과를 검증하기 위한 Assertion 기능 중 Duration Assertion 테스트 기능</li>
+                                <li>응답 결과를 검증하기 위한 Assertion 기능 중 Size Assertion 테스트 기능</li>
+                            </ul>
+                            <p>관리자 홍길동씨의 테스트 계획</p>
+                            <ul class="list-unstyled">
+                                <li>부하 테스트 수행 시 반복 횟수는 1000번으로 설정한다.</li>
+                                <li>Duration Assertion 테스트 수행 시 지정한 시간은 10Millsecond으로 설정한다.</li>
+                                <li>Size Assertion 테스트 수행 시 테스트할 웹 페이지 크기가 2,000Bytes보다 작을 것이라고 설정한다.</li>
+                            </ul>
+                            <p>홍길동씨는 테스트 결과를 바탕으로 웹 페이지 수정 작업을 할 것이다.</p>
+                        </div>
+
+                        <h3>테스트 플랜 작성하기</h3>
+                        <div class="content">
+                            <p>처음으로 홍길동씨가 해야 할 일은 테스트 플랜을 작성하는 것이다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-34-55.png"
+                                        data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-34-55.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Thread Group을 생성한다.</p>
+                            <ul class="list-unstyled">
+                                <li> Test Plan 선택 후 마우스 우 선택 → Add → Threads (Users) → Thread Group 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-54-43.png"
+                                        data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-54-43.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>오른쪽 항목들에 대해 작성한다.</p>
+                            <ul class="list-unstyled">
+                                <li> Loop Count는 1000으로 설정한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-55-20.png"
+                                        data-lightbox="tab04-1">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-55-20.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Http Request Defaults를 작성하기</h3>
+                        <div class="content">
+                            <p>Http Request Defaults를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li> Thread Group 선택 후 마우스 우 선택 → Add → Config Element → Http Request
+                                    Defaults
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-58-14.png"
+                                        data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-58-14.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request Defaults를 작성한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_13-58-50.png"
+                                        data-lightbox="tab04-2">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_13-58-50.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Http Request를 작성하기</h3>
+                        <div class="content">
+                            <p>Http Request를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li> Thread Group 선택 후 마우스 우 선택 → Add → Sampler → HTTP Request 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-4-9.png"
+                                        data-lightbox="tab04-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-4-9.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Http Request Defaults를 작성한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-4-43.png"
+                                        data-lightbox="tab04-3">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-4-43.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Duration Assertion 작성하기&nbsp;</h3>
+                        <div class="content">
+                            <p>Duration Assertion 테스트 수행을 위한 Duration Assertion을 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li> Thread Group 선택 후 마우스 우 선택 → Add → Assertions → Duration
+                                    Assertion을 선택한다.
+                                </li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-6-59.png"
+                                        data-lightbox="tab04-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-6-59.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Duration Assertion 테스트를 위해 원하는 응답 시간을 10 Milliseconds로 입력한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-7-34.png"
+                                        data-lightbox="tab04-4">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-7-34.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Size Assertion 작성하기</h3>
+                        <div class="content">
+                            <p>Size Assertion 테스트 수행을 위한 Size Assertion을 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>Thread Group 선택 후 마우스 우 선택 → Add → Assertions → Size Assertion 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-8-24.png"
+                                        data-lightbox="tab04-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-8-24.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Size Assertion 테스트를 위해 크기는 2,000 Bytes로 설정하였으며 비교 타입은 &gt;으로 설정한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-9-17.png"
+                                        data-lightbox="tab04-5">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-9-17.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>Listener 추가하기</h3>
+                        <div class="content">
+                            <p>결과를 보기 위해 3개의 Listener를 추가한다.</p>
+                            <ul class="list-unstyled">
+                                <li>View Results Tree Listener를 추가한다.</li>
+                            </ul>
+                            <p>Thread Group 선택 후 마우스 우 선택 → Add → Listener → View Results Tree를 선택한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-10-32.png"
+                                        data-lightbox="tab04-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-10-32.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>아래 화면은 Graph Results Listener를 추가하는 화면이다.</p>
+                            <p>Thread Group 선택 후 마우스 우 선택 → Add → Listener → Graph Results
+                                선택</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-11-18.png"
+                                        data-lightbox="tab04-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-11-18.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>아래 화면은 Assertion Results Listener를 추가하는 장면이다.</p>
+                            <p>Thread Group 선택 후 마우스 우 선택 → Add → Listener → Assertion Results를 선택한다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-11-54.png"
+                                        data-lightbox="tab04-6">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-11-54.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>테스트 실행하기</h3>
+                        <div class="content">
+                            <p>마지막으로 테스트를 실행한다.</p>
+                            <ul class="list-unstyled">
+                                <li>메뉴 바의 Run → Start 선택한다.</li>
+                            </ul>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-12-30.png"
+                                        data-lightbox="tab04-7">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-12-30.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3>테스트 결과 보기</h3>
+                        <div class="content">
+                            <p>View Results Tree를 선택하면 다음과 같은 화면이 출력된다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-13-30.png"
+                                        data-lightbox="tab04-8">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-13-30.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>만약 실패한 테스트가 존재한다면 아래의 화면과 같이 빨간색 글씨로 표시가 되며 그 부분을 선택하면 테스트에 대한 상세
+                                정보를 볼 수 있다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-14-17.png"
+                                        data-lightbox="tab04-8">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-14-17.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>Graph Result를 선택하면 부하 테스트에 대한 결과를 볼 수 있다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-14-47.png"
+                                        data-lightbox="tab04-8">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-14-47.png" alt=""/>
+                                </a>
+                            </div>
+
+                            <p>마지막으로 Assertion Results부분을 선택하면 다음과 같은 결과를 볼 수 있다.</p>
+                            <div class="img-box">
+                                <a
+                                        href="../../../img/tool/jmeter/image2018-10-21_14-15-16.png"
+                                        data-lightbox="tab04-8">
+                                    <img width="526"
+                                         src="../../../img/tool/jmeter/image2018-10-21_14-15-16.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 최상단 이동 btn -->
+            <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+    </main>
+    <!-- END main -->
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+
+</body>
+</html>

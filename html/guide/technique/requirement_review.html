@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 기법 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a class="active on" href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a class="active on" href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../guide/summary/summary01.html">개요</a>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발표준 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>요구사항 검증</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/guide/technique.html">개발 가이드</a></li>
+                    <li><a href="../../guide/technique/summary01.html">개발 기법</a></li>
+                    <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                    <li class="active">리뷰(인스펙션, 동료검토)</li>
+                </ol>
+
+                <ul class="top-nav-menu">
+                    <li><a href="summary04.html">개요</a></li>
+                    <li class="active"><a href="requirement_review.html">리뷰(인스펙션, 동료검토)</a></li>
+                    <li><a href="requirement_prototype.html">프로토타입</a></li>
+                    <li><a href="requirement_checklist.html">체크리스트</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container">
+            <h2>리뷰(인스펙션, 동료검토)</h2>
+            <ol class="ol-styled">
+                <li>
+                    <strong>Formal Review</strong>
+                    <div class="content-des">
+                        <ul class="list-unstyled">
+                            <li>하나의 문서는 여러 형태로 리뷰 될 수 있음.</li>
+                            <li>만약 한가지 이상의 리뷰 방식이 사용된다면, 리뷰 순서는 매우 다양해 질 수 있음.</li>
+                            <li>예를 들어 비공식적인 리뷰(informal review)를 기술적 리뷰(technical review)에 앞서 수행 할 수 있음.</li>
+                            <li>요구사항 명세에 대하여 수행되는 검사(Inspection)는 고객과 함께하는 walkthrough 전에 수행될 수 있음.</li>
+                        </ul>
+                        <table class="table table-tbody-styled">
+                            <colgroup>
+                                <col width="25%">
+                                <col width="75%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>수행절차</th>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        <li><strong>1단계 : 계획(Planning)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>리뷰 조건 정리</li>
+                                                <li>인원 선택</li>
+                                                <li>역할 할당</li>
+                                                <li>좀 더 형식적인 리뷰(e.g. 점검)를 위해 시작과 종료조건(entry and exit criteria)
+                                                    정의.
+                                                </li>
+                                                <li>리뷰 할 문서의 부분 선택.</li>
+                                                <li>시작 조건 확인. (매우 공식적인 리뷰)</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>2단계 : 킥오프(Kick-Off)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>문서배포</li>
+                                                <li>참가자들에게 리뷰 목적, 프로세스, 문서들에 대해 설명</li>
+                                                <li>좀 더 형식을 필요로 하는 리뷰들을 위해서 시작 조건을 확인.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>3단계 : 개별 준비(individual preparation)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>문서 리뷰로 리뷰 미팅 준비.</li>
+                                                <li>참가자 개개인들 스스로 리뷰 미팅 전에 잠재적인 결함, 질문과 Comment들을 기록.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>4단계 : 리뷰 미팅(Review meeting)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>토론하고 기록함 (보다 formal한 경우 상세 회의록 작성).</li>
+                                                <li>미팅 참석자들은 결함(defect)을 처리하기 위한 충고사항을 제시하거나 결함에 대한 결정을 하기 위하여
+                                                    간단하게
+                                                    결함을
+                                                    기록 할 수
+                                                    있다.<br/>
+                                                    (단순한 결함체크 -> 결함 대처안 제안 -> 결함(처리)여부를 결정.)
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>5단계 : 재작업(Rework)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>발견된 결함 수정(주로 작성자(Author) 수행).</li>
+                                                <li>결함의 업데이트 된 상태 기록(공식적인 리뷰).</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>6단계 : 추가 작업(Follow-up)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>발견된 결함 처리되었는지 확인.</li>
+                                                <li>메트릭(측정치) 수집 & 확인(메트릭 : 측정에 쓰이는 측정 척도와 방법)</li>
+                                                <li>좀 더 형식적인 리뷰들을 위해 리뷰 종료 기준 확인.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>역할/분담</th>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        <li><strong>관리자(Manager)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>리뷰 실행을 결정.</li>
+                                                <li>프로젝트 일정 내에 리뷰 시간을 할당.</li>
+                                                <li>리뷰의 목표가 달성되었는가를 결정.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>중재자(Moderator)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>문서의 리뷰나 설정을 리드하는 사람.</li>
+                                                <li>리뷰 계획.</li>
+                                                <li>회의 진행.</li>
+                                                <li>회의 후 후속 작업 수행.</li>
+                                                <li>다양한 관점에 대해 중재.</li>
+                                                <li>리뷰의 성공여부가 달림.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>작성자(Author)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>리뷰되는 문서의 작성자나 최고 책임자.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>리뷰어(Reviewer)</strong>
+                                            <ul class="list-unstyled">
+                                                <li>특정 기술 혹은 비즈니스 배경을 가지고 있는 개인</li>
+                                                <li>Checker 또는 Inspector로 불려짐.</li>
+                                                <li>필요한 준비 후에 리뷰 동안에 제춤에서 발견된 사항(e.g 결함)을 정의하고 묘사하는 사람.</li>
+                                                <li>리뷰 프로세스에서 다양한 관점과 역할을 대표하도록 선정.</li>
+                                                <li>모든 리뷰 미팅에 참가.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>필기자(또는 서기)(Scribe(or recorder))</strong>
+                                            <ul class="list-unstyled">
+                                                <li>모든 이슈사항, 문제 그리고 미팅 동안에 정의된 문제점(- 미정사항 open points)을 문서화.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <strong>Informal Review</strong>
+                    <div class="content-des">
+                        <ul class="list-unstyled">
+                            <li><strong>주요 특성</strong>
+                                <ul class="list-unstyled inner">
+                                    <li>공식적인 프로세스가 없음.</li>
+                                    <li>2인 1조(Pair programming)에 의한 리뷰 또는 기술 리더가 설계와 코드를 리뷰하는 형태</li>
+                                    <li>선택적으로 문서화 될 수 있음.</li>
+                                    <li>리뷰하는 사람에 따라 유용성이 달라짐.</li>
+                                </ul>
+                            </li>
+                            <li><strong>주요 목적</strong>
+                                <ul class="list-unstyled inner">
+                                    <li>저렴한 비용으로 일정 성과 달성</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <strong>Technical Review</strong>
+                    <div class="content-des">
+                        <table class="table table-tbody-styled">
+                            <colgroup>
+                                <col width="20%">
+                                <col width="80%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>정의</th>
+                                <td>
+                                    문서에 존재하는 기술적인 부분에 대해 기술적 문제가 있는지를 확인하는 리뷰로서 기술전문가 및 아키텍트 위주로 진행.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>특징/목적</th>
+                                <td>
+                                    <p><strong>주요 특징</strong></p>
+                                    <ul class="list-unstyled">
+                                        <li>동료와 기술 전문가가 참여, 결함 발견을 위한 문서화되고 전의된 절차가 존재함.</li>
+                                        <li>훈련된 중재자(작성자가 아닌) 또는 기술전문가가 주도.</li>
+                                        <li>관리적 개입 없이 동료검토를 통해 수행 할 수 있음.</li>
+                                        <li>리뷰어는 회의 전 사전 준비(pre-meeting preparation) 필요.</li>
+                                        <li>때로 체크 리스트, 리뷰 리포트, 발견 사항의 리스트 및 경영층 참여 활용.</li>
+                                        <li>실무에서는 비공식적일수도, 공식적일수도 있음.</li>
+                                        <li>공식적인 경우 문서화 필요.</li>
+                                        <li>(성공적으로 진행되는 경우) 리뷰어에 관계 없이 일관되고 정량적인 효과 도출 가능.</li>
+                                    </ul>
+                                    <p><strong>주요 목적</strong></p>
+                                    <ul class="list-unstyled">
+                                        <li>논의, 의사 결정, 대안 사항의 평가, 결함(defect)의 발견.</li>
+                                        <li>기술적인 문제 해결, 명세서 또는 표준과의 적합성 확인.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <strong>Walkthrough</strong>
+                    <div class="content-des">
+                        <table class="table table-tbody-styled">
+                            <colgroup>
+                                <col width="20%">
+                                <col width="80%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>정의</th>
+                                <td>
+                                    소프트웨어 개발 멤버가 집단 토의에 따라 설계문서나 프로그램 중의 논리적인 오류를 발견하는 방식.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>특징/목적</th>
+                                <td>
+                                    <p><strong>주요 특징</strong></p>
+                                    <ul class="list-unstyled">
+                                        <li>작성자에 의해 주도되는 미팅.</li>
+                                        <li>시나리오 사용, 리허설(dry runs), 동료 그룹 검토의 형태.</li>
+                                        <li>시간 및 인원수 등에 제한이 없고 상황에 따라 변경 할 수 있는(Open-ended) 세션.</li>
+                                        <li>(선택적)리뷰어가 사전 회의 준비(pre-meeting preparation), 발견한 결함들에 대한 목록을 포함한 보고서
+                                            준비.
+                                        </li>
+                                        <li>서기가 있을 수 있음(작성자 아님).</li>
+                                        <li>실무에서는 비공식적일 수 있고 반대로 공식적일 수 있음.</li>
+                                        <li>요구사항 명세서와 같은 상위 수준의 문서에 유용함.</li>
+                                    </ul>
+                                    <p><strong>주요 목적</strong></p>
+                                    <ul class="list-unstyled">
+                                        <li>학습, 시스템에 대한 이해 향상, 결함 발견.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <strong>Inspection</strong>
+                    <div class="content-des">
+                        <table class="table table-tbody-styled">
+                            <colgroup>
+                                <col width="20%">
+                                <col width="80%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>정의</th>
+                                <td>
+                                    항목(entry)과 종료 특성(exit criteria)을 가진 규칙(rules)과 체크 리스트(checklists)에 기반한 가장
+                                    공식적인
+                                    리뷰
+                                    기법이며 항상 문서화된
+                                    절차에 기반하여 수행.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>특징/목적</th>
+                                <td>
+                                    <p><strong>주요 특징</strong></p>
+                                    <ul class="list-unstyled">
+                                        <li>훈련된 중재자(moderator)에 의하여 주도(작성자 아님).</li>
+                                        <li>주로 동료검사</li>
+                                        <li>역할이 정의되어 있음.</li>
+                                        <li>메트릭 수집 및 활용.</li>
+                                        <li>회의 전 사전 준비(pre-meeting preparation)</li>
+                                        <li>검사 보고서(Inspection report), 발견사항 리스트(list of findings) 산출</li>
+                                        <li>공식적인 후속처리 확인(Follow-up)프로세스 존재.</li>
+                                        <li>프로세스 향상과 reader 필요(선택적)</li>
+                                        <li>리뷰어와는 별도로 테스터의 역할을 둠.</li>
+                                    </ul>
+                                    <p><strong>주요 목적</strong></p>
+                                    <ul class="list-unstyled">
+                                        <li>에러 예방, 비용 절감, 팀간 커뮤니케이션 향상</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+
+                <li>
+                    <strong>동료 검토(Peer Review)</strong>
+                    <div class="content-des">
+                        <table class="table table-tbody-styled">
+                            <colgroup>
+                                <col width="20%">
+                                <col width="80%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>정의</th>
+                                <td>
+                                    <p>개발 동료들이 검출된 결함의 개선을 위해 정의된 순서를 따르는 소프트웨어 작업 산출물을 검토하는 작업.</p>
+                                    <p>개발자가 자신의 동료들이 완료한 작업을 검토하는것.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>수행절차</th>
+                                <td>
+                                    <ol class="ol-styled">
+                                        <li>
+                                            <strong>공지와 배포</strong>
+                                            <ul class="list-unstyled">
+                                                <li>산출물 작성자
+                                                    <ul class="list-unstyled">
+                                                        <li>자신의 산출물이 리뷰할 준비가 되었음을 검토자에게 통지<br/>(예를 들어 프로젝트 계획서,
+                                                            요구
+                                                            분석,
+                                                            사용자 인터페이트
+                                                            프로토타입, 설계, 코드, 혹은 테스터 사계 등)
+                                                        </li>
+                                                        <li>공식 절차를 거쳐 해당 자료를 진행자(Moderator)에게 전달.</li>
+                                                    </ul>
+                                                </li>
+                                                <li>진행자
+                                                    <ul class="list-unstyled">
+                                                        <li>산출물을 검토 할 사람과 리뷰 회의에 참석할 사람을 결정.</li>
+                                                        <li>검토를 위한 자료를 배포</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>준비</strong>
+                                            <ul class="list-unstyled">
+                                                <li>검토자는 이전에 가장 많이 발생했던 에러 체크리스트로 산출물을 검토.</li>
+                                                <li>검토 회의는 검토잗들이 산출물에 대한 검토를 마친 후 개최.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>검토</strong>
+                                            <ul class="list-unstyled">
+                                                <li>산출물의 작성자, 진행자, 검토자들이 모여 산출물을 검토.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>검토 보고서 작성</strong>
+                                            <ul class="list-unstyled">
+                                                <li>회의 후에 작성자와 진행자는 리뷰 회의의 결과 등을 기록으로 남김.</li>
+                                                <li>내용 : 검토한 자료의 양, 발견된 결함의 종류와 개수, 회의에 걸린 시간, 산출물이 검토에 통과하였는지
+                                                    여부
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>후속 조치</strong>
+                                            <ul class="list-unstyled">
+                                                <li>작성자 및 기타 관련자는 수정 작업을 끝내고, 변경된 내용을 검토 한 후 해당 산출물이 공식적으로 검토
+                                                    되었음을
+                                                    선언.
+                                                </li>
+                                            </ul>
+                                            <div class="img-box des">
+                                                <img src="../../../img/developmentGuide/requirement/image2018-12-6_13-33-10.png"
+                                                     width="544" alt="">
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ol>
+        </div>
+</div>
+
+<!-- 최상단 이동 btn -->
+<div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+</div>
+
+</div>
+<!-- END container -->
+
+</main>
+<!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

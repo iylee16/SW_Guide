@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a>
+                                        </li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard01.html">체크리스트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a>
+                                        </li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic
+                                            개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a>
+                                        </li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile
+                                            방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li>
+                                            <a href="../../download/company/international_development.html">대외SW개발방법론</a>
+                                        </li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a class="active on" href="javascript:;">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a class="active on" href="../../methodology/development/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a class="active on" href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>프로세스(절차) - 아키텍처 설계</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a></li>
+                    <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a></li>
+                    <li><a href="../../methodology/development/process00.html">프로세스(절차)</a></li>
+                    <li class="active">아키텍처 설계</li>
+                </ol>
+
+                <ul class="top-nav-menu">
+                    <li><a href="process02.html">개요</a></li>
+                    <li class="active"><a href="process02_1.html">활동 정의</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container">
+            <h3>활동 정의</h3>
+            <div class="content">
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">3.1 아키텍처 문서 작성</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>아키텍처 요구사항, 접근방법, 아키텍처 설계와 원칙 등을 문서로 작성함</p>
+                            <ul class="list-unstyled">
+                                <li>모든 이해관계자의 관심사를 반영하여 아키텍처를 설계함</li>
+                                <li>설계 내용을 공유함</li>
+                                <li>준수해야 할 가이드라인으로서의 아키텍처 설계를 배포함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td>
+                            <ol class="ol-styled">
+                                <li>준비: 아키텍처 요구사항 파악 → 아키텍처 자산 확인 → 설계 접근방법 결정</li>
+                                <li>설계: 아키텍처 모델링 → 아키텍처 프로토타입 → 아키텍처 문서화</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td>소프트웨어 아키텍트</td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td>아키텍처 문서</td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1"><p>아키텍처 설계 가이드</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">3.2 아키텍처 설계</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>제약조건 하에서 시스템의 품질요구를 만족하기 위하여 아키텍처 설계를 수행함. 아키텍처 설계는 방향설정, 주요 의사결정, 아키텍처 모델링, 설계 원칙
+                            정의 등의 작업을 포함</p>
+                            <ul class="list-unstyled">
+                                <li>시스템의 구조 설계를 위한 원칙을 정의하고 그원칙에 따라 구조를 설계함</li>
+                                <li>가능한 여러 가지 문제해결 방법 중에 자원 효율적인 방안을 선택함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td>
+                            <ol class="ol-styled">
+                                <li>시스템을 여러 영역으로 구분하고 설계 주제를 정의함</li>
+                                <li>적용할 뷰를 정의</li>
+                                <li>뷰를 중심으로 또는 설계 주제를 중심으로 구조를 설계함</li>
+                                <li>구조 설계를 하면서 지속적으로 원칙을 추출하여 계층구조를 가지도록 정의함</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td>소프트웨어 아키텍트</td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td>아키텍처 모델</td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1"><p>아키텍처 설계 가이드</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">3.3 아키텍처 프로토타입 개발</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>아키텍처 설계 결과를 검증하기 위해 실행 가능한 프로토타입 시스템을 개발함</p>
+                            <ul class="list-unstyled">
+                                <li>아키텍처 설계가 목표 시스템이 요구하는 품질목표를 달성했는지 검증함</li>
+                                <li>시스템 개발 팀이 개발에 참조할 시스템을 개발함</li>
+                                <li>아키텍처 설계에서 다루었던 이슈를 모두 포함하는 구조의 가능성 여부 검증</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td>
+                            <ol class="ol-styled">
+                                <li>아키텍처 관점에서 의미가 있는 주요 유스케이스 2,3개 식별</li>
+                                <li>분석, 설계, 구현 과정을 거쳐 시스템 개발</li>
+                                <li>품질검증에 초점을 두고 테스트 수행</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td>소프트웨어 아키텍처 팀</td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td>아키텍처 프로토타입 시스템</td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1"><p>아키텍처 설계 가이드</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">3.4 아키텍처 적용 가이드 작성</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>아키텍처 설계 결과 적용 시 필요한 각종 가이드를 작성함</p>
+                            <ul class="list-unstyled">
+                                <li>아키텍처 설계도 중요하지만 준수가 매우 중요함 따라서 준수를 위한 도움을 제공하여야 함</li>
+                                <li>다양한 가이드를 제공함으로써 아키텍처를 준수하며 기능 설계를 할 수 있도록 지원함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td>
+                            <ol class="ol-styled">
+                                <li>설계 가이드 작성</li>
+                                <li>코딩 규약 작성</li>
+                                <li>프레임워크 사용 가이드</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td>소프트웨어 아키텍트 또는 아키텍처팀</td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>설계 가이드, 코딩 규약, 프레임워크 사용 가이드</li>
+                                <li>가이드 작성 범위는 조직의 표준 가이드 유무나 프로젝트의 성격에 따라 매우 다양함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1"><p>아키텍처 설계 가이드</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">3.5 인프라 아키텍처 설계</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>대규모 프로젝트에서 인프라 아키텍처 부분은 운영팀의 역할이지만 소규모 프로젝트에서는 소프트웨어 아키텍처 설계에 포함하여 수행함</p>
+                            <ul class="list-unstyled">
+                                <li>하드웨어 스팩, 구성, 네트워크 구성 등에 대한 설계를 수행함</li>
+                                <li>개발되거나 또는 구매한 소프트웨어 어느 하드웨어에 배포(deployment)되는 지를 결정함</li>
+                                <li>클러스터링 등을 포함한 플랫폼 SW의 구성을 결정함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td>
+                            <ol class="ol-styled">
+                                <li>품질 요구사항 검토(범위성, 수행성능, 가용성 등)</li>
+                                <li>가용 하드웨어 자산과 네트워크 및 보안 인프라 검토</li>
+                                <li>인프라 아키텍처 설계</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td>소프트웨어 아키텍트, 시스템 엔지니어</td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td><p>인프라 아키텍처 설계서</p></td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1"><p>아키텍처 설계 가이드</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 최상단 이동 btn -->
+            <div>
+                <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+
+    </main>
+    <!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

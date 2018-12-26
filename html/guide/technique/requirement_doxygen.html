@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 기법 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a class="active on" href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a class="active on" href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a>
+                        </li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발표준 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>요구사항 도출</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/guide/technique.html">개발 가이드</a></li>
+                    <li><a href="../../guide/technique/summary01.html">개발 기법</a></li>
+                    <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                    <li class="active">Doxygen</li>
+                </ol>
+
+                <ul class="top-nav-menu">
+                    <li><a href="summary01.html">개요</a></li>
+                    <li><a href="requirement_interview.html">인터뷰</a></li>
+                    <li><a href="requirement_brainstorming.html">브레인스토밍</a></li>
+                    <li><a href="requirement_survey.html">설문</a></li>
+                    <li><a href="requirement_workshop.html">워크샵</a></li>
+                    <li class="active"><a href="requirement_doxygen.html">Doxygen</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container">
+            <h2>Doxygen 소개</h2>
+            <div class="content">
+
+                <h3>1. Doxygen 소개</h3>
+                <div class="content">
+                    <p>C , C++ , JAVA 소스코드의 구조 및 사양을 문서화 해 주는 오픈소스 개발지원 도구이다. 효과적인 문서화를 위해서는 소스코드내에 표준화된 주석을 사용함으로써, 손쉽게
+                        HTML이나
+                        워드 문서가 생성된다. 문서 작성의 공수를 줄이고, 코드와 문서를 통합함으로써 보다 실질적이고 효과적인 Documentation이 가능하도록 해 준다.</p>
+                </div>
+
+                <h3>2. 개념적 흐름</h3>
+                <div class="content">
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/04.png" width="786" alt="">
+                    </div>
+                </div>
+
+                <h3>3. 관련 프로젝트 산출물</h3>
+                <div class="content">
+                    <p>Doxygen의 모바일 방법론의 어플리케이션 설계서 작성시 사용될 수 있으며, 특히 어플리케이션 Class 설계 내용을 문서화하는데 사 용된다. Class 설계 내용을
+                        수작업으로 작성할
+                        경우, Doxygen을 사용하지 않아도 무방하다.</p>
+                </div>
+            </div>
+
+            <h2>설치 (Installation) </h2>
+            <div class="content">
+
+                <h3>1. 셋업 파일 다운로드</h3>
+                <div class="content">
+                    <p>Doxygen의 경우 <a href="http://www.doxygen.org">http://www.doxygen.org</a> 또는 <a
+                            href="http://www.stack.nl/~dimitri/doxygen/download.html">http://www.stack.nl/~dimitri/doxygen/download.html</a>
+                        에서 다운로드 받을 수 있다. Doxygen의 경우, Graphviz와 같은 외부 패키지를 이용할 경우, 보다 시각화된 결과를 얻을 수 있어, 설치가 권고된다.
+                        Graphviz는
+                        <a href="http://www.graphviz.org/Download..php">http://www.graphviz.org/Download..php</a> 에서
+                        다운로드
+                        받을 수 있다.
+                    </p>
+                </div>
+
+                <h3> 2. 설치</h3>
+                <div class="content">
+                    <p>Doxygen 및 Graphviz 모두 설치에 특이할 점은 없으므로, 일반적인 방식으로 설치하면 된다.</p>
+                    <p>단, Graphviz의 경우, 일부 환경에서 설치가 잘 이루어지지 않는 버그가 있으므로, 설치완료 화면이 제대로 나타나지 않는 경우, 설치 시 사용자를 Just me로 하지
+                        말고,
+                        Everyone으로 하면 된다.</p>
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/05.png" width="443" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <h2>사용방법</h2>
+            <div class="content">
+
+                <h3>1. 실행방법</h3>
+                <div class="content">
+                    <p>시작메뉴 --> 프로그램 --> doxygen --> doxywizard 실행 (본 기법서는 doxygen 버전 : 1.8.3.1을 기준으로 작성되었음) 다음과 같이 실행된
+                        Doxygen
+                        프로그램을 사용하면 된다.</p>
+                    <ul class="list-unstyled">
+                        <li>Step1 : Doxygen 을 실행시킬 작업폴더를 선택한다.</li>
+                        <li>Step2. 실행을 위한 주요 설정 값을 입력한 후 실행한다. (다음 Page부터 설정 방법 설명)</li>
+                    </ul>
+
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/06.png" width="531" alt="">
+                    </div>
+
+                    <ol class="ol-styled">
+                        <li><strong>설정 및 실행 탭</strong>
+                            <div class="content-des">
+                                <ul class="list-unstyled">
+                                    <li>Wizard : 마법사(따라하기) 방식으로 쉽게 따 라하기 방식으로 소스코드의 프로젝트 파일 에 대한 정보를 입력한다. 기본적으로 Wizard
+                                        탭을 사용하여
+                                        문서를 생성한다. Wizard 탭에 대한 상세한 내용은 3.2절을 참 조한다.
+                                    </li>
+                                    <li>Expert : Wizard 탭을 사용하여 설정할 수 없 는 상세한 Doxygen 문서화 옵션을 설정할 수 있다. Expert탭은 기본적으로
+                                        사용하지 않
+                                        는다. 상세 내용은 3.3절을 참조한다.
+                                    </li>
+                                    <li>Run:설정이끝나면,이탭을클릭하여문서 생성 기능을 실행시킬 수 있다. 상세 내용은 3.4절을 참조한다.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><strong>상세 내용</strong>
+                            <div class="content-des">
+                                <ul class="list-unstyled">
+                                    <li>Wizard 탭의 내용은 크게 프로젝트/모드/출 력/다이어그램 등에 대한 4가지 Topic내용으 로 구분되며, 상세내용은 3.2절을
+                                        참조한다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><strong>Topic별로 상세 조건을 설정하는 영역이다.</strong></li>
+                    </ol>
+                </div>
+
+
+                <h3>2. Wizard 설정</h3>
+                <div class="content">
+                    <h4>1.1 Wizard > Project 설정</h4>
+
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/07.png" width="531" alt="">
+                    </div>
+
+                    <table class="table table-styled">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>입력사항</th>
+                            <th>설명</th>
+                            <th>입력할 것</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Project name</td>
+                            <td>프로젝트 이름</td>
+                            <td>Mobile Device Management</td>
+                        </tr>
+                        <tr>
+                            <td>Project version or id</td>
+                            <td>프로젝트 버전</td>
+                            <td>1.0</td>
+                        </tr>
+                        <tr>
+                            <td>Source code Directory</td>
+                            <td>소스 파일 폴더</td>
+                            <td>C:/SourceCodeLocation</td>
+                        </tr>
+                        <tr>
+                            <td>Destination Directory</td>
+                            <td>문서를 출력할 폴더</td>
+                            <td>C:/DoxygenOutput</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4>1.2. Wizard>Mode 설정</h4>
+                    <p>Android 어플리케이션 개발의 경우, java 개발환경이므로 “Optimize for Java or C# output”을 선택한다.</p>
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/08.png" width="594" alt="">
+                    </div>
+                    <h4>1.3. Wizard>Output 설정</h4>
+                    <p>기본적으로 HTML을 선택하고, MS-Word 파일의 결과물을 원할 경우에는 “Rich Text Format(RTF)”도 선택한다.</p>
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/09.png" width="773" alt="">
+                    </div>
+                    <h4>1.4. Wizard>Diagram 설정</h4>
+                    <p>Diagram 생성을 위한 설정을 하는 topic 화면이다. 일반적인 Built-in class diagram generator를 사용해도 무방하지만, Graphiviz
+                        Package를 이용할 경우, 미려한 다이어그램 생성이 가능한다.</p>
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/10.png" width="557" alt="">
+                    </div>
+                </div>
+
+                <h3>3. Expert 설정</h3>
+                <div class="content">
+                    <p>Graphviz와 같은 외부 패키지를 이용할 경우, 때에 따라 문서생성이 실패하는 경우도 있다. 대부분 긴 이름을 지원하지 못해서 발생 하는 경우이며, 이 경우, Expert
+                        >
+                        Project
+                        > Short_Names의 체크를 활성화시켜 주면 해결된다.</p>
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/11.png" width="543" alt="">
+                    </div>
+                </div>
+
+                <h3>4. Run 실행</h3>
+                <div class="content">
+                    <p>Doxygen을 사용하여 문서를 생성한다.</p>
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/12.png" width="634" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <h2>수행결과</h2>
+            <div class="content">
+
+                <h3>1. 수행 결과 (HTML)</h3>
+                <div class="content">
+                    <p>Doxygen을 사용하여 생성된 문서의 결과 예시이다. (HTML의 경우)</p>
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/13.png" width="851" alt="">
+                    </div>
+                </div>
+
+                <h3>2. 수행 결과 (RFT)</h3>
+                <div class="content">
+                    <p>Doxygen을 사용하여 생성된 문서의 결과 예시이다. (MS-WORD의 경우)</p>
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/14.png" width="900" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <h2>주석적용법</h2>
+            <div class="content">
+
+                <h3>1. 주석 적용 목적</h3>
+                <div class="content">
+                    <p>Doxygen을 사용하여 소스코드의 구조 및 사양을 효과적으로 문서화하기 위해서는, 기본적인 주석 표준을 반드시 사용하여야 한다. 이런 주석표준이 없이는 소스코드 내부의
+                        구조적인
+                        내용만을
+                        Doxygen이 문서화하고, 사양이나 설명(Description)이 없게 되므로, 반 드시 주석에 대한 표준을 아래와 같이 적용하여 소스코드를 작성하여야 한다. 아래 내용은
+                        모바일
+                        방법론에서
+                        Doxygen을 사용하여 어플리케이션 설계 내용을 문서화할 경우, 필수 적용사항이며, 수작업으로 작성할 경우 재정의(Tailoring)의 대상이 된다.</p>
+                </div>
+
+                <h3>2. 주석 적용 기본 형식</h3>
+                <div class="content">
+                    <p>일반적인 주석 형식이 /* ~~~ */ 인데 반해, Doxygen 주석 표준은 /** ~~~ */ 로 시작시 *가
+                        하나 더 붙는다.</p>
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/15.png" width="834" alt="">
+                    </div>
+                </div>
+
+                <h3>3. 적용 결과 #1</h3>
+                <div class="content">
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/16.png" width="900" alt="">
+                    </div>
+                </div>
+
+                <h3>4. 적용 결과 #2</h3>
+                <div class="content">
+                    <div class="img-box des">
+                        <img src="../../../img/developmentGuide/requirement/doxygen/17.png" width="869" alt="">
+                    </div>
+                </div>
+
+                <!-- 최상단 이동 btn -->
+                <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+                </div>
+
+            </div>
+            <!-- END container -->
+
+    </main>
+    <!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a class="active on" href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a class="active on" href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>테스트 설계</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/guide/technique.html">개발가이드</a></li>
+                    <li><a href="../../guide/technique/summary01.html">개발 기법</a></li>
+                    <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                    <li class="active">기능 테스트 케이스</li>
+                </ol>
+
+                <ul class="top-nav-menu">
+                    <li><a href="testcase_guide00.html">목적 및 구성</a></li>
+                    <li><a href="testcase_guide02.html">단위 테스트</a></li>
+                    <li class="active"><a href="testcase_guide03.html">기능 테스트</a></li>
+                    <li><a href="testcase_guide04.html">비기능 테스트</a></li>
+                    <li><a href="testcase_guide01.html">더보기</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container">
+            <h2>(기능) 통합 테스트 케이스 개발 기법</h2>
+            <div class="content">
+
+                <h3>1. 결정 테이블 테스팅(Decision Table testing) 기법</h3>
+                <div class="content">
+                    <p>테스트 케이스가 결정 테이블(Decision Table)에 표시된 입력값과 자극(원인)의 조합을 테스트 하도록 설계하는 블랙박스 설계 기법.</p>
+                    <p>결정 테이블이란 테스트 케이스를 설계할 때 사용할 수 있는 입력과 자극(원인)의 조합을 연관된 출력과 활동(결과)과 함께 보여주는 테이블을 말한다.</p>
+                    <p>결정 테이블 테스팅 기법은 특정 유형의 시스템 요구 사항을 도출하거나 내부 시스템 디자인을 문서화하는 유용하다.
+                        이것은 시스템이 구현해야 하는 복잡한 비지니스 규칙을 문서화하는데 사용된다.</p>
+                    <h5>결정 테이블 (Decision Class)</h5>
+                    <p>결정 테이블은 테스트 케이스를 작성하는 가이드로 활용할 수 있다. 결정 테이블은 조건 집합에 근거한 복잡한 비지니스 규칙을 나타낸다. 기본적인 형태는 다음과 같다.
+                        &nbsp;</p>
+                    <p class="example-title">일반적인 결정 테이블 형태</p>
+                    <ul class="list-unstyled">
+                        <li>조건1~m까지는 다양한 입력 조건을 나타냄</li>
+                        <li>액션 1~n 까지는&nbsp;다양한 입력 조건의 조합에 따른 액션을 나타냄. 각각의 룰은 룰과 관련된 액션의 실행 결과인 특정한 조건의 조합을 정의함</li>
+                        <li>액션은 평가되는 조건 순서와는 관련이 없으며, 각 조건의 값들과만 관련한다.(모든 값은 동시에 사용이 될 수 있다는 가정)</li>
+                        <li>액션은 특정한 조건에만 의지하게 되며, 이전 입력 조건이나 시스템의 상태에 영향을 받지는 않는다.</li>
+                    </ul>
+
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col width="16%">
+                                <col width="21%">
+                                <col width="21%">
+                                <col width="21%">
+                                <col width="21%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>테스트 케이스 1</th>
+                                <th>테스트케이스2</th>
+                                <th>테스트케이스3</th>
+                                <th>테스트케이스4</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>조건</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><em>조건1</em></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><em>조건2</em></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><em>...</em></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><em>조건m</em></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>액션</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><em>액션1</em></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><em>액션2</em></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><em>...</em></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><em>액션n</em></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h5>결정 테이블 (Decision Class) 테스팅 적용방법</h5>
+                    <p>자동차 보험 회사에서는 운전자의 결혼여부 또는/그리고 학생인지의 여부에 따라서 할인을 해준다.</p>
+                    <p>이러한 조건에서 결정 테이블 테스팅 기법을 적용해본다.</p>
+                    <p>아래 결정 테이블은 두 개의 조건이 있으며 각각은 Yes 또는 No 둘 중의 하나의 값만을 가진다. &nbsp;</p>
+                    <p class="example-title">이진 조건을 가진 결정테이블</p>
+
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>테스트케이스1</th>
+                                <th>테스트케이스2</th>
+                                <th>테스트케이스3</th>
+                                <th>테스트케이스4</th>
+                            </tr>
+                            <tr>
+                                <th>조건</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>결혼여부</th>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <th>학생여부</th>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>위의 결정 테이블은 모든 가능한 조건의 조합을 포함하고 있다. &nbsp;두 개의 바이너리 조건(Yes 또는 No)이 존재하며, 각 조건간의 가능한 조합은
+                            다음과 같다.
+                            {Yes, Yes}, {Yes, No}, {No, Yes}, 그리고 {No, No}. &nbsp;
+                        </li>
+                        <li>각 룰은 이러한 조합을 나타낸다. 테스트 요원은 정의된 모든 조건의 조합을 확인해야 한다. 일부 조합이 생략된다면 특정 입력 조건들의 조합을 제대로 처리하지
+                            못하는 시스템
+                            개발 가능성이 존재하게 된다.&nbsp;
+                        </li>
+                        <li>각 조건들의 조합에 따른 액션은 다음과 같다. 각 룰은 "결과"가 발생하게 되는 원인이 되며 각각의 룰은 그 룰에 단일 액션을 나타내거나 다양한 액션이 나타날
+                            수 있다.&nbsp;
+                        </li>
+                    </ul>
+
+                    <p class="example-title">결정 테이블에 단일 액션이 추가되는 경우</p>
+
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>테스트케이스1</th>
+                                <th>테스트케이스2</th>
+                                <th>테스트케이스3</th>
+                                <th>테스트케이스4</th>
+                            </tr>
+                            <tr>
+                                <th>조건</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>결혼여부</th>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <th>학생여부</th>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>액션</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>할인금액</th>
+                                <td>60</td>
+                                <td>25</td>
+                                <td>50</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>&nbsp;결정 테이블은 각각의 룰에 대해서 한 가지 이상의 액션을 정의할 수 있다. 즉 이 룰들은 유일하거나 공유될 수 있다.</li>
+                    </ul>
+                    <p class="example-title">결정 테이블에 다중 액션이 추가되는 경우</p>
+
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>테스트케이스1</th>
+                                <th>테스트케이스2</th>
+                                <th>테스트케이스3</th>
+                                <th>테스트케이스4</th>
+                            </tr>
+                            <tr>
+                                <th>조건</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>결혼여부</th>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <th>학생여부</th>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>액션</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>액션-1</th>
+                                <td>X 실행</td>
+                                <td>Y 실행</td>
+                                <td>X 실행</td>
+                                <td>Z 실행</td>
+                            </tr>
+                            <tr>
+                                <th>액션-2</th>
+                                <td>A 실행</td>
+                                <td>B 실행</td>
+                                <td>B 실행</td>
+                                <td>B 실행</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>위의 결정 테이블에서 조건은 입력을, 액션은 예상 결과를 나타낸다. &nbsp;이번 예제에서는 간단한 이진 조건을 사용하였으나, 조건은 상황에 따라 더 복잡할
+                            수 있다.
+                        </li>
+                    </ul>
+
+                    <p class="example-title">Non-binary 조건을 가진 결정 테이블의 경우</p>
+
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>테스트케이스1</th>
+                                <th>테스트케이스2</th>
+                                <th>테스트케이스3</th>
+                                <th>테스트케이스4</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>조건</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            <tr>
+                                <th>결혼여부</th>
+                                <td>0-1</td>
+                                <td>1-10</td>
+                                <td>10-100</td>
+                                <td>100-1000</td>
+                            </tr>
+                            <tr>
+                                <th>학생여부</th>
+                                <td>&lt;5</td>
+                                <td>5</td>
+                                <td>6 또는 7</td>
+                                <td>&gt;7</td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>액션</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>액션-1</th>
+                                <td>X 실행</td>
+                                <td>Y 실행</td>
+                                <td>X 실행</td>
+                                <td>Z 실행</td>
+                            </tr>
+                            <tr>
+                                <th>액션-2</th>
+                                <td>A 실행</td>
+                                <td>B 실행</td>
+                                <td>B 실행</td>
+                                <td>B 실행</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>이런 경우 테스트 케이스 선택은 조금 복잡하다. <br/>각 룰(수직 컬럼)은 테스트 케이스가 될 수 있지만, 값은 이 상황은 테스트 케이스의 선택이 약간 더
+                            복잡해 진다.
+                            <br/>각 룰(수직 컬럼)은
+                            테스트 케이스가 되지만, 적절한 값을 선택하여 테스트 케이스를 만들어야 한다.
+                        </li>
+                    </ul>
+
+                    <p class="example-title">결정 테이블 기법을 적용한 Test Case 예제</p>
+
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>테스트 케이스 ID</th>
+                                <th>조건#1</th>
+                                <th>조건#2</th>
+                                <th>기대결과</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>TC 1</th>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>X 실행 / A 실행</td>
+                            </tr>
+                            <tr>
+                                <th>TC 2</th>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>Y 실행 / B 실행</td>
+                            </tr>
+                            <tr>
+                                <th>TC 3</th>
+                                <td>50</td>
+                                <td>7</td>
+                                <td>X 실행 / B 실행</td>
+                            </tr>
+                            <tr>
+                                <th>TC4</th>
+                                <td>500</td>
+                                <td>10</td>
+                                <td>Z 실행 / B 실행</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li>만일 테스트 대상 시스템이 완전한 비즈니스 규칙을 가지고 있고, 비지니스 분석가나 디자이너가 이런 (또는 유사한) 형태로 규칙을 문서화하지 않았다면, 결정
+                            테이블 테스팅
+                            기법을 적용하기 위하여 테스터
+                            요원은 관련 정보(조건/액션 등)를 수집하여 결정 테이블의 형태로 나타내야 한다. <br/>시스템 동작이 결정 테이블의 형태로 완전하고 간단히 표현될 수
+                            있다면 결정
+                            테이블에서 테스트 케이스를 곧바로
+                            생성가능하기 때문이다.
+                        </li>
+                        <li><u>각 룰(수직 컬럼)에서 최소한 하나 이상의 테스트 케이스 생성한다.&nbsp; </u><br/>룰이 이진 조건이라면 각 조합의 단일 테스트
+                            케이스로 충분할 수 있다.
+                            <br/>만약 조건이 값의 범위라면 최소, 최대 값 두 개를 대상으로 테스팅을 고려할 수 있다. <br/><u>이런 방법으로 결정 테이블 테스팅 기법과 경계값
+                                분석 테스팅 기법을 결합할 수
+                                있다. &nbsp;</u></li>
+                        <li>결정 테이블로부터의 테스트 케이스 명세 작성은 간단히 테이블의 열과 컬럼의 제목을 변경하고, 지정된 Template에 기술하면 된다.</li>
+                    </ul>
+                    <p class="example-title">Non-binary 조건을 가진 결정 테이블의 경우 </p>
+
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th><p>&nbsp;&nbsp;</p></th>
+                                <th>테스트케이스1</th>
+                                <th>테스트케이스2</th>
+                                <th>테스트케이스3</th>
+                                <th>테스트케이스4</th>
+                            </tr>
+                            <tr>
+                                <th><p align="center">입력</p></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><p align="center">조건-1</p></th>
+                                <td>YES</td>
+                                <td>YES</td>
+                                <td>NO</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <th><p align="center">조건-2</p></th>
+                                <td>YES</td>
+                                <td>NO</td>
+                                <td>YES</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <th><p align="center">&nbsp;</p></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><p align="center">기대결과</p></th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><p align="center">액션-1</p></th>
+                                <td>X 실행</td>
+                                <td>Y 실행</td>
+                                <td>X 실행</td>
+                                <td>Z 실행</td>
+                            </tr>
+                            <tr>
+                                <th><p align="center">액션-2</p></th>
+                                <td>A 실행</td>
+                                <td>B 실행</td>
+                                <td>B 실행</td>
+                                <td>B 실행</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="example-title">예제 1</p>
+                    <ul class="list-unstyled">
+                        <li>사용자 요구사항<br/>시민이 역(Station)의 자동 개찰구를 통과하기 위해서는 자동화된 승차권(1회용) 또는 정액 권이 필요하고, 승차시에 개찰이 되어
+                            있어야 한다.
+                            이런 전제가 충족되면 하차 후에
+                            자동 개찰구를 통과할 수 있다. 만일 승차권이 자동화되지 않은 것이라면 역원에게 안내되고, 승차 시에 개찰이 안된 경우에는 통과할 수 없도록 개찰구가
+                            폐쇄되어야 한다. 이와
+                            같은 사용자 요구사항에
+                            대하여 다음과 같이 원인과 결과를 정리가능하다.
+                        </li>
+                        <li>원인(조건)
+                            <ul class="list-unstyled">
+                                <li>자동화 된 승차권</li>
+                                <li>자동화 된 정액권</li>
+                                <li>승차시 개찰되어 있음</li>
+                            </ul>
+                        </li>
+                        <li>결과(액션)
+                            <ul class="list-unstyled">
+                                <li>자동 개찰구 통과 가능</li>
+                                <li>역원에게 안내됨</li>
+                                <li>개찰구 폐쇄됨</li>
+                            </ul>
+                        </li>
+                        <li>
+                            결정 테이블(Decision Table) : 사용자 요구사항에 따라 원인(조건)과 결과(액션을) 결정 테이블에 정리하면 다음과 같다. <br/>결정 테이블의
+                            테스트
+                            케이스별로
+                            각 조건에 따른 테스트 데이터를 준비하여 테스트를 수행한다.
+                        </li>
+                    </ul>
+
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col width="16%">
+                                <col width="24%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th colspan="2">테스트케이스</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="3">원인(조건)</th>
+                                <td>자동화된 승차원</td>
+                                <td>Y</td>
+                                <td>&nbsp;</td>
+                                <td>N</td>
+                                <td>&nbsp;</td>
+                                <td>Y</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>자동화된 정액권</td>
+                                <td>&nbsp;</td>
+                                <td>Y</td>
+                                <td>&nbsp;</td>
+                                <td>N</td>
+                                <td>&nbsp;</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>승차시 개찰되어 있음</td>
+                                <td>Y</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>N</td>
+                                <td>N</td>
+                                <td>N</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3">결과(액션)</th>
+                                <td>자동 개찰구 통과 가능</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>역원에게 안내됨</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>개찰구 폐쇄됨</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>X</td>
+                                <td>X</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="example-title">예제 2</p>
+                    <ul class="list-unstyled">
+                        <li>사용자 요구사항<br/>OS종류가 Windows XP, 버전이 Home 이면서 라이센스가 유효하다면 자동 업데이트를 수행하고, OS가 Windows XP가
+                            아니거나 버전이
+                            Home이 아닌 경우에는 자동
+                            업데이트를 수행하지 않는다. <br/>그리고OS가 Windows XP 버전이 Home이지만 라이센스가 유효하지 않다면 라이센스 발급유도 메시지를 발생한다.
+                        </li>
+                        <li>원인(조건)
+                            <ul class="list-unstyled">
+                                <li>Windows XP</li>
+                                <li>Home</li>
+                                <li>라이센스 유효</li>
+                            </ul>
+                        <li>결과(액션)
+                            <ul class="list-unstyled">
+                                <li>자동 업데이트 수행</li>
+                                <li>Don’t Action</li>
+                                <li>라이센스 발급유도 메시지 발생</li>
+                            </ul>
+                        <li>결정 테이블(Decision Table): 사용자 요구사항에 따라 원인(조건)과 결과(액션을) 결정 테이블에 정리하면 다음과 같다. <br/>
+                            결정 테이블의 테스트 케이스별로 각 조건에 따른 테스트 데이터를 준비하여 테스트를 수행한다.
+                        </li>
+                    </ul>
+
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col width="16%">
+                                <col width="24%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th colspan="2">테스트케이스</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="3">원인(조건)</th>
+                                <td>Windows XP</td>
+                                <td>Y</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>N</td>
+                                <td>N</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>Home</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>N</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>라이센스 유효</td>
+                                <td>Y</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>N</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3">결과(액션)</th>
+                                <td>자동 업데이트 수행</td>
+                                <td>Y</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Don’t Action</td>
+                                <td>-</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>X</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>라이센스 발급유도 메시지</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>X</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h5>결정 테이블 (Decision Table) 테스팅 기법 적용과 제약사항</h5>
+                    <ul class="list-unstyled">
+                        <li>결정 테이블 테스팅(Decision Table Testing) 기법은 복잡한 비지니스 규칙을 구현해야 하거나 규칙이 조건의 조합으로 나타내어 질 수 있을 때,
+                            조건들이
+                            조건과 관련한 추상적인 액션을 가지고 있는 경우 사용가능하다.
+                        </li>
+                        <li>결정 테이블(Decision Tbale)은 시스템이 구현해야 하는 복잡한 비지니스 규칙을 문서화하는데 사용된다. 부가적으로, 결정 테이블은 테스트 케이스를
+                            생성하는데
+                            가이드를 제공한다.
+                        </li>
+                        <li>조건은 다양한 입력 조건을 나타내며, 액션은 입력 조건의 다양한 조합에 대응되어 실행되어야 하는 프로세스를 나타낸다. 각 룰은 그 룰과 연관된 실행 결과를
+                            발생시키는 조건의
+                            조합을 정의한다.
+                        </li>
+                        <li>각 룰(수직 컬럼)마다 최소한 하나의 테스트 케이스를 작성한다. <br/>룰이 이진 조건이라면 조합마다 하나의 테스트 케이스로 도출하며 값의 범위라면 값의 양
+                            끝 최소,
+                            최대
+                            값 모두를 테스팅 값으로
+                            고려하는 등 결정 테이블 테스팅 기법과 경계값 분석 테스팅 기법 또는 동등 분할 기법을 결합하여 사용한다.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>2. 유스 케이스(Use Case)로부터의 테스트 케이스 도출 기법</h3>
+                <div class="content">
+                    <p>사용자 시나리오(Use Case)를 실행하도록 테스트 케이스를 설계하는 블랙박스 테스트 설계 기법</p>
+                    <h5>적용방법</h5>
+                    <ol class="ol-styled">
+                        <li>이벤트 흐름(Event Flow) 작성</li>
+                        <li>Use Case 시나리오 도출</li>
+                        <li>테스트 케이스 도출</li>
+                    </ol>
+
+                    <h5>이벤트 흐름(Event Flow) 작성</h5>
+                    <ul class="list-unstyled">
+                        <li>시스템 명세를 기반으로 Event Flow를 작성. 예를 들면, 아래 그림에서 기본 흐름(Basic Flow)과 선택 흐름(Alternative Flow)을
+                            반영한 Use
+                            Case 내에 다양한 경로가
+                            화살표로 표현되어 있다.
+                        </li>
+                        <li>검은 직선으로 표현된 기본 흐름은 Use Case를 관통하는 가장 단순한 경로이다.</li>
+                        <li>각 선택 흐름은 기본 흐름에서 시작하지만 특정한 조건에 따라 선택 흐름이 수행된다. 선택 흐름은 기본 흐름을 다시 만날 수(선택 흐름1과 3)도 있고, 또
+                            다른 선택 흐름을
+                            가지를 칠 수(선택 흐름
+                            2)도 있으며, 기본 흐름을 다시 만나지 않고 Use Case를 종료할 수(선택 흐름 2와 4)도 있다.
+                        </li>
+                    </ul>
+                    <p class="example-title">Event Flow 작성 예</p>
+                    <div class="img-box des">
+                        <img src="../../../img/flow/eventflow_ex.png" height="380" alt=""/>
+                    </div>
+                    <h5>Use Case 시나리오 도출</h5>
+                    <p>Use Case 시나리오는 Use Case 시작부터 끝까지의 기본 흐름과 선택(Alternative) 흐름을 고찰하여 Use Case내 다양한 경로(Path)를
+                        파악함으로
+                        식별된다.</p>
+                    <p>위 다이어그램에서 Use Case내에 각 가능한 경로를 살펴보면 다양한 Use Case 시나리오가 나타나는데 그 가능한 시나리오는 아래와 같다.</p>
+
+                    <table class="table table-styled">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>시나리오 구분</th>
+                            <th colspan="4">흐름 경로</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>시나리오1</th>
+                            <td>기본 흐름1</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>시나리오2</th>
+                            <td>기본 흐름1</td>
+                            <td>선택 흐름 1</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>시나리오3</th>
+                            <td>기본 흐름1</td>
+                            <td>선택 흐름 1</td>
+                            <td>선택 흐름 2</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>시나리오4</th>
+                            <td>기본 흐름1</td>
+                            <td>선택 흐름 3</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>시나리오5</th>
+                            <td>기본 흐름1</td>
+                            <td>선택 흐름 3</td>
+                            <td>선택 흐름 1</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>시나리오6</th>
+                            <td>기본 흐름1</td>
+                            <td>선택 흐름 3</td>
+                            <td>선택 흐름 1</td>
+                            <td>선택 흐름 2</td>
+                        </tr>
+                        <tr>
+                            <th>시나리오7</th>
+                            <td>기본 흐름1</td>
+                            <td>선택 흐름 4</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>시나리오8</th>
+                            <td>기본 흐름1</td>
+                            <td>선택 흐름 3</td>
+                            <td>선택 흐름 4</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p class="refer">※ 주의: 단순화를 위하여, 시나리오 5/6/8은 선택흐름이 단순히 한번 반복 실행한 것으로 표현</p>
+                    <p>현실적인 예를 위하여 아래와 같은 ATM Use Case 명세를 생각해보자</p>
+                    <p class="example-title">ATM 기계에서의 Use Case와 Actor</p>
+                    <div class="img-box des">
+                        <img src="../../../img/flow/atm_ex.png" height="320" alt=""/>
+                    </div>
+                    <p>위 그림에서 계좌 인출에 대한 기본 흐름과 선택 흐름을 포함하고 있는 유지케이스 명세서(Use Case Specification) 는 아래와 같다.</p>
+                    <p class="example-title">‘계좌인출’ 유즈 케이스 명세서</p>
+                    <table class="table table-styled table-tbody-styled">
+                        <colgroup>
+                            <col width="22%">
+                            <col width="78%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>기본 흐름</th>
+                            <td>이 Use Case은 준비상태에 있는 ATM을 가지고 시작한다.<br/>
+                                <ul class="list-unstyled">
+                                    <li>예금인출 초기화 : 고객은 은행카드를 ATM 기계의 카드리더에 삽입</li>
+                                    <li>은행카드 검증 : ATM은 카드에서 계좌를 읽어 사용 가능한 은행카드인지 체크[선택흐름-1]</li>
+                                    <li>비밀번호 입력 : ATM은 고객에게 4자리 비밀번호를 요청</li>
+                                    <li>계좌번호 &amp; 비밀번호 검증 : 계좌번호가 유효한지 그리고 그 계좌번호에 대한 비밀번호가 유효한 것인지
+                                        확인[선택흐름-4]
+                                    </li>
+                                    <li>ATM 거래 유형 선택 : ATM는 ATM에서 거래할 수 있는 다양한 유형을 보여준다. 이 흐름에서 고객은 항상 “예금 인출”을
+                                        선택함[선택흐름-2], [선택흐름-5]
+                                    </li>
+                                    <li>금액 입력 : 고객은 인출할 금액을 입력 이 흐름에서 고객은 미리 설정된 금액(10만원, 20만원, 40만원 또는 100만원)을
+                                        선택.[선택흐름-3]
+                                    </li>
+                                    <li>인증 : ATM은 트랜잭션으로 카드ID, 비밀번호, 금액, 계좌정보를 보냄으로써 은행시스템과의 확인 과정 수행 [선택흐름-6],
+                                        [선택흐름-7]
+                                    </li>
+                                    <li>지급 : ATM은 고객에게 돈을 지급</li>
+                                    <li>카드 반환 : 은행카드를 고객에게 반환</li>
+                                    <li>영수증 : 영수증을 고객에게 출력 지급. ATM은 내부 Log 기록</li>
+                                </ul>
+                                Use Case는 다시 준비 상태로 돌아감으로써 종료된다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 1<br/>- 유효하지 않은 카드</th>
+                            <td>기본 흐름 2 <br/>- 은행카드를 확인하여 유효하지 않다면 적당한 메시지를 보여주고 카드를 반환</td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 2<br/>- ATM 잔액 소진</th>
+                            <td>기본 흐름 단계 5 <br/>– ATM에 잔액이 없다면 “예금인출”거래 유형은 사용할 수 없도록 되어야 함</td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 3<br/>- ATM에 잔액 부족</th>
+                            <td>기본 흐름 단계 6 <br/>– 금액 입력시 ATM에 인출요구 금액보다 잔액이 부족할 경우에는 적당한 메시지를 출력하고 기본 흐름 단계 6으로 돌아감
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 4<br/>- 비밀번호 오류</th>
+                            <td>기본 흐름 단계 4 <br/>– 계좌 및 비밀번호 확인시 고객은 비밀번호 입력을 3회까지 시도 가능. 만약 비밀번호 오류시 ATM는 적당한 메시지를
+                                출력하고 입력 가능
+                                횟수(3회)를 넘지 않았을 경우에는 기본 흐름 3으로 돌아감. 만약 비밀번호 3번째 입력시에도 비밀번호가 틀릴 경우에는 카드는 반환되고 ATM는
+                                준비상태로
+                                돌아감. Use Case 종료
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 5<br/>- 계좌 없음</th>
+                            <td>기본 흐름 단계 4 <br/>– 계좌 및 비밀번호 확인시 은행시스템에 계좌가 존재하지 않거나 인출이 불가능하다는 코디 반환할 경우 ATM은 적당한
+                                메시지를 보여주고
+                                기본 흐름 단계 9로 돌아감
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 6<br/>- 계좌 잔액 부족</th>
+                            <td>기본 흐름 단계 7 <br/>–인출 요구 금액보다 계좌 잔액이 작다는 코드를 은행시스템이 반환할 경우, ATM은 적당한 메시지를 보여주고 기본 흐름 단계
+                                6으로
+                                돌아감
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 7<br/>- 하루 인출 가능 금액 초가</th>
+                            <td>기본 흐름 단계 7 <br/>–인출 요구 금액과 24시간 이내에 인출한 금액의 합이 하루 인출 가능금액을 초과하였다는 코드를 은행시스템이 반환할 경우,
+                                ATM는 적당한
+                                메시지를 보여주고 기본 흐름 단계 6으로 돌아감
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 x<br/>- Log 에러</th>
+                            <td>기본 흐름 단계 10 <br/>– Log가 기록되지 않는다면 ATM는 모든 기능이 중지되는 “안전모드”로 전환되며 ATM의 가동중지를 알리기 위하여
+                                적당한 경고
+                                메시지가 은행시스템에 보내어진다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 y<br/>- 거래 취소</th>
+                            <td>고객은 어느 흐름에서나 거래 취소가 가능. 거래를 취소하면 거래는 중단되고 카드는 반환됨</td>
+                        </tr>
+                        <tr>
+                            <th>선택 흐름 z<br/>- “안전모드” 전환</th>
+                            <td>전기, 문의 압력, 움직임 감지기 등의 모니터링 센서를 ATM은 보유. 센서가 동작할 경우, 알람 신호가 경찰시스템으로 전송하고 ATM는 재시작
+                                조작이 이루질 때까지 모든 기능이 중지한 “안전모드”로 전환됨.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">1차 Iteration에서 Iteration계획에 따라 예금인출 Use Case가 올바르게 동작하는지 확인한다. 모든
+                                Use Case
+                                흐름모두가 구현되지는 않았으며 현재 아래 흐름만이 구현되어 있다.
+                                <ul class="list-unstyled">
+                                    <li>기본 흐름 1 – 사전 설정된 금액의 인출 (10만원, 20만원, 50만원, 100만원)</li>
+                                    <li>선택 흐름 2 – ATM 잔액 소진</li>
+                                    <li>선택 흐름 3 – ATM 잔액 부족</li>
+                                    <li>선택 흐름 4 – 비밀번호 오류</li>
+                                    <li>선택 흐름 5 – 계좌가 없거나 부적당한 계좌 유형</li>
+                                    <li>선택 흐름 6 – 계좌 잔액 부족</li>
+                                </ul>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>이 Use Case에서 도출될 수 있는 유즈케이스 시나리오는 아래와 같다.</p>
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>유즈 케이스 시나리오 구분</th>
+                                <th colspan="2">흐름 경로</th>
+                            </tr>
+                            <tr>
+                                <th>시나리오1 <br/>– 성공적인 예금 인출</th>
+                                <td>기본 흐름</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th>시나리오2 <br/>– ATM 잔액 소진</th>
+                                <td>기본 흐름</td>
+                                <td>선택 흐름 2</td>
+                            </tr>
+                            <tr>
+                                <th>시나리오3 <br/>– ATM 잔액 부족</th>
+                                <td>기본 흐름</td>
+                                <td>선택 흐름 3</td>
+                            </tr>
+                            <tr>
+                                <th>시나리오4 <br/>– 비밀번호 오류 <br/>(추가 입력시도 가능)</th>
+                                <td>기본 흐름</td>
+                                <td>선택 흐름 4</td>
+                            </tr>
+                            <tr>
+                                <th>시나리오5 <br/>– 비밀번호 오류 <br/>(추가 입력시도 불가능)</th>
+                                <td>기본 흐름</td>
+                                <td>선택 흐름 4</td>
+                            </tr>
+                            <tr>
+                                <th>시나리오6 <br/>– 계좌가 없거나 부적당한 계좌 유형</th>
+                                <td>기본 흐름</td>
+                                <td>선택 흐름 5</td>
+                            </tr>
+                            <tr>
+                                <th>시나리오7 <br/>– 계좌잔액 부족</th>
+                                <td>기본 흐름</td>
+                                <td>선택 흐름 6</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="refer">※ 주의: 단순화를 위해 선택 흐름 3/6(시나리오 3/7)의 반복과 반복 조합은 포함하지 않음</p>
+                    <h5>Test Case 정의</h5>
+                    <ul class="list-unstyled">
+                        <li>Use Case 시나리오 각각에 대하여 Test Case를 정의한다. <br/>각 Use Case 시나리오에서 테스트 케이스를 도출하는 것은 특정 Use
+                            Case 시나리오가
+                            실행되도록 하는 특별한 조건을
+                            식별함으로써 이루어진다.
+                        </li>
+                        <li><em>위의 7개의 Use Case 시나리오 각각에 대하여 Test Case를 정의한다</em>.<br/>
+                            테스트 케이스는 매트릭스(Matrix)나 결정 테이블(Decision Tables)을 이용해 식별할 수 있다.<br/>
+                            일반적인 형태인 매트릭스에서 각 줄(Row)은 각 테스트 케이스를 나타내고, 칼럼들은 Test Case속성을 나타낸다.<br/>
+                            예를 들어, 각 테스트 케이스는 ID, 조건(또는 설명), 테스트 데이터, 예상결과가 있다.
+                        </li>
+                        <li>매트릭스 개발을 위해서는 우선 Use Case 시나리오 수행에 필요한 데이터 식별에서부터 시작한다. <br/>
+                            그리고 적어도 각 시나리오가 수행하는데 적당한 조건을 포함하는 테스트 케이스를 정의하여야 한다. <br/>
+                            예를 들어, 아래 매트릭스에서 V(valid)는 기본 흐름이 수행하였을 때 유효(VALID)해야만 하는 조건이라는 것을 나타내고, I(invalid)는 의도된
+                            선택 흐름을 호출하는 조건이라는 것을 나타내며 “N/A”는 해당 테스트 케이스에 적용될 조건이 아님을 나타낸다.
+                        </li>
+                    </ul>
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col width="8%">
+                                <col width="28%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="24%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>ID</th>
+                                <th>시나리오/조건</th>
+                                <th>비밀번호</th>
+                                <th>계좌번호</th>
+                                <th>요구인출금액</th>
+                                <th>계좌잔액</th>
+                                <th>ATM잔고</th>
+                                <th>예상결과</th>
+                            </tr>
+                            <tr>
+                                <th>TC1</th>
+                                <td>[시나리오 1]<br/>성공적 예금인출</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td>성공적 예금 인출</td>
+                            </tr>
+                            <tr>
+                                <th>TC2</th>
+                                <td>[시나리오 2]<br/>ATM 잔액 소진</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td class="center">I</td>
+                                <td>예금 인출 불가능하며, Use Case 종료</td>
+                            </tr>
+                            <tr>
+                                <th>TC3</th>
+                                <td>[시나리오 3]<br/>ATM 잔액 부족</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td class="center">I</td>
+                                <td>경고 메시지 출력, 기본 흐름 6으로 복귀</td>
+                            </tr>
+                            <tr>
+                                <th>TC4</th>
+                                <td>[시나리오 4]<br/>비밀번호 오류<br/>(시도 가능 횟수 1번 이상 남음)</td>
+                                <td class="center">I</td>
+                                <td class="center">V</td>
+                                <td class="center">N/A</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td>경고 메시지 출력, 기본 흐름 4로 복귀</td>
+                            </tr>
+                            <tr>
+                                <th>TC5</th>
+                                <td>[시나리오 4]<br/>비밀번호 오류<br/>(시도 가능 횟수 1번 남음)</td>
+                                <td class="center">I</td>
+                                <td class="center">V</td>
+                                <td class="center">N/A</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td>경고 메시지 출력, 기본 흐름 4로 복귀</td>
+                            </tr>
+                            <tr>
+                                <th>TC6</th>
+                                <td>[시나리오 4]<br/>비밀번호 오류<br/>(시도 가능 회수 없음)</td>
+                                <td class="center">I</td>
+                                <td class="center">V</td>
+                                <td class="center">N/A</td>
+                                <td class="center">V</td>
+                                <td class="center">V</td>
+                                <td>경고 메시지 출력, 카드 반환, Use Case 종료</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>위 매트릭스에서 6개의 테스트 케이스는 4개의 Use Case 시나리오를 수행한다. 기본 흐름에 대하여 CW1는 경로를 변경하지 않는 긍정적(Positive)
+                            테스트 케이스이다. 기본 흐름의 종합적인 테스트는 기본 흐름이 조건이 올바를 때만 이루어진다는 것을 확인하기 위하여 부정적(Negative) 테스트 케이스들도
+                            포함해야 하는데 이런 테스트 케이스가 CW2~6이다.
+                        </li>
+                        <li>시나리오4는 각각 하나의 긍정적/부정적 테스트 케이스를 가지고는 불충분하다. 시나리오4를 완전히 테스트하기 위해서는 최소한 3개의 긍정적 테스트 케이스를
+                            필요로 한다.
+                            <ul class="list-unstyled">
+                                <li>틀린 비밀번호가 입력되고 시도횟수가 남아있다면 이 선택 흐름은 기본 흐름 단계 3(비밀번호 입력)으로 복귀<br/>
+                                <li>틀린 비밀번호가 입력되고 시도횟수가 남아있지 않다면 이 선택 흐름은 카드를 되돌려 주고 Use Case 종료<br/>
+                                <li>올바른 비밀번호가 입력되고 시도횟수가 남아있지 않다면 이 선택 흐름은 기본 흐름 단계 5(인출금액 입력) 실행</li>
+                            </ul>
+                        </li>
+                        <li>위 매트릭스(Matrix)에는 각 조건에 대한 실제 값이 존재하지 않는다. 하지만 이런 Matrix는 무슨 조건이 테스트 되는지 이해하기 쉽고, 또한 단지
+                            V와 I만을 보면 되므로 충분한 테스트 케이스가 정의되었는지에 대한 확인이 용이하다.
+                        </li>
+                        <li>일단 모든 테스트 케이스가 식별되고 검토되면 적절한지 확인되어야 한다, 그리하여 중복되거나 동일한 테스트 케이스는 제거한다.</li>
+                        <li>테스트 케이스의 승인과정에서 실제 데이터 값이 식별되고 테스트 데이터가 만들어 진다.</li>
+                    </ul>
+                    <div class="example-table">
+                        <table class="table table-bordered">
+                            <colgroup>
+                                <col width="8%">
+                                <col width="20%">
+                                <col width="10%">
+                                <col width="11%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="11%">
+                                <col width="20%">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>ID</th>
+                                <th>시나리오/조건</th>
+                                <th>비밀번호</th>
+                                <th>계좌번호</th>
+                                <th>요구인출금액</th>
+                                <th>계좌잔액</th>
+                                <th>ATM잔고</th>
+                                <th>예상결과</th>
+                            </tr>
+                            <tr>
+                                <th>TC1</th>
+                                <td>[시나리오 1]<br/>성공적 예금인출</td>
+                                <td>7777</td>
+                                <td>111-11</td>
+                                <td>50만원</td>
+                                <td>500만원</td>
+                                <td>700만원</td>
+                                <td><p>성공적 예금 인출</td>
+                            </tr>
+                            <tr>
+                                <th>TC2</th>
+                                <td>[시나리오 2]<br/>ATM 잔액 소진</td>
+                                <td>7777</td>
+                                <td>111-11</td>
+                                <td>100만원</td>
+                                <td>500만원</td>
+                                <td>0원</td>
+                                <td><p>예금 인출 불가능하며, Use Case 종료</td>
+                            </tr>
+                            <tr>
+                                <th>TC3</th>
+                                <td>[시나리오 3]<br/>ATM 잔액 부족</td>
+                                <td>7777</td>
+                                <td>111-11</td>
+                                <td>100만원</td>
+                                <td>500만원</td>
+                                <td>70만원</td>
+                                <td><p>경고 메시지 출력, 기본 흐름 6으로 복귀</td>
+                            </tr>
+                            <tr>
+                                <th>TC4</th>
+                                <td>[시나리오 4]<br/>비밀번호 오류<br/>(시도 가능 횟수 1번 이상 남음)</td>
+                                <td>6666</td>
+                                <td>111-11</td>
+                                <td>N/A</td>
+                                <td>500만원</td>
+                                <td>700만원</td>
+                                <td>경고 메시지 출력, 기본 흐름 4로 복귀</td>
+                            </tr>
+                            <tr>
+                                <th>TC5</th>
+                                <td>[시나리오 4]<br/>비밀번호 오류(시도 가능 횟수 1번 남음)</td>
+                                <td>6666</td>
+                                <td>111-11</td>
+                                <td>N/A</td>
+                                <td>500만원</td>
+                                <td>700만원</td>
+                                <td>경고 메시지 출력, 기본 흐름 4로 복귀</td>
+                            </tr>
+                            <tr>
+                                <th>TC6</th>
+                                <td>[시나리오 4]<br/>비밀번호 오류<br/>(시도 가능 회수 없음)</td>
+                                <td>6666</td>
+                                <td>111-11</td>
+                                <td>N/A</td>
+                                <td>500만원</td>
+                                <td>700만원</td>
+                                <td>경고 메시지 출력, 카드 반환, Use Case 종료</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- 최상단 이동 btn -->
+            <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+
+    </main>
+    <!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

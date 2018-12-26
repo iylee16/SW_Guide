@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a class="active on" href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a class="active on" href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>테스트 수행</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/guide/technique.html">개발가이드</a></li>
+                    <li><a href="../../guide/technique/summary01.html">개발 기법</a></li>
+                    <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    <li class="active">결함유형분류 가이드</li>
+                </ol>
+
+                <ul class="top-nav-menu">
+                    <li><a href="unittest.html">단위테스트 가이드</a></li>
+                    <li><a href="functional_test.html">기능테스트 가이드</a></li>
+                    <li><a href="defect_administration_guide.html">결함관리 가이드</a></li>
+                    <li class="active"><a href="defect_type_guide.html">결함유형분류 가이드</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container">
+            <div id="accordian" class="links well">
+                <dl>
+                    <dt><a href="#title1">1. 목적 및 범위</a></dt>
+                </dl>
+                <dl>
+                    <dt><a href="#title2">2. 용어 정의</a></dt>
+                    <div class="content">
+                        <dd><a href="#title2-1">2.1 결함 심각도(Defect Severity)</a></dd>
+                        <dd><a href="#title2-2">2.2 발생 단계</a></dd>
+                    </div>
+                </dl>
+                <dl>
+                    <dt><a href="#title3">3. 결함 분류의 필요성</a></dt>
+                </dl>
+                <dl>
+                    <dt><a href="#title4">4. 결함 심각도 (Defect Severity)</a></dt>
+                </dl>
+                <dl>
+                    <dt><a href="#title5">5. 결함 유형 분류표</a></dt>
+                </dl>
+                <dl>
+                    <dt><a href="#title6">6. 결함 발생 단계 및 결함원인</a></dt>
+                </dl>
+                <dl>
+                    <dt><a href="#title7">7. 결함 상태 (Status)</a></dt>
+                </dl>
+                <dl>
+                    <dt><a href="#title8">8. 개발공정별 자주 발생되는 결함 리스트 </a></dt>
+                    <div class="content">
+                        <dd><a href="#title8-1">8.1 요구사항 결함 리스트</a></dd>
+                        <dd><a href="#title8-2">8.2 설계 결함 리스트 </a></dd>
+                        <dd><a href="#title8-3">8.3 제작(코딩)단계 결함 리스트 </a></dd>
+                        <dd><a href="#title8-4">8.4 단위 테스트 결함 리스트 </a></dd>
+                        <dd><a href="#title8-5">8.5 기능(통합/시스템) 테스트 결함 리스트 </a></dd>
+                        <dd><a href="#title8-6">8.6 성능 테스트 결함 리스트 </a></dd>
+                        <dd><a href="#title8-7">8.7 사용자 인터페이스 결함 리스트 </a></dd>
+                    </div>
+                </dl>
+            </div>
+
+            <h2 id="title1">목적 및 범위</h2>
+            <div class="content">
+                <p>본 문서는 시스템 결함 분류 지침으로 유형별 결함 분류와, 발생단계 및 결함 원인, 심각도 설명에 목적이 있다.</p>
+            </div>
+
+            <h2 id="title2">용어 정의</h2>
+            <div class="content">
+                <h3 id="title2-1">1. 결함 심각도(Defect Severity) </h3>
+                <div class="content">
+                    <p>사용자 관점에서 결함이 시스템에 미치는 영향을 측정한 것을 말한다.
+                        결함의 심각도 수준은 최종 사용자에 대한 잠재적인 비지니즈 영향을 암시하며 사용자에 대한 영향과 해당 결함의 발생 빈도를 고려하여 결정한다.</p>
+                    <p>결함 심각도는 테스트 대상 시스템의 품질에 대한 암시를 제공한다.</p>
+                    <p>높은 심각도의 결함은 낮은 시스템 품질을 의미한다.</p>
+                    <p>테스트 종료단계에서 이러한 정보는 결함의 수와 결함의 심각도 수준을 기반으로 하여 릴리즈 시기 결정 등에 사용될 수 있다.</p>
+                    <p>모든 결함들은 심각도 수준을 가져야 한다.</p>
+                </div>
+
+                <h3 id="title2-2">2. 발생 단계</h3>
+                <div class="content">
+                    <p>결함이 발생하게 된 개발 생명주기 상의 단계를 말한다.</p>
+                </div>
+            </div>
+
+            <h2 id="title3">결함 분류의 필요성</h2>
+            <div class="content">
+                <p>결함은 모든 프로젝트에서 발생할 수 있으며, 프로젝트 초기 단계에 식별하고, 평가해서 수정해야 한다.</p>
+                <p>결함 분류를 통해 결함 분석 영역을 식별하고 결함의 주원인을 발견할 수 있다.</p>
+                <p>&nbsp;결함은 다양한 유형(Type), 심각도(Severity), 발생 단계 및 결함 원인으로 분류될 필요가 있다.</p>
+                <p>심각도 분류를 통해 시스템 작동에 결함이 미치는 영향을 이해할 수 있다.</p>
+                <p>향은 사용자 관점에서 판단되며, 수정을 해야 하는 결함 수와는 반드시 일치하지 않는다.</p>
+            </div>
+
+            <h2 id="title4">결함 심각도 (Defect Severity)</h2>
+            <div class="content">
+                <p>결함 심각도 분류는 다음을 따른다.</p>
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="18%">
+                        <col width="60%">
+                        <col width="22%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>심각도</th>
+                        <th>설 명</th>
+                        <th>예 시</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>Critical<br/>(치명적 결함)</th>
+                        <td>기능 수행으로 인하여 시스템 품질에 치명적인 영향을 미칠 때</td>
+                        <td>프로그램 비정상 종료, 프로그램 비정상 중지, 데이터 손상, 메모리 누수 등</td>
+                    </tr>
+                    <tr>
+                        <th>Major<br/>(주요 결함)</th>
+                        <td>프로그램의 핵심 기능수행에 있어서 결함이 발생하는 상태</td>
+                        <td>핵심 요구사항 미구현, 주요 기능 오작동, 응답시간 지연, 시스템 복구 후 데이터 왜곡</td>
+                    </tr>
+                    <tr>
+                        <th>Normal<br/>(일반적 결함)</th>
+                        <td>기능이 정상적으로 수행되는 경우가 존재하나, 비정상적인 값 혹은 예외적인 상황에서 결함이 발생하는 상태(시스템 흐름에 영향을 미치는 결함),
+                            일반적인 문제이나 반드시 고쳐야 할 결함
+                        </td>
+                        <td>부정확한 기능, 부정확한 프로세스 로직, 사소한 기능 오작동, 잘못된 인터페이스 등</td>
+                    </tr>
+                    <tr>
+                        <th>Minor<br/>(사소한 결함)</th>
+                        <td>기능상의 문제는 발생하지 않으나, 권고수준의 미흡한 부분이 존재하는 상태 혹은 사용자가 불편함을 느끼는 상태,
+                            기능상 덜 중요한 결점이 발견되거나 쉽게 해결될 수 있는 문제가 나타남.
+                            오∙탈자나 텍스트의 정렬이 잘못된 단순 외형적 문제점
+                        </td>
+                        <td>스크린 표준 위반, 필드 형식 오류, 부정확한 GUI 및 메시지, 에러메시지 미출력, 문법/철자 오류 등</td>
+                    </tr>
+                    <tr>
+                        <th>Enhancement<br/>(개선사항)</th>
+                        <td>결함은 아니나, 사용자 편의성 확보를 위하여 기능 또는 성능 개선을 권고</td>
+                        <td>개선이 필요한 사항 등</td>
+                    </tr>
+                    <tr>
+                        <th>Blocker</th>
+                        <td>기능 수행이 되지 않아 개발 혹은 테스팅 진행자체가 불가능하게 만드는 상태</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="title5">결함 유형 분류표</h2>
+            <div class="content">
+                <p>테스트 엔지니어를 포함하여 테스트 관려자는 테스트 수행 시 발견된 결함에 대해 기술해야 한다.</p>
+                <p>발견된 결함을 분류하면 해당 테스트 대상의 취약한 부분에 대한 분석이 가능해 진다.</p>
+                <p>예를 들어 표준 준수에 대한 결함이 많다면 해당 프로젝트의 표준이 올바르게 기술되지 않았거나 프로젝트 팀원들이 표준을 따르지 않고 있는 걸로 파악이 된다.</p>
+                <p>결함분류는 결함을 분석하여 개발 시 취약한 부분을 찾아내어 빠른 조치가 가능한 도구가 될 수 있다.</p>
+                <p>아래는 본 가이드라인에서 제시하는 결함 유형 분류 체계이다.</p>
+                <p>프로젝트 상황에 따라 결함을 크게 또는 자세하게 분류할 수 있다.</p>
+                <p>테스트 엔지니어는 결함 발견 후 결함관리대장에 해당 결함유형을 찾아 기록해야 한다.</p>
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="18%">
+                        <col width="22%">
+                        <col width="60%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>결함유형(대)</th>
+                        <th>결함유형(소)</th>
+                        <th>설명</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="5">제어/로직</th>
+                        <td>프로그램 이상 수행</td>
+                        <td>문장∙로직 오류, 잘못된 리턴, 인터럽트</td>
+                    </tr>
+                    <tr>
+                        <td>프로그램 중지</td>
+                        <td>크래쉬, 불가능한 조건을 위하여 기다림</td>
+                    </tr>
+                    <tr>
+                        <td>시스템 다운</td>
+                        <td>시스템이 비정상적으로 종료되거나 중단됨</td>
+                    </tr>
+                    <tr>
+                        <td>계산값 오류</td>
+                        <td>잘못된 로직에 의한 계산오류가 발생</td>
+                    </tr>
+                    <tr>
+                        <td>입력값 검증</td>
+                        <td>입력 시 범위, 자릿수, 경계값 에 잘못된 입력 시 가능함</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">CUD</th>
+                        <td>CUD가 안됨</td>
+                        <td>데이터 추가, 수정, 삭제 기능이 안됨</td>
+                    </tr>
+                    <tr>
+                        <td>CUD가 잘못 반영됨</td>
+                        <td>데이터 추가, 수정, 삭제 기능 수행 시 결과가 잘못 반영됨</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="9">조회 및 리포트</th>
+                        <td>조회 안됨</td>
+                        <td>조회 기능이 안됨</td>
+                    </tr>
+                    <tr>
+                        <td>조회 항목 누락</td>
+                        <td>조회는 되나 누락되는 항목이 존재</td>
+                    </tr>
+                    <tr>
+                        <td>조회 내용 오류</td>
+                        <td>조회는 되나 원하지 않은 조회 발생</td>
+                    </tr>
+                    <tr>
+                        <td>조회 내용의 무결성</td>
+                        <td>조회는 바르게 했으나 조회의 내용이 실제 데이터베이스 내용과 불일치함.</td>
+                    </tr>
+                    <tr>
+                        <td>조회 필드 구성 오류</td>
+                        <td>조회는 되나 UI상에 항목이 바뀌거나 잘못되어 있음.</td>
+                    </tr>
+                    <tr>
+                        <td>리포트 출력 안됨</td>
+                        <td>리포트 출력기능이 안됨.</td>
+                    </tr>
+                    <tr>
+                        <td>리포트 출력 항목 누락</td>
+                        <td>리포트 출력기능이 되나 누락되는 항목이 존재</td>
+                    </tr>
+                    <tr>
+                        <td>리포트 출력 내용 오류</td>
+                        <td>리포트 출력기능이 되나 출력내용에 오류가 있음</td>
+                    </tr>
+                    <tr>
+                        <td>리포트 출력 필드 구성 오류</td>
+                        <td>리포트 출력기능이 되나 출력필드에 바뀌거나 잘못되어 있음.</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">I/F</th>
+                        <td>내부 링크 안됨</td>
+                        <td>한 서브 시스템 내에서의 콜에 대한 응답이 오지 않음</td>
+                    </tr>
+                    <tr>
+                        <td>타 시스템 링크 안됨</td>
+                        <td>별도의 시스템으로의 콜에 대한 응답이 오지 않음</td>
+                    </tr>
+                    <tr>
+                        <td>잘못된 링크</td>
+                        <td>콜에 대한 링크가 잘못되어 오∙동작이 발생함</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="4">GUI</th>
+                        <td>화면 표시</td>
+                        <td>화면 제목 표시, 버튼 활성화/비활성화 표시, 화면내 오∙탈자, 잘못된 메뉴나 버튼의 배치, 표준 또는 템플릿에 따라 UI가 작성되지 않아 일관성이
+                            부족함
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>편의성</td>
+                        <td>사용자 입장에서 불편한 기능 개선 항목</td>
+                    </tr>
+                    <tr>
+                        <td>커뮤니케이션</td>
+                        <td>메시지/정보표시 누락, 일관성 오류, 부적절한 내용
+                            <ul class="list-unstyled">
+                                <li>메시지 내용이 사용자가 알기 어렵게 내용이 부실하거나 불명확함</li>
+                                <li>메시지 내용이 해당 동작 또는 결과와 맞지 않음</li>
+                                <li>입력수정삭제와 같은 처리완료 시 해당 동작에 대한 완료메시지가 나오지 않음</li>
+                                <li>비정상적인 동작이나 결과가 발생할 때 경고메시지가 나오지 않음.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>보편성</td>
+                        <td>명세서에는 없으나 보편적으로 사용자가 예상하는 UI</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="4">요구사항</th>
+                        <td>불명확</td>
+                        <td>요구사항의 불명확한 기술</td>
+                    </tr>
+                    <tr>
+                        <td>불완전</td>
+                        <td>요구사항이 누락됨</td>
+                    </tr>
+                    <tr>
+                        <td>불일치</td>
+                        <td>요구사항간 중복되거나 상호 모순됨</td>
+                    </tr>
+                    <tr>
+                        <td>불가능</td>
+                        <td>구현/테스트 불가능하거나 불충분한 요구사항</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="4">표준/절차</th>
+                        <td>전사 표준</td>
+                        <td>전사 표준 프로세스/방법론 미 준수</td>
+                    </tr>
+                    <tr>
+                        <td>UI 표준 미 준수</td>
+                        <td>UI 표준을 따르지 않음</td>
+                    </tr>
+                    <tr>
+                        <td>코딩 표준 미 준수</td>
+                        <td>프로젝트 내 코딩 표준을 따르지 않음</td>
+                    </tr>
+                    <tr>
+                        <td>데이터 포맷 준수</td>
+                        <td>표준상의 데이터 포맷을 따르지 않음</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="5">성능</th>
+                        <td>응답시간 초과</td>
+                        <td>동작 수행 시 응답시간이 요구사항에 비해 초과됨</td>
+                    </tr>
+                    <tr>
+                        <td>시스템 waiting 또는 hanging</td>
+                        <td>시스템이 waiting하여 동작이 지연되는 현상 발생</td>
+                    </tr>
+                    <tr>
+                        <td>메모리 사용 오류</td>
+                        <td>비정상적인 메모리 사용 발견</td>
+                    </tr>
+                    <tr>
+                        <td>커넥션 풀 오류</td>
+                        <td>비정상적인 커넥션 풀 사용 발견</td>
+                    </tr>
+                    <tr>
+                        <td>용량/부하</td>
+                        <td>H/W, Infra의 용량/성능의 적정(기준) 임계치 초과</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">데이터
+                            (DB)
+                        </th>
+                        <td>SQL 실행 오류</td>
+                        <td>SQL 관련 실행 오류</td>
+                    </tr>
+                    <tr>
+                        <td>DB Table 오류</td>
+                        <td>Table 생성의 오류로 프로그램에서 오류가 나는 경우</td>
+                    </tr>
+                    <tr>
+                        <td>기준정보</td>
+                        <td>기준정보의 부적절한 정의 및 명세</td>
+                    </tr>
+                    <tr>
+                        <th>기타</th>
+                        <td>기타</td>
+                        <td>기타 결함</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="title6">결함 발생 단계 및 결함원인</h2>
+            <div class="content">
+                <p>결함 발생 단계 및 원인은 다음과 같이 분류된다.</p>
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="16%">
+                        <col width="58%">
+                        <col width="26%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>발생 단계</th>
+                        <th>설 명</th>
+                        <th>결함 원인</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>분석</th>
+                        <td>시스템의 요구사항을 분석하고 명세화 하는 과정에서 발생된 결함</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>불명확한 요구사항</li>
+                                <li>요구사항에 대한 이해 부족</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>설계</th>
+                        <td>시스템을 설계(DB 설계, 보안 설계, 워크플로우 디자인, 프로덕트 아키텍처 디자인)하는 과정에서 발생된 결함</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>설계 내용 오류</li>
+                                <li>불완전한 설계</li>
+                                <li>설계 문서 이해력 부족</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>제작</th>
+                        <td>프로그램을 제작하는 과정에서 발생된 결함</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>설계에 대한 코딩 미 실시</li>
+                                <li>코딩 미숙</li>
+                                <li>불완전한 컴포넌트 사용/적용</li>
+                                <li>불완전한 Tool 사용/적용</li>
+                                <li>불완전한 데이터 사용</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>기타/공통</th>
+                        <td>개발 발생 단계 전체 혹은 기타 문제로 인하여 발생된 결함</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>변경사항 반영 미흡</li>
+                                <li>표준 미 준수</li>
+                                <li>기타</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="title7">결함 상태 (Status)</h2>
+            <div class="content">
+                <p>결함 상태란 보고된 결함이 현재 어떤 상태에 있는가를 설명하는 것이다.</p>
+                <p>다음은 결함 상태에 대한 분류이다.</p>
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="16%">
+                        <col width="84%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>발생 단계</th>
+                        <th>설 명</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>NEW<br/>(등록상태)</th>
+                        <td>발견된 에러가 등록된 상태, 등록된 에러에 대한 상세 설명을 결함관리대장(또는 SR)에 기술하고 스크린 덤프가 가능하면 첨부
+                            발견된 시점을 기록하고, 관련자들에게 등록된 에러에 대한 내용을 통보
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>OPEN<br/>(결함확정)</th>
+                        <td>통보 받은 관련자들(테스트 설계자, 테스트 엔지니어, 개발프로젝트 팀)은 등록된 에러를 분석하여 단순 에러인지 결함인지 분석한다. 결함으로 판명된
+                            경우, 결함의 상태를 “OPEN”으로 변경
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>ASSIGNED<br/>(결함할당)</th>
+                        <td>영향 분석 및 수정을 위해 결함을 개발자에게 할당한 상태</td>
+                    </tr>
+                    <tr>
+                        <th>FIXED<br/>(결함조치)</th>
+                        <td>할당 받은 개발자가 결함에 대한 수정활동을 수행하고 수정내역을 확인완료한 상태</td>
+                    </tr>
+                    <tr>
+                        <th>CLOSED<br/>(조치완료)</th>
+                        <td>결함담당자가 “FIXED”된 결함이 수정되었는지 확인하고 회귀 테스트 시 결함이 발견되지 않은 상태
+                            만약 수정된 결함이 만족스럽지 않을 경우, 결함의 상태를 “ASSIGNED”으로 변경
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>DEFERRED<br/>(조치연기)</th>
+                        <td>결함 심각도 및 수정 우선순위가 매우 낮거나 해당 프로젝트에서의 수정범위가 아닌것으로 판단되어 결함 수정이 연기된 상태</td>
+                    </tr>
+                    <tr>
+                        <th>CLARIFIED<br/>(결함반려)</th>
+                        <td>보고된 결함이 결함이 아니라고 판단된 상태(Rejected)</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="title8">개발공정별 자주 발생되는 결함 리스트</h2>
+            <div class="content">
+                <p>시스템 개발에서 자주 발견되는 공통적인 결함들을 개발 단계별로 리스트하고 있다.
+                    본 내용이 절대적이고 완전한 결함 리스트를 제공하고자 하는 것은 아니며, 실 프로젝트에서는 이 결함리스트를 기반으로 결함을 관리할 때 사용 할 수 있다.</p>
+
+                <h3 id="title8-1">1. 요구사항 결함 리스트</h3>
+                <div class="content">
+                    <p>요구사항에서 주로 나타나는 문제점/오류 유형은 아래와 같다.</p>
+                    <ul class="list-unstyled">
+                        <li>애매모호한 요구사항 (Ambiguous requirement). 하나의 문장에 대하여 하나 이상의 해석이 가능 여러 해석이 가능하여 오해의 소지가 있는
+                            요구사항
+                        </li>
+                        <li>불필요한 요구사항 또는 특성이 포함</li>
+                        <li>반드시 있어야 할 요구사항이 누락</li>
+                        <li>요구사항이 불완전하게 정의</li>
+                        <li>일관성이 없는 요구사항 추출</li>
+                        <li>모순된 요구사항</li>
+                        <li>부정확한 (inaccurate) 요구사항</li>
+                        <li>추상적인 요구사항</li>
+                        <li>가정 또는 전제 조건 비문서화. 명세서에 언급되지 않은 가정이나 부정확한 가정 존재</li>
+                        <li>한쪽에 치우친 표현 (개발자 중심 또는 사용자 중심).
+                            요구사항 명세서가 최종 사용자 또는 업무 분석가에게는 명확한 반면 개발자에게는 도움이 안 되고 그 반대인 경우
+                        </li>
+                        <li>특정 사용자 그룹을 고려하지 않음</li>
+                        <li>도출된 요구사항이 고객이 진정으로 원하는 요구사항이 아님</li>
+                        <li>변경이 불가능하게 정의된 요구사항</li>
+                        <li>개발자(소프트웨어 엔지니어)와 사용자/고객과의 잘못된 의사소통으로 인해 잘못된 요구사항 도출</li>
+                        <li>기능성, 신뢰성, 사용성 등의 품질 요소가 명시되어 있지 않음</li>
+                        <li>승인 받지 않았거나 문서에 기록되지 않은 변경 사항</li>
+                        <li>기술적 또는 개발환경에서 타당성이 없는 요구사항</li>
+                        <li>가독성 결여</li>
+                    </ul>
+                </div>
+
+                <h3 id="title8-2">2. 설계 결함 리스트</h3>
+                <div class="content">
+                    <p>설계에서 주로 나타타는 결함의 주요 유형은 아래와 같다.</p>
+                    <ul class="list-unstyled">
+                        <li>요구사항을 만족시키지 못함</li>
+                        <li>기능 명세서와 일관성이 유지되지 않음</li>
+                        <li>변경 관리 없이 범위가 많이 변경</li>
+                        <li>신경망과 같이 구성요소 간에 복잡하게 얽힘</li>
+                        <li>기술적으로 너무 앞서거나 너무 뒤쳐짐</li>
+                        <li>제품 개발에 필요한 내용이 구체적이지 못함</li>
+                        <li>제품 사용성이 충분히 언급되지 않음</li>
+                        <li>결함 예방, 감지 또는 발견하는 방법이 시스템에 고려되지 않았음</li>
+                        <li>소프트웨어 설계가 유연하지도, 견고하지도 않고, 결함에 대한 허용 수준도 낮음</li>
+                        <li>기존의 기술 환경 및 업무 운영과 통합이 부족함</li>
+                        <li>전반적인 시스템 설계가 하드웨어 신뢰성에 초점이 맞춰져 있고 소프트웨어는 오류 없이 잘 작동될 것으로 간주</li>
+                        <li>효과적인 설계 원칙을 고수하는데 실패, 설계 표준(가이드라인) 위반</li>
+                        <li>서브 시스템이나 구성 요소간 인터페이스 문제</li>
+                        <li>알고리즘이나 로직의 오류</li>
+                        <li>부정확한 데이터 구조나 데이터 표현</li>
+                        <li>요구사항이 설계에서 누락 됨</li>
+                        <li>요구사항이 한번 이상 설계 됨</li>
+                        <li>불필요한 설계 존재</li>
+                        <li>하나의 요구사항이 여러 설계 요소에 관련되어 있는 경우, 설계기 완전하지 못하거나 일관성이 없음</li>
+                        <li>요구사항과 설계의 기술적 관계가 불일치</li>
+                    </ul>
+                </div>
+
+                <h3 id="title8-3">3. 제작(코딩)단계 결함 리스트</h3>
+                <div class="content">
+                    <p>제작단계에서 공통적으로 많이 발생하는 결함의 주요 유형은 아래와 같다.</p>
+                    <ul class="list-unstyled">
+                        <li>설계 사양을 만족시키지 못함</li>
+                        <li>효율적인 코드 원칙과 표준을 준수하지 않음</li>
+                        <li>데이터 초기화나 정의 오류</li>
+                        <li>프로그램간 인터페이스 문제</li>
+                        <li>부정확한 알고리즘</li>
+                        <li>부정확한 로직 (부정확한 로직 분기나 루프, 부정확한 계산)</li>
+                        <li>부정확한 데이터 구조나 데이터 표현</li>
+                        <li>부적합한 문서화 (프로그램 명세서의명세정도 부적절)</li>
+                        <li>설계 누락 (구현되지 않은 설계 컴포넌트 존재)</li>
+                        <li>설계가 불필요하게 한번 이상 구현</li>
+                        <li>불필요한 코드 존재</li>
+                        <li>테스트 명세서 또는 데이터의 결함</li>
+                        <li>테스트 절차 실행상의 잘못</li>
+                        <li>테스트 환경의 결함</li>
+                        <li>프로그램의 결함</li>
+                        <li>프로그램 설계의 결함</li>
+                    </ul>
+                </div>
+
+                <h3 id="title8-4">4. 단위 테스트 결함 리스트</h3>
+                <div class="content">
+                    <p>단위 테스트 단계에서 많이 발견되는 결함의 주요 유형은 아래와 같다.</p>
+                    <table class="table table-styled">
+                        <colgroup>
+                            <col width="26%">
+                            <col width="74%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>결함</th>
+                            <th>설명(Description)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>알고리즘이나 로직 오류</td>
+                            <td>부정확한 알고리즘이나 로직 사용</td>
+                        </tr>
+                        <tr>
+                            <td>제한사항 또는 조건문의 누락</td>
+                            <td>부적절한 값이 입력되는 경우 적절히 처리를 해주거나 또는 특정 작업을 수행 하기 위해 반드시 만족되어야 할 사전조건을 확인하는 코드 부분을 만들지
+                                않음<br/>
+                                (예) 날짜 입력에 February 31이 될 때 입력을 막고 적절한 에러 메시지 디스플레이
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>에러 또는 Exception 핸들링 코드가 생략 또는 부적절</td>
+                            <td>오류 또는 Exception 발생시 처리를 해주는 코드가 누락되었거나 부적절함</td>
+                        </tr>
+                        <tr>
+                            <td>런타임 에러</td>
+                            <td>컴파일러에 의해 발견되지 못하는 프로그램 syntax error가 런타임에 발생</td>
+                        </tr>
+                        <tr>
+                            <td>무한 루프</td>
+                            <td>루프를 빠져 나올 수 있는 termination 조건이 만족되지 못함</td>
+                        </tr>
+                        <tr>
+                            <td>dead-end code</td>
+                            <td>한번 들어가면 빠져 나갈 방법이 없는 모듈/서브루틴</td>
+                        </tr>
+                        <tr>
+                            <td>프로그램 제어 오류</td>
+                            <td>GOTO, CONTINUE, BREAK 문 등을 이용하여 프로그램 제어(control)가 비순차적으로 이동될 때 제어가 잘못된 곳으로 이동</td>
+                        </tr>
+                        <tr>
+                            <td>프로그램의 비정상적 종료</td>
+                            <td>정상적인 종료(termination) 절차를 거치지 않고 프로그램이 종료</td>
+                        </tr>
+                        <tr>
+                            <td>off-by one error</td>
+                            <td>예1, if x &lt;0 대신 x &lt;1 사용<br/>
+                                예2, 반복문에서10번 반복을 수행해야 하나 실제 9번이나 11번의 반복이 됨
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dead code 또는 unreachable code</td>
+                            <td>무의미한 코드. 불필요한 또는 실행되지 않는 (실행시킬 방법도 없는) 코드 (예) 프로그램내에서 반복 초기 조건이 절대 만족될 수 없어
+                                반복문(iteration statements)이 한번도 수행되지 못하는 경우
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>타입이 다른 오브젝트의 연산
+                            </td>
+                            <td>타입이 다른 오브젝트를 직접 비교하거나 연산을 수행하여 의도되지 않은 데이타 전환 (data conversion), truncation(값이 잘려나가는
+                                경우), round-off (반올림) 등이 발생 (예) float 타입의 변수로 integer 타입의 변수를 나누는 연산
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>오버플로우/언더플로우 발생</td>
+                            <td>연산 도중 계산값에 overflow나 underflow가 발생해 결과값이 변질되는 경우</td>
+                        </tr>
+                        <tr>
+                            <td>잘못된 function을 호출</td>
+                            <td>(예) free_avail 이라는 이름의 function 대신 free_node를 호출하여 계산 수행</td>
+                        </tr>
+                        <tr>
+                            <td>오퍼레이터(연산자)를 잘못 사용</td>
+                            <td>(예1) x – y 대신 x + y
+                                (예2) 오른쪽 변수값을 왼쪽 변수에 할당하는 = 오퍼레이터와 오른쪽과 왼쪽이 동일한지 비교하는 == 오퍼레이터를 혼동하여 사용
+                                (예3) &gt;= 대신 &gt; 사용
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>오퍼레이터의 연산 순서가 잘못됨</td>
+                            <td>여러 개의 오퍼레이터가 있는 경우 오퍼레이터의 연산 순서가 의도된 대로 되지않아 결과값이 다르게 발생</td>
+                        </tr>
+                        <tr>
+                            <td>division by zero</td>
+                            <td>0으로 나누는 계산을 수행</td>
+                        </tr>
+                        <tr>
+                            <td>부적절한 프로그래밍 구조를 사용</td>
+                            <td>(예) REPEAT UNTIL문을 사용해야 하는 곳에 WHILE DO 문을 사용</td>
+                        </tr>
+                        <tr>
+                            <td>변수명 혼동</td>
+                            <td>유사한 이름의 여러 데이터 변수가 존재하는 경우, 잘못된 변수를 참조 (예) x=acd33 대신 x=acg33 사용 또는 변수 VOLT 대신 VOLTS
+                                사용
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>부적절한 입력/업데이트 허용</td>
+                            <td>입력 트랜잭션이 데이터 포맷에 맞지 않음에도 불구하고 입력(insert)을 허용하거나, 데이터의 잘못된 업데이트를 막지 못하여 데이터 무결성
+                                파괴
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>중복 데이터 입력 허용</td>
+                            <td>중복 데이터 입력을 허용하여 데이터 무결성 파괴</td>
+                        </tr>
+                        <tr>
+                            <td>부정확한 데이터 구조나 데이터 표현</td>
+                            <td>부정확한 데이터 구조나 데이터 표현 존재</td>
+                        </tr>
+                        <tr>
+                            <td>초기화되지 않은 데이터 값 참조</td>
+                            <td>값이 정해지지 않았거나 또는 초기화되지 않은 변수, array element, 필드(field) 등을 참조</td>
+                        </tr>
+                        <tr>
+                            <td>잘못된 초기화</td>
+                            <td>초기화가 적절하게 이루어지지 않음. 몇몇 프로그래밍 언어에서 array나 String 같은 특정 데이터 타입의 초기화 작업이 다소 복잡</td>
+                        </tr>
+                        <tr>
+                            <td>Static과 dynamic 데이터 혼동</td>
+                            <td>static 데이타를 dynamic 데이터처럼 사용하거나, static data와 dynamic data의 선언이 잘못됨 (예) static으로
+                                선언되어야 할
+                                데이터가 dynamic으로 선언
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>재초기화 누락</td>
+                            <td>데이터 값이 변경된 후 재초기화(reinitialization)가 될 필요가 있는 곳에서 데이터들이 재초기화 되지않음 즉, 쓰레기 값이(garbage
+                                data) 존재 (예) 큐, 스택, 버퍼에 들어 있는 항목들을 지우지 않음 (doesn’t clear items from Queue, Buffer,
+                                Stack)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>부적절한 데이터 타입 사용</td>
+                            <td>데이터에 적절한 데이터 타입(type)이 선언되지 않음 (예) float 타입 대신 integer사용</td>
+                        </tr>
+                        <tr>
+                            <td>의도되지 않은 데이터 값 변경
+                            </td>
+                            <td>같은 데이터를 참조(reference)하는 여러 alias가 있는 경우 한 alias에 의해 변경된 값이 의도되지 않게 다른 곳에 영향을 미침
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>데이터의 범위(scope) 부적절</td>
+                            <td>(예) 지역변수(local variable)가 광역변수(global variable)로 정의</td>
+                        </tr>
+                        <tr>
+                            <td>유효기간이 지난 상수값</td>
+                            <td>과거 상수값 (outdated constants)이 업데이트 되지 못하고 존재</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 id="title8-5">5. 기능(통합/시스템) 테스트 결함 리스트</h3>
+                <div class="content">
+                    <p>기능(통합/시스템) 테스트 단계에서 중점적으로 테스트 되는 인터페이스 관련 결함 유형은 아래와 같다.</p>
+                    <ul class="list-unstyled">
+                        <li>구성요소간 또는 상이한 버전간의 잘못된 연결: 구성요소 연결 실패, 잘못된 구성요소와 연결, 구성요소의 잘못된 버전과의 연결
+                            (여기서 구성요소는 단위 프로그램일 수도 통합된 서브 시스템일 수도 있다)
+                        </li>
+                        <li>구성요소에 틀린 인수와 인자 전달: 구성 요소에 잘못된 인수 전달</li>
+                        <li>구성요소의 사용을 위한 초기 조건 만족 실패: 구성 요소 이용에 필요한 초기 조건이 만족되지 않은 경우.
+                            (예, 변수 값을 0로 초기화하지 않음, 날짜가 약속된 초기값으로 설정되지 않음)
+                        </li>
+                        <li>경계값의 침범에 따른 오류 경계 값 위반. (예, 100% 이상의 지금 이자율 계산이 필요한 경우 99% 초과하는 이자율 계산이 안 되는 구성 요소)</li>
+                        <li>구성요소의 선행조건에 대한 점검 오류: 사용 전에 구성요소에 대한 초기 조건에 대한 잘못된 가정 또는 미 점검
+                            (예, 데이터 베이스 갱신이 정확히 수행되었다는 가정)
+                        </li>
+                        <li>구성요소로부터 기대하지 않았던 리턴 코드에 대한 미점검</li>
+                        <li>연계간에 전달되는 추가된 데이터 필드에 대한 결과 미점검</li>
+                        <li>구성요소에 데이터가 정확하게 전달되었기 때문에 해당 데이터의 이후 과정은 정확하게 처리될 것이라는 가정</li>
+                        <li>시스템을 조합에 따른 오류를 예방할 수 있도록 설계하지 못함</li>
+                        <li>모듈간의 인터페이스 표준 위반</li>
+                        <li>전역변수의 의도되지 않은 변경: 서브루틴에서 전역변수의 값을 실수로 변경. 변경된 값은 전역변수를 참조하는 모든 서브루틴에 영향을 미침</li>
+                        <li>연계된 모듈간의 일관성 결여</li>
+                        <li>인터페이스 과정에서 데이터 변질. 데이터를 여러 서브루틴을 거쳐 넘길 때 데이터가 의도하지 않게 변경 되는 경우</li>
+                        <li>부적절한 인터페이스 프로토콜 사용</li>
+                        <li>상호 호출 관계. 두 개의 모듈이 서로를 상호 참조하고 있는 경우 dead lock 발생</li>
+                        <li>잘못된 호출 관계</li>
+                        <li>부정확한 파러미터 정의(예, 틀린 패러미터 수, 위치, 패러미터 변수 타입 등)</li>
+                        <li>인터페이스 표준 준수나 통합이 안되어 마치 서로 다른 시스템들이 모여 있는 것처럼 감지</li>
+                    </ul>
+                </div>
+
+                <h3 id="title8-6">6. 성능 테스트 결함 리스트</h3>
+                <div class="content">
+                    <p>성능 테스트 단계에서 중점적으로 테스트 되는 결함 유형은 아래와 같다.</p>
+                    <ul class="list-unstyled">
+                        <li>시스템 응답 없음 (Hang) 또는 사용 불가</li>
+                        <li>프로그램 중단: 특정 형태의 에러 발생시 프로그램이 멈추어버림 (비정상적인 프로그램 중단)</li>
+                        <li>응답시간 지연: 설계나 코딩상에서 만들어진 여러 오류가 프로그램 속도를 느리게 하는 원인이 될 수 있다
+                            (예, 프로그램이 불필요한 일을 하거나 불필요하게 일을 반복 수행하는 경우, 설계상의 잘못된 솔루션 선택 등).<br>
+                            그 이유가 무엇이든 간에 프로그램이 느리다면 문제가 된다.
+                            1초가 안 되는 아주 짧은 시간의 지연(delay)이라도 사용자의 집중을 흐트리거나 결과적으로 업무를 완수하는 시간에 상당한 큰 영향을 미칠 수 있기 때문
+                        </li>
+                        <li>시스템 복구 불가: 시스템 failure 이 후 정상적인 복구가 불가능</li>
+                        <li>1 user 에서는 잘 작동되던 기능이 여러 사용자가 접속하여 수행을 시키면 문제가 생김</li>
+                        <li>간헐적인 문제발생: 특정 기능이 수행되다가 안되다가 한다. 정확한 원인 파악 불가능하고 결함 재현도 어려움</li>
+                        <li>특정 상태에 빠져 탈출이 불가능: 시스템이 바람직하지 않은 특정 상태에 빠져 탈출하는 것이 불가능하다. 앞으로 진행도 뒤로 취소도 불가능</li>
+                        <li>요구되는 최대, 최소 트랜잭션 처리량을 처리하지 못하는 결함</li>
+                        <li>개발에 사용된 케이스 툴 자체에 결함. 많은 경우 정확한 원인 파악도 안되고 해결 불가능</li>
+                        <li>테스팅 과정에서 만들어짐 결함 예, 테스트 툴 결함, 테스트 스크립트 오류, 버그가 이닌 것을 버그로 간주</li>
+                        <li>어플리케이션의 기능상의 결함으로 인해 성능테스트 진행 불가능</li>
+                    </ul>
+                </div>
+
+                <h3 id="title8-7">7. 사용자 인터페이스 결함 리스트</h3>
+                <div class="content">
+                    <p>사용자 인터페이스 테스트 단계에서 중점적으로 테스트 되는 결함 유형은 아래와 같다.</p>
+                    <table class="table table-styled">
+                        <colgroup>
+                            <col width="28%">
+                            <col width="72%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>결함</th>
+                            <th>설명(Description)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>화면 정보 결여</td>
+                            <td>일반적인 사용자의 원활한 시스템 사용을 위해 화면에 표기되어야 할 정보가 결여. 예) 화면명 결여</td>
+                        </tr>
+                        <tr>
+                            <td>No cursor</td>
+                            <td>화면에서 커서 사라짐</td>
+                        </tr>
+                        <tr>
+                            <td>입력 인식 실패</td>
+                            <td>입력(keystroke)을 바로 인식하고 화면에 보여주지 못한다</td>
+                        </tr>
+                        <tr>
+                            <td>장시간 작업에 대한 시스템 작동 여부 확인 불가</td>
+                            <td>시간이 오래 걸리는 (2초 이상) 작업을 수행하는 경우 시스템이 여전히 작동하고 있다는 것을 사용자에게 보여주지 못하다.</td>
+                        </tr>
+                        <tr>
+                            <td>잘못된 또는 혼동이 쉬운 정보</td>
+                            <td>사용자에게 혼동을 주거나 오해를 불러 일으킬 가능성이 높은 인터페이스</td>
+                        </tr>
+                        <tr>
+                            <td>화면에 유효기간이 지난 오브젝트나 내용 포함</td>
+                            <td>프로그램이 변경되면서 더 이상 쓸모없게 된 것을 업데이트 하는 것을 게을리하여 화면에 아무 일도 하지 않는 버튼이 있거나, 더 이상 유효하지 않은
+                                정보나 메시지가 나타나거나, 현 버전의 내용과 일치하지 않는 정보를 보여주는 경우
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>화면상에 철자 오류</td>
+                            <td>프로그래머는 철자 오류에 별로 신경을 쓰지 않을지 몰라도 사용자에게는 중요한 문제이다.</td>
+                        </tr>
+                        <tr>
+                            <td>부적합한 단순화</td>
+                            <td>설명을 간단하게 하려는 노력이 지나쳐 메시지나 도움말(Help)이 의도된 정보를 제공하는데 실패</td>
+                        </tr>
+                        <tr>
+                            <td>불합리한 메타포</td>
+                            <td>메타포(일반적으로 인식되는 관념)의 사용은 시스템을 더 쉽게 이해하는데 도움을 주지만 잘못 사용된 메타포는 사용자가 오류를 범할 확률을
+                                높인다.<br/>
+                                예를 들면 휴지통(trash can) 아이콘으로 옮겨진 파일이 복원되지 못하고 영구적으로 지워진다면 문서절단기(paper shredder) 아이콘을
+                                사용하는 것이
+                                나을 것이다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>혼동되기 쉬운 이름 사용</td>
+                            <td>SAVE 명령어를 파일을 지우거나 정렬하는 목적으로 사용해서는 안된다.</td>
+                        </tr>
+                        <tr>
+                            <td>동일한 특성에 대해 하나 이상의 이름 사용</td>
+                            <td>동일한 것을 지칭하는데 여러 다른 이름을 사용한 경우</td>
+                        </tr>
+                        <tr>
+                            <td>지나치게 많은 상세 정보 제공</td>
+                            <td>도움말 화면등에 지나치게 상세한 기술적인 정보를 쏟아 부어 핵심이 되는 정보를 캡쳐하는데 어려움</td>
+                        </tr>
+                        <tr>
+                            <td>동일 화면을 여러 번 여는 것을 허용</td>
+                            <td>동일 화면을 한번 이상 열 수 있어 두번째 열린것과 첫번째 열었던 것을 구분할 방법이 없거나, 두번째 화면이 첫번째 화면 오브젝트를 븥들고 있는 변수를
+                                차지하면서 첫번째 생성된 오브젝트와의 연결고리를 놓치는 경우
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>도움말 화면과 에러 메시지</td>
+                            <td>Help나 error 메시지는 종종 중요하지 않은 부분으로 인식하여 충분한 검토가 이루어지 않고 소홀히 다루어지는 경향이 있다. 사용자가 시스템 사용
+                                중 문제가 생겼을 때 도움을 받을 수 있는 정보가 Help나 error 메시지이므로 제대로 만들 필요가 있다.<br/>
+                                예를 들면, 지나치게 복잡하거나 전문가 위주의 도움말 정보를 주어서는 안되고, 예의 없는 표현이나 부적절한 용어(예, kill) 사용 여부도 확인하여야
+                                한다.<br/>
+                                도움말에 제공되는 사용법과 예제(examples)들도 현 시스템 버전에 맞게 업데이트 되었는지도 확인할 필요가 있다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>잘못된 에러 메시지</td>
+                            <td>에러발생시 나타나는 에러메시지가 보여주는 내용이 실제 발생된 에러와 상관없거나, 문제의 원인을 잘못지적 하거나 가이드 하여 사용자를 더 혼란에 빠트리는
+                                경우
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>알아 볼 수 없는 16진수 등을 에러메시지로 덤프</td>
+                            <td>쉽게 알아볼 수 없는 hexadecimal (octal, even decimal) 데이터 값들을 화면에 덤프 하는 것은 에러메시지가 아니다.</td>
+                        </tr>
+                        <tr>
+                            <td>에러 메시지 오류</td>
+                            <td>에러 상태가 아닌 경우에도 에러 메시지가 떠서 사용자를 불편하게 한다.</td>
+                        </tr>
+                        <tr>
+                            <td>부당한 자원 사용 금지</td>
+                            <td>적절한 이유나 설명 없이 시스템 자원 (프린터, 모뎀, 메모리 등)의 사용이 금지되는 경우</td>
+                        </tr>
+                        <tr>
+                            <td>커서가 두개</td>
+                            <td>스크린 새로운 곳으로 이동시 이전 커서를 지우는 것을 잊어 화면에 커서가 두개 존재</td>
+                        </tr>
+                        <tr>
+                            <td>커서가 잘못된 곳에 위치</td>
+                            <td>실제 입력이 되는 내용이 나타는 부분과 커서가 있는 부분이 다르다. 즉, 커서가 위치해 있는 곳과 다른 장소에 입력이 디스플레이 된다.</td>
+                        </tr>
+                        <tr>
+                            <td>컬러의 잘못된/지나친 사용</td>
+                            <td>컬러를 지나치게 사용하거나 부적절하게 사용하여 화면이 알아보기 어렵고 깔끔하지 않다.</td>
+                        </tr>
+                        <tr>
+                            <td>일반적인 스타일과 다르게 만듬</td>
+                            <td>일반적인 관습과 다르게 일관성 없이 사용자 인터페이스를 만든다. <br/>
+                                예를 들면, 윈도우 환경의 프로그램에서 마우스와 아이콘 중심의 프로그램이 아닌 코맨드 스타일로 명령어를 수행하도록 시스템을 만드는 경우
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>확인과정 없이 중요 작업 처리 (No "Are you sure?")</td>
+                            <td>중요한 데이터 등을 지우는 작업에서 유저에게 확인을 받는 과정 없이 처리한다.</td>
+                        </tr>
+                        <tr>
+                            <td>시스템에서 내는 소리를 제거할 수 없는 경우</td>
+                            <td>시스템 비프(beep)을 끌 수가 없다.</td>
+                        </tr>
+                        <tr>
+                            <td>숙련된 사용자를 고려하지 않은 초보자 위주의 인터페이스</td>
+                            <td>처음 시스템을 사용하는 초보자에게는 좋은 상세한step by step 인터페이스가 숙련된 기술자들에게는 오히려 불편하고 시간을 낭비하게 한다. 양쪽
+                                모두의 사용자를 고려하여 빠르게 작업을 처리할 수 있는 shortcut 인터페이스도 (예, 단축키) 제공해야 한다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>잘못된 출력물 (output) 생성</td>
+                            <td>시스템이 프로세싱 결과로 만들어내는 산출물(예, 보고서, 그래프)이 사용자가 원하는 것과 다르다.</td>
+                        </tr>
+                        <tr>
+                            <td>장시간 작업에 대한 경고메시지 결여</td>
+                            <td>시간이 오래 걸리는 오퍼레이션에 대해 사전 경고 메시지가 없음.</td>
+                        </tr>
+                        <tr>
+                            <td>작업 수행중에도 사용자의 시스템 사용이 가능하도록 고려하지 않음</td>
+                            <td>시스템이 특정 작업을 완료할 때까지 사용자를 무작정 기다리게 한다.<br/>
+                                예, 워드프로세서에서 스크린 리포맷팅(reformatting) 작업을 수행 도중 사용자가 타이핑을 시작하였을 때 리포맷팅이 끝날 때 까지 타이핑이
+                                불가능하다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>진척보고 결여</td>
+                            <td>시간이 오래 소요되는 작업이나 지연(delay)이 되고 있는 작업에 대해 진척 상황을 보여주지 않는다.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 최상단 이동 btn -->
+            <div>
+                <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+
+    </main>
+    <!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

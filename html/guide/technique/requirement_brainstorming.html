@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 기법 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a class="active on" href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a class="active on" href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a>
+                        </li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../guide/summary/summary01.html">개요</a>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발표준 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>요구사항 도출</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/guide/technique.html">개발 가이드</a></li>
+                    <li><a href="../../guide/technique/summary01.html">개발 기법</a></li>
+                    <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                    <li class="active">브레인스토밍</li>
+                </ol>
+
+                <ul class="top-nav-menu">
+                    <li><a href="summary01.html">개요</a></li>
+                    <li><a href="requirement_interview.html">인터뷰</a></li>
+                    <li class="active"><a href="requirement_brainstorming.html">브레인스토밍</a></li>
+                    <li><a href="requirement_survey.html">설문</a></li>
+                    <li><a href="requirement_workshop.html">워크샵</a></li>
+                    <li><a href="requirement_doxygen.html">Doxygen</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container">
+            <h2>개요</h2>
+            <div class="content">
+
+                <h3>1. 정의</h3>
+                <div class="content">
+                    <p>브레인스토밍은 회의의 부정적인 면을 없애고 회의를 즐겁고 말을 꺼내기 쉬운 분위기로 만들어 회의 참석자들이 내놓은 아이디어들 을 비판 없이 수용하는 회의다. 물론 그
+                        아이디어는 문제 해결의
+                        실마리가 되는 것이고 뒤에 평가하거나 손을 쓸 수 있는 유형이다.</p>
+                    <p>판단을 미룬다는 원칙이 엄격히 지켜지지 않으면, 어떤 것도 브레인스토밍 회의라고 할 수 없다.</p>
+                    <p>브레인스토밍을 그룹이 하는 완전한 문제 해결 과정이라고 오해하는 경향이 많다. 이것은 아이디어 발상의 몇몇 단계 중의 하나에 불 과하다.</p>
+                    <p>브레인스토밍의 가치는 그것을 적절하게 행하면 일반회의에 비해 단 시간에 많은 명안을 내놓을 수 있다는 점이다.</p>
+                </div>
+
+                <h3>2. 목적</h3>
+                <div class="content">
+                    <p>첫째, 짧은 시간내에 많은 양의 아이디어를 얻고</p>
+                    <p>둘째, 판단과 비판을 유보함으로써 창의성의 장애를 극복하는 것이다</p>
+                </div>
+
+                <h3>3. 구성요소</h3>
+                <div class="content">
+                    <ol class="ol-styled">
+                        <li><strong>주제</strong>
+                            <div class="content-des">
+                                <p>얻고자 하는 아이디어에 관한 주제를 설정하여 참가자들에게 설명하도록 한다.</p>
+                            </div>
+                        </li>
+                        <li><strong>아이디어</strong>
+                            <div class="content-des">
+                                <p>참가자들이 자유로운 분위기 속에서 주제에 대하여 자신들이 가지고 있는 아이디어를 제시하면 이에 대한 의견을 종합하여 최종적으 로 이에 대한 해결방안으로
+                                    정리하도록 한다.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <h2>적용지침</h2>
+            <div class="content">
+
+                <h3>1. 규칙</h3>
+                <div class="content">
+                    <p>회의에 들어가기 전에 먼저 모든 출석자들에게 다음 네 가지의 규칙을 지키도록 한다.</p>
+                    <ul class="list-unstyled">
+                        <li>비판을 하지 않는다. 나온 아이디어에 대한 반대는 끝날 때까지 보류해야 한다.</li>
+                        <li>자유분방하도록 권장한다. 아이디어는 자유분방할수록 좋다. 생각해내기는 힘들지만 트집을 잡기는 쉽다.</li>
+                        <li>양을 추구한다. 아이디어의 수가 많을수록 좋은 아이디어가 나올 가능성도 많아진다.</li>
+                        <li>결합과 개선을 추구한다. 참가자는 자기의 아이디어도 내놓음과 동시에 다른 사람의 아이디어를 더 좋은 것으로 바꾸려면 어떻 게 해야 하는가, 또는 두세가지 아이디어를
+                            또 다른
+                            아이디어로 종합하려면 어떻게 해야 하는가를 생각해야 한다.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>2. 멤버 선정 방법</h3>
+                <div class="content">
+                    <p>멤버는 초보자 또는 베테랑이 함께 참석할 때에 회의는 잘 진행된다. 사무실의 사환, 비서, 문서계원, 각 계층의 종업원 그룹에서 브레 인스토밍을 하는 것은 매우 좋은
+                        착상이다.</p>
+                    <p>그 이유는, 그들은 가쯤 매우 좋은 아이디어를 가지고 있는 경우가 많다는 점이다. 그들은 그들 자신의 특유한 접근에 의해 문제를 전 혀 다른 시각에서 볼 수 있기 때문이다.
+                        또한 남녀가 함께 참석해도 좋다</p>
+                </div>
+
+                <h3>3. 장소</h3>
+                <div class="content">
+                    <p>참석자가 브레인스토밍을 가볍게 할 수 있는 방을 찾아야 한다. 누구나 자유로이 편안하게 느낄 수 있는 곳이어야 한다. 회의전 가벼 운 음악을 틀어눟는 것도 효과가 있을
+                        것이다. 때때로 회사에서 완전히 떠난 상태에서 레스토랑이나 호텔이나 클럽의 한 방에서 하게 되면 더 좋은 결과를 기대할 수 있다.</p>
+                    <p>이처럼 회의실의 분위기는 매우 중요하다. BBDO라는 광고회사는 조찬회 또는 만찬회에서 브레인스토밍을 실시하기도 한다.</p>
+                </div>
+
+                <h3>4. 준비</h3>
+                <div class="content">
+                    <p>1주일쯤 전에 전화 등으로 회의 일시를 연락하고 미리 약속을 받아 둘 필요가 있다. 그리고 전화 외에 시간이나 장소를 분명히 쓴 문서를 보내야한다. 또 회사에서 처음으로
+                        브레인스토밍을 하는 경우에는 브레인스토밍이 얼마나 중요한가를 나타내는 글을 첨부하여 보내야 한다. 그것을 쓰기 전에, 또는 브레인스토밍을 시작하기 전에 브레인스토밍이란
+                        무엇인가? 를 회의 담당자는 물론 참석자들도 철저히 인식해야 한다.</p>
+                    <p>또 하나 중요한 점은, 브레인스토밍 회의의 초대는 강제적이어서는 안된다. 출석을 강요받은 사람이 좋은 아이디어를 내놓은 일은 매우 드물다.</p>
+                </div>
+
+                <h3>5. 진행방법</h3>
+                <div class="content">
+                    <p>먼저 주제를 정한다. 그것이 회사내의 문제점이라든지 신제품에 대한 의견이나 불편한 점의 개선이라든지 아니면 그런 목적이 없는 어떤 주제여도 괜찮다. 하지만 한 회의에 하나의
+                        주제여야 한다.</p>
+                    <p>그리고 문제는 구체적인 것이 좋다. 그래야 문제가 명확해져서 아이 디어를 내놓기가 쉽다. 구체적인 것을 본보기로 내놓을 필요가 있다. 만약 포장 문제가 화제에 올라 있다고
+                        한다면 제품과 포장 재료 를 눈으로 보고, 손으로 만지고, 구부려 보거나, 잘라 볼 수 있게 한다.</p>
+                    <p>가장 강한 금구리스트를 작성하여 참석자들이 숙지하도록 한다.</p>
+                    <p>다음에 나오는 말들은 아이디어를 의기소침하게 만드는 말들로서</p>
+                    <ul class="list-unstyled">
+                        <li>지금까지 우리는 그런 방법으로 한 일이 없으니까...</li>
+                        <li>그것은 실천으로 옮길 수 없으니까...</li>
+                        <li>논리적으로 타당성이 없는데 당신은 그것을 행동으로 옮길 수 있는가? <br/>(만일 그것이 참으로 좋은 일이라면 벌써 누군가 손을 댔을것이다.)</li>
+                        <li>너무 시대에 뒤떨어졌다.</li>
+                        <li>우리 회사의 규정으로는 그것을 할 수 없다.</li>
+                        <li>회사의 운명을 좌우하는거니까 가볍게 다룰수 없다.</li>
+                    </ul>
+
+                    <p>다음은 자기 자신이 아이디어를 억압하는 말들이다.</p>
+                    <ul class="list-unstyled">
+                        <li>이 방법은 조금 빗나갔지만...</li>
+                        <li>이것을 필요로 하는지 어떤지는 분명치 않지만...</li>
+                        <li>당신은 아마 웃을 것이다. 그러나...</li>
+                        <li>내 의견은 별로 가치 있는것은 아니지만...</li>
+                        <li>이것은 내 전문분야는 아니지만 잘못이 있으면 바로 잡아 주십시오.</li>
+                    </ul>
+                </div>
+
+                <h3>6. 제안된 아이디어 처리방법</h3>
+                <div class="content">
+                    <p>회의가 다 끝나면 그 아이디어를 가지고 문제 해결방안을 찾는 일이 남았다. 이제부터 중요한 것은 판단이다. 정확한 판단을 해야 좋은 해결방안이 선정될 수 있다. 그리고 판단을
+                        해야 좋은 해결방안이 선정될 수 있다.</p>
+                    <p>그리고 판단을 하기 전에 아이디어 목록을 잘 정리하고 각 항목 사이에 여백을 두게 적어서 모든 참가자들에게 돌려서 아이디어가 떠 오르거나 보충할 것이 있으면 적어서 보내달라고
+                        한다.</p>
+                    <p>보통 참가자들은 회의가 끝난 뒤 며칠 동안 그 의제에 대해 생각하며 더 좋은 아이디어들을 떠올릴 수 있다. 아이디어의 최종선택은 보통 그 문제에 직접적인 책임이 있는 사람들이
+                        평가를 하는 것이 좋다고 한다. 그리고 어떠한 경우에도 아이디어가 어떻게 처리되었는가를 출석자에게 잘 알려야 한다.</p>
+                </div>
+            </div>
+
+            <h2>브레인스토밍의 종류</h2>
+            <div class="content">
+
+                <h3>1. Free Wheeling</h3>
+                <div class="content">
+                    <p>회의에 참가한 모든 구성원이 일정한 순서에 구애받지 않고 아이디어가 떠오르는 대로 동시다발적으로 의견을 내는 방식이다. 일반 적으로 시간을 정해놓고 진행하는 것이
+                        보통이다.</p>
+                    <p>Brainstorming의 취지를 최대한 살려 모든 구성원이 일정한 제약이 없는 상태에서 참여할 수 있는 장점이 있으나 종종 구성원 중에 말이 많고 적극적인 몇몇이 회의를
+                        주도하는 경향이 발생하며, 소극적인 사람의 뛰어난 아이디어가 사장될 위험이 있다.</p>
+                </div>
+
+                <h3>2. Round Robin</h3>
+                <div class="content">
+                    <p>리더의 진행으로 구성원들이 한사람씩 순서대로 돌아가며 아이디어를 내는 방식이다. 마땅한 의견이 없을 경우 구성원은 ‘Pass’을 외 쳐 자신의 순서를 지나 보낼 수 있으며
+                        모든 구성원이 ‘Pass’를 외칠 때까지 진행하도록 한다. 소극적인 구성원들도 모두 참여시킬 수 있는 장점을 가지고 있는 반면 순서에 따라 의견을 개진하게 되므로
+                        Brainstorming의 자유분방함의 취지를 완전히 살릴 수 없다는 단 점이 있다.</p>
+                </div>
+
+                <h3>3. Slip Method</h3>
+                <div class="content">
+                    <p>회의를 시작하기 전 작은 쪽지에 주제와 관련된 아이디어를 기술하고 이를 참고로 Brainstorming을 진행하는 방법이다.</p>
+                    <p>터무니 없는 아이디어의 남발을 방지하고 보다 신뢰성이 있고 활용 가능한 아이디어를 얻을 수 있다는 장점이 있어 다소 시간적인 제약이 있는 경우 활용할 수 있는 장점이 있으나
+                        아이디어를 사전에 문장으로 표현하여야 하므로 위와 같이 시간적 제약이 있다든가하는 특수한 경우에 많이 활용됨</p>
+                </div>
+            </div>
+
+            <!-- 최상단 이동 btn -->
+            <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+
+    </main>
+    <!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

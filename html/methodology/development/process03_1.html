@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a>
+                                        </li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard01.html">체크리스트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a>
+                                        </li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic
+                                            개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a>
+                                        </li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile
+                                            방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li>
+                                            <a href="../../download/company/international_development.html">대외SW개발방법론</a>
+                                        </li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a class="active on" href="javascript:;">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a class="active on" href="../../methodology/development/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a class="active on" href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>프로세스(절차) - 설계</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a></li>
+                    <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a></li>
+                    <li><a href="../../methodology/development/process00.html">프로세스(절차)</a></li>
+                    <li class="active">설계</li>
+                </ol>
+
+                <ul class="top-nav-menu">
+                    <li><a href="process03.html">개요</a></li>
+                    <li class="active"><a href="process03_1.html">활동 정의</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container">
+            <h3>활동 정의</h3>
+            <div class="content">
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">4.1 서버 컴포넌트 설계</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>업무 분석작업 결과로 얻은 도메인 객체 모델과 컴포넌트 명세서로 표현된 비즈니스 로직을 아키텍처 설계를 통해 얻은 기술구조에 올리는 작업을 수행함</p>
+                            <ul class="list-unstyled">
+                                <li>비즈니스 로직을 기술구조 속에 담는 작업을 수행함</li>
+                                <li>코딩 작업 전, 비즈니스 로직을 구조화 함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td>
+                            <ol class="ol-styled">
+                                <li>인터페이스 설계</li>
+                                <li>컴포넌트 내부 설계</li>
+                                <li>컴포넌트 명세 상세화</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td>시스템 분석가 또는 시스템 설계자</td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td><p>분석모델(분석 도메인 객체모델+컴포넌트명세모델(명세서))</p>
+                            <p>POC 프로토타입 결과</p></td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1">
+                            <ul class="list-unstyled">
+                                <li><strong>인터페이스 설계</strong>
+                                    <ul class="list-unstyled">
+                                        <li>절차
+                                            <ul class="list-unstyled inner">
+                                                <li>분석 단계 컴포넌트 리뷰</li>
+                                                <li>변경 및 확장 요구 검토</li>
+                                                <li>적용 기술 검토 및 데이터 타입 확인</li>
+                                                <li>컴포넌트 인터페이스 작성</li>
+                                            </ul>
+                                        </li>
+                                        <li>가이드
+                                            <ul class="list-unstyled inner">
+                                                <li>인터페이스 설계 결과는 가급적이면 모델 형태를 유지한다.</li>
+                                                <li>감리, 리뷰 등의 목적으로 형식을 갖춘 인터페이스 명세서(또는 컴포넌트 명세서)가 필요할 경우, 템플릿을 기반으로
+                                                    모델로부터
+                                                    자동으로 문서를 생성하는 방법을
+                                                    선택한다.
+                                                </li>
+                                                <li>매개변수는 여러 개의 원시(primitive) 타입을 사용하기 보다는 가급적 묶어서 하나 또는 두 개 정도의 객체를
+                                                    사용한다.
+                                                    이러한 방법은 매개변수
+                                                    변경이나 확장에 대해 유연한 인터페이스를 유지할 수 있도록 해준다.
+                                                </li>
+                                                <li>오류 정보를 리턴하도록 설계하지 않고 예외(exception)와 같은 언어가 지원하는 오류처리 메커니즘을
+                                                    활용한다.
+                                                </li>
+                                                <li>하나의 인터페이스를 지나치게 여러 가지 용도로 사용하지 않으며, 유시한 인터페이스를 많이 만들 지 않는다. 이 두
+                                                    가지 요건은
+                                                    상충 관계이므로 설계자는
+                                                    누구나 쉽게 이해할 수 있는 명확한 원칙을 가지고 인터페이스 변형(variation) 이나
+                                                    입도(granularity)를 조절 및
+                                                    적용한다.
+                                                </li>
+                                                <li>모든 컴포넌트의 인터페이스를 설계하지 않는다. 유사한 경우는 분석 명세서로부터 바로 코드로 작성할 수 있으며, 필요
+                                                    시
+                                                    구현모델(reverse 결과 모델)을
+                                                    참조용으로 사용한다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>컴포넌트 내부 설계</strong>
+                                    <ul class="list-unstyled">
+                                        <li>절차
+                                            <ul class="list-unstyled inner">
+                                                <li>서비스 인터페이스 구현부분 구조 설계</li>
+                                                <li>도메인 객체 부분 구조 설계</li>
+                                                <li>지원 클래스를 위한 공간 마련(DTO객체, Key객체, Helper객체, Utility 객체 등)</li>
+                                            </ul>
+                                        </li>
+                                        <li>가이드
+                                            <ul class="list-unstyled inner">
+                                                <li>분석결과와 아키텍처 설계 결과를 반영하여 업무컴포넌트를 설계함</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><strong>컴포넌트 명세 상세화</strong>
+                                    <ul class="list-unstyled">
+                                        <li>절차
+                                            <ul class="list-unstyled inner">
+                                                <li>설계 작업을 통해 추가 및 변경된 부분 추출</li>
+                                                <li>분석 모델에 반영</li>
+                                            </ul>
+                                        </li>
+                                        <li>가이드
+                                            <ul class="list-unstyled inner">
+                                                <li>컴포넌트 인터페이스 명세 작업 시 매개변수와 리턴 타입으로 가급적이면 객체를 사용한다.</li>
+                                                <li>매개변수 객체나 리턴타입 객체들을 명시적으로 표현하기 위해 “인터페이스 정보 모델”을 작성한다. 이 모델은
+                                                    인터페이스와 관련된
+                                                    모든 정보를 표현한다.
+                                                </li>
+                                                <li>인터페이스는 계약(contract)의 한 종류로 보고 설계를 한다. 계약에는 다양한 조건들이 부과되며 이러한
+                                                    조건들을 적절한
+                                                    양식으로 표현을 한다. 단,
+                                                    중요한 계약에 많은 부과 정보들이 추가되듯이 중요한 인터페이스에 대해서 인터페이스 정보모델을 작성한다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">4.2 데이터 설계</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>업무에 필요한 데이터를 분석하고 설계하여 시스템 구축과 운영에서 영속성을 갖는 업무 데이터를 식별하고 영속 메커니즘을 결정함</p>
+                            <ul class="list-unstyled">
+                                <li>업무가 어떤 데이터와 관련이 있는지 또는 데이터간의 관계는 무엇인지를 분석함</li>
+                                <li>업무에 필요한 데이터의 영속성과 무결성을 보장하기 위한 데이터 구조를 설계함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td>
+                            <ol class="ol-styled">
+                                <li>코드설계</li>
+                                <li>데이터전환 설계</li>
+                                <li>논리데이터모델링</li>
+                                <li>물리데이터모델링</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>데이터베이스(업무) 설계자, 데이터베이스 관리자 (DBA)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>코드정의서: 업무 코드 정의서</li>
+                                <li>데이터모델: 논리모델, 물리모델모델</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1">
+                            <ol class="ol-styled">
+                                <li><strong>코드설계</strong>
+                                    <div class="content-des">
+                                        <ul class="list-unstyled">
+                                            <li>절차
+                                                <ul class="list-unstyled">
+                                                    <li>자주 사용하는 엔티티의 속성 식별</li>
+                                                    <li>유사 엔티티 속성 식별과 정련</li>
+                                                    <li>코드 엔티티타입(테이블) 설계</li>
+                                                </ul>
+                                            </li>
+                                            <li>가이드
+                                                <ul class="list-unstyled">
+                                                    <li>구분하기 위한 용도로 사용하는 엔티티 속성을 코드 후보로 식별한다.</li>
+                                                    <li>코드로 정의할 엔티티 데이터를 코드 엔티티(테이블)로 분리한다.</li>
+                                                    <li>코드 테이블이 수가 많고 각 테이블이 코드량이 적을 경우 유사한 구조의 코드 테이블을 통합니다.</li>
+                                                    <li>코드의 양이 많고 코드에 업무규칙이 수반되면 통합 코드에서 분리하여 별도의 엔티티로 정의한다.</li>
+                                                    <li>코드 테이블과 엔티티간의 관계를 정의한다.</li>
+                                                    <li>물리모델에서 코드 테이블과 엔티티간의 제약조건(FK)를 설정할지 정책을 결정한다. 제약조건을 설정할 경우
+                                                        무결성은 안전하게
+                                                        유지되는 반면 성능에 심각한 저하를 초래할 수 있다. 이는 코드 테이블의 량과 코드와 엔티티간의 관계의 수에
+                                                        의해 정책을
+                                                        결정할 수 있다.
+                                                    </li>
+                                                    <li>데이터베이스 전환이 필요한 경우 이전 AS-IS 업무 코드와 TO-BE 업무 코드간의 관계를 식별하고 데이터
+                                                        전환설계에
+                                                        정의한다.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>데이터전환설계</strong>
+                                    <div class="content-des">
+                                        <ul class="list-unstyled">
+                                            <li>절차
+                                                <ul class="list-unstyled">
+                                                    <li>데이터전환 전략 수립 및 분석</li>
+                                                    <li>데이터전환 자료에 대한 정의</li>
+                                                    <li>데이터 전환(변환) 설계 및 개발</li>
+                                                    <li>데이터 정합성 검증 방안 준비</li>
+                                                </ul>
+                                            </li>
+                                            <li>가이드
+                                                <ul class="list-unstyled">
+                                                    <li>데이터전환은 이행방법 및 전환전략이 매우 중요하므로 데이터전환 계획서를 통한 전환전략을 명시한다.</li>
+                                                    <li>데이터전환의 범위는 AS-IS 데이터베이스가 될 수도 있으며 시스템 운영에 필요한 전자문서나 일반문서가 될
+                                                        수도 있다.
+                                                    </li>
+                                                    <li>데이터전환의 범위와 전략에 따라 규모가 많이 변경될 수 있으므로 시스템 운영에 필요한 데이터 식별에 매우
+                                                        유의한다.
+                                                    </li>
+                                                    <li>데이터전환 대상에 따라 전환전략을 세운다. 전환전략은 전환프로그램을 이용한 자동화, 전자문서 데이터베이스화
+                                                        또는 일반문서
+                                                        데이터베이스 등이 있으며 이에 따른 적절한 도구선정이 필요하다.
+                                                    </li>
+                                                    <li>데이터전환 일정은 시스템 개발에 많은 영향을 줄 수 있으므로 전체 개발 일정에 따라 단계적인 구축 전략을
+                                                        취한다.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>논리 데이터 모델링</strong>
+                                    <div class="content-des">
+                                        <ul class="list-unstyled">
+                                            <li>절차
+                                                <ul class="list-unstyled">
+                                                    <li>엔티티타입 정의</li>
+                                                    <li>관계정의, 식별자 및 속성 정의</li>
+                                                    <li>정규화, 비정규화</li>
+                                                    <li>도메인 및 용어사전 정의</li>
+                                                </ul>
+                                            </li>
+                                            <li>가이드
+                                                <ul class="list-unstyled">
+                                                    <li>유스케이스 명세서나 업무 기술서를 통해 영속성을 가져야하는 요소들을 식별한다.</li>
+                                                    <li>개념이 불분명한 것이나 광범위한 것은 제거한다.</li>
+                                                    <li>초기에 엔티티타입의 특성이나 속성값을 상세하게 정의하지 않는다.</li>
+                                                    <li>유스케이스 명세서의 시나리오를 통해 누락된 엔티티타입이 존재하는지 검증한다.</li>
+                                                    <li>유스케이슨 명세서나 업무 기술서를 통해 엔티티에서 발생할 수 있는 행위를 식별하여 관계를 설정한다.</li>
+                                                    <li>관계정의는 ERD나 UML 모델을 통해 엔티티 간의 관계를 도식화하여 검토한다.</li>
+                                                    <li>각 엔티티가 유일하게 구분할 수 있고 대표성을 가지는 식별자가 있는지 점검한다.</li>
+                                                    <li>복합 식별자를 가지는 경우 너무 많은 복합 식별자를 가지는지 점검한다.</li>
+                                                    <li>유스케이스 명세서나 업무 기술서를 통해 각 엔티티가 가져야 있는 속성을 식별한다. 또한 이를 통해 파생되는
+                                                        속성을 식별하고
+                                                        추가한다.
+                                                    </li>
+                                                    <li>파생 속성의 경우 계산 등에 의해 다른 속성 값에 영향 받는지 점검하고 속성간의 영향도를 최소화한다.
+                                                    </li>
+                                                    <li>모든 속성을 분류하여 공통의 특징을 식별하고 속성에 대한 도메인을 정의한다. 각 도메인별로 데이터 타입과
+                                                        길이를
+                                                        지정한다.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>물리 데이터 모델링</strong>
+                                    <div class="content-des">
+                                        <ul class="list-unstyled">
+                                            <li>절차
+                                                <ul class="list-unstyled">
+                                                    <li>논리 모델 ERD를 물리 모델 ERD나 테이블 정의서로 전환</li>
+                                                    <li>테이블 정규화, 비정규화</li>
+                                                    <li>관계의 제약조건(FK) 설정 및 입력,수정,삭제 무결성 규칙 정의</li>
+                                                    <li>인덱스, 접근방법, 뷰, 파티션, 트랜잭션 설계</li>
+                                                </ul>
+                                            </li>
+                                            <li>가이드
+                                                <ul class="list-unstyled">
+                                                    <li>논리 데이터 모델의 엔티티 타입은 테이블, 주식별자는 PRIMARY KEY, 속성은 컬럼 그리고 엔티티
+                                                        관계는
+                                                        FOREIGN KEY로 변환한다.
+                                                    </li>
+                                                    <li>1:1, 1:M, N:M 의 관계를 물리모델에 맞게 변환한다. N:M의 관계는 물리모델에서 관계 테이블을
+                                                        추가하여 변환할
+                                                        수 있다.
+                                                    </li>
+                                                    <li>목적 데이터베이스 특성에 맞게 성능을 고려하여 비정규화가 필요한 부분을 식별한다.<br/>
+                                                        비정규화 시 데이터의 무결성을 해치지 않는 방안을 반드시 세워야 한다.비정규화는 테이블 병합이나 테이블 분할
+                                                        그리고 테이블
+                                                        추가에 의해 이루어진다.
+                                                    </li>
+                                                    <li>각 관계에서 데이터 무결성을 보장하기 위한 참조 무결성을 설계한다. 입력 참조 무결성, 수정 참조 무결성,
+                                                        삭제 참조
+                                                        무결성을 정의할 수 있다.
+                                                    </li>
+                                                    <li>과다한 참조 무결성은 데이터베이스 성능을 저하시키는 주요한 원인이 될 수 있다. 대용량의 입력,수정, 삭제가
+                                                        필요한
+                                                        테이블의 경우 참조 무결성 설계에 주의한다.
+                                                    </li>
+                                                    <li>PRIMARY KEY, FOREIGN KEY에 의한 관계에 필요한 필요한 인덱스를 설계한다.<br> 인덱스
+                                                        설계는 인덱스
+                                                        컬럼, 순서의 식별 인덱스 명, 그리고 인덱스의 테이블스페이스 지정을 포함하여야 한다.
+                                                    </li>
+
+                                                    <li>업무분석을 통해 테이블의 데이터량을 추정하여 데이터베이스 용량을 설계한다. 추정된 용량을 근거로 물리
+                                                        데이터베이스 파티션을
+                                                        결정한다.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ol>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">4.3 UI 컴포넌트 설계</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>UI기본원칙인 유용성, 사용성, 감성을 고려하여 사용자가 시스템을 효과적(effective)이고 효율적(efficient)으로 사용해 만족을 얻을 수
+                            있도록 사용자 중심(user-centered)의 시스템 UI를 설계하는 활동임</p>
+                            <ul class="list-unstyled">
+                                <li>사용자가 손쉽게 시스템을 이용할 수 있도록 시스템의 전반적인 UI를 상세하게 설계한다.</li>
+                                <li>분석단계에서 획득하지 못한 상세한 요구사항을 시각적인 방법으로 고객에게 제공하기 때문에 요구사항을 추가 획득할 수 있고 정제할 수 있다.
+                                </li>
+                                <li>개발에 들어가기 전에 프로젝트 이해관계자와 시스템의 전체적인 UI 모습을 공유한다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td>
+                            <ol class="ol-styled">
+                                <li>화면구조설계(screen layout design)</li>
+                                <li>화면설계(screen detailed design)</li>
+                                <li>네비게이션설계(navigation design)</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td><p>UI디자이너</p></td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>UI 모델 또는 UI 설계문서(레이아웃 다이어그램(Layout diagram), 플로우 다이어그램(flow diagram), 네비게이션
+                                    다이어그램(navigation diagram) 포함)
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1">
+                            <ol class="ol-styled">
+                                <li><strong>화면구조 설계</strong>
+                                    <div class="content-des">
+                                        <ul class="list-unstyled">
+                                            <li>절차
+                                                <ul class="list-unstyled">
+                                                    <li>사용자의 화면구조에 대한 요구사항과 정황 분석</li>
+                                                    <li>화면구조 설계</li>
+                                                    <li>상호작용 설계(interaction design)</li>
+                                                </ul>
+                                            </li>
+                                            <li>가이드
+                                                <ul class="list-unstyled">
+                                                    <li>사용자의 정황과 메뉴의 깊이와 넓이, 정보의 양 등을 고려한다.</li>
+                                                    <li>화면 구조에 대한 최상위 레벨이므로 최상위 레벨에 위치할 요소가 무엇인지 정의한다.</li>
+                                                    <li>레이아웃에 배치된 메뉴 또는 링크가 다른 레이아웃에 어떤 영향을 주는지를 결정한다.</li>
+                                                    <li>레이아웃의 정확한 크기는 고려하지 않는다.(이는 비주얼 디자인을 할 때 그리드 시스템 방법을 적용하여
+                                                        결정함)
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>화면 설계</strong>
+                                    <div class="content-des">
+                                        <ul class="list-unstyled">
+                                            <li>절차
+                                                <ul class="list-unstyled">
+                                                    <li>화면구성요소(기능, 컨텐츠, 입출력 항목 등) 식별</li>
+                                                    <li>화면 상세설계</li>
+                                                    <li>비주얼 컨셉 도출</li>
+                                                    <li>비주얼 디자인(화면, UI컴포넌트 등)</li>
+                                                </ul>
+                                            </li>
+                                            <li>가이드
+                                                <ul class="list-unstyled">
+                                                    <li>화면 상에서 수행될 핵심 비즈니스의 처리를 위한 요소는 사용자의 동선을 고려하여 배치한다.</li>
+                                                    <li>기능과 컨텐츠들 사이의 상대적 중요도를 고려하여 크기와 위치, 표현방식을 결정한다.</li>
+                                                    <li>정보의 양, 정보의 그룹, 정보의 정렬을 고려하여 배치한다.</li>
+                                                    <li>사용자의 언어나 업무에서 사용되는 실제 용어를 사용한다.</li>
+                                                    <li>개략적인 시나리오, 속성정보, 컨텐츠 설명, 주석 등을 스토리보드에 기술한다.</li>
+                                                    <li>결정되지 않은 기능과 컨텐츠에 대해서 임의로 설계를 할 경우 비주얼 디자인에 영향을 미칠 수 있으므로
+                                                        결정되지 않은
+                                                        것은 박스형태로 표현한다.
+                                                    </li>
+                                                    <li>화면설계는 개발 이전 화면의 최종 모습이므로 반복적으로 설계하고 검토한다.</li>
+                                                    <li>화면설계도구, 화면설계문서 템플릿 그리고 설계요소 엘리먼트를 사전에 협의한다.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><strong>네비게이션 설계</strong>
+                                    <div class="content-des">
+                                        <ul class="list-unstyled">
+                                            <li>절차
+                                                <ul class="list-unstyled">
+                                                    <li>유스케이스, 사이트 맵 분석</li>
+                                                    <li>화면, 화면 별 기능 및 이동접점 식별</li>
+                                                    <li>도식화된 네비게이션 다이어그램 작성</li>
+                                                </ul>
+                                            </li>
+                                            <li>가이드
+                                                <ul class="list-unstyled">
+                                                    <li>비즈니스를 처리하기 위한 화면, 화면 별 기능, 컨텐츠, 이동방식, 사용자 행위 등을 식별한다.</li>
+                                                    <li>화면에 들어갈 개략적인 기능과 컨텐츠는 의미 있는 또는 연관성이 있는 단위로 구분하여 화면을 분활한다.
+                                                    </li>
+                                                    <li>비즈니스 차원에서 연속 또는 상관 관계에 있거나 참조 관계에 있는 화면을 연결한다.</li>
+                                                    <li>일련의 절차에 의한 비즈니스 처리는 이동 화면의 개수, 단위 절차의 당위성, 페이지 별 정보의 양, 의미
+                                                        있는 정보의
+                                                        그룹핑 등을 고려하여 절차의 단계를 정의한다.
+                                                    </li>
+                                                    <li>화면 간 정보 흐름을 파악하기 위해 요소 간 연결고리를 표시하고 시나리오 또는 유스케이스를 기반으로 테스트를
+                                                        수행한다.
+                                                    </li>
+                                                    <li>시작 포인트와 종료 포인트를 표현한다.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ol>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">4.4 외부인터페이스 설계</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>아키텍처의 “외부 인터페이스 구조 설계”를 기반으로 목표 시스템과 외부 시스템의 인터페이스를 설계함. 전문 구성, 프로토콜 사용 설계 등을 포함</p>
+                            <ul class="list-unstyled">
+                                <li>명시적으로 설계함으로써 “Seperation of Concern”이라는 설계 원칙을 준수함</li>
+                                <li>외부로 나가는 모든 호출을 일목요연하게 설계 및 관리함</li>
+                                <li>외부로 나가는 메시지를 일관된 방식으로 설계 함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td>
+                            <ol class="ol-styled">
+                                <li>아키텍처 팀의 도움을 받아 외부 인터페이스 구조 설계 이해 및 공유</li>
+                                <li>전문구성방식 표준화</li>
+                                <li>전문작성 및 인터페이스 로직 설계</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>시스템 분석가 또는 시스템 설계자</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>외부 인터페이스 설계(통합모델에 포함하며, 문서를 병행하여 사용할 수 있도록 함)</li>
+                                <li>특히 다른 부서나 회사 등과 교환을 하는 자료이므로 반드시 문서의 형태로도 관리해야 함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1">
+                            <ul class="list-unstyled">
+                                <li>명시적으로 설계함으로써 “Seperation of Concern”이라는 설계 원칙을 준수함</li>
+                                <li>외부로 나가는 모든 호출을 일목요연하게 설계 및 관리함</li>
+                                <li>외부로 나가는 메시지를 일관된 방식으로 설계 함</li>
+                                <li>전문 내부 속성은 확장성을 염두에 두고 결정하여야 함. 그렇지 않을 경우 전문 변경에 따른 작업 부하가 증가함</li>
+                                <li>인터페이스 하는 두 시스템 간의 거리가 멀 수로 Xml 등과 같은 유연한 형태의 전문 표현 방식을 사용하여야 함</li>
+                                <li>전문과 프로토콜 간에 의존성을 최대한 줄이는 방식으로 설계함</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-styled">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>활동(Activity)명</th>
+                        <th class="left">4.5 설계 리뷰</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>목적</th>
+                        <td><p>모든 설계 내용은 리뷰 과정을 통해서 다양한 피드백을 수렴하고 설계 내용에 대해서 공감하고 공유함 </p>
+                            <ul class="list-unstyled">
+                                <li>설계 검토</li>
+                                <li>설계 내용 공유</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>절차</th>
+                        <td><p>동료검토 프로세스 (SOP)</p></td>
+                    </tr>
+                    <tr>
+                        <th>역할자</th>
+                        <td>
+                            <ul class="list-unstyled">
+                                <li>시스템 설계자, 프로젝트 관리자, 현업 담당자, 비즈니스 분석가</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>산출물</th>
+                        <td><p>설계 검토서</p></td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">가이드</th>
+                        <td colspan="1"><p>동료검토 프로세스(SOP)</p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 최상단 이동 btn -->
+            <div>
+                <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+
+    </main>
+    <!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 기법 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a class="active on" href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a class="active on" href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발표준 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>요구사항 도출</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/guide/technique.html">개발 가이드</a></li>
+                    <li><a href="../../guide/technique/summary01.html">개발 기법</a></li>
+                    <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                    <li class="active">설문</li>
+                </ol>
+
+                <ul class="top-nav-menu">
+                    <li><a href="summary01.html">개요</a></li>
+                    <li><a href="requirement_interview.html">인터뷰</a></li>
+                    <li><a href="requirement_brainstorming.html">브레인스토밍</a></li>
+                    <li class="active"><a href="requirement_survey.html">설문</a></li>
+                    <li><a href="requirement_workshop.html">워크샵</a></li>
+                    <li><a href="requirement_doxygen.html">Doxygen</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container">
+            <h2>개요</h2>
+            <div class="content">
+
+                <h3>정의</h3>
+                <div class="content">
+                    <p>설문은 질문사항에 대하여 다수의 의견을 취합하는 방법으로 우편이나 인터넷을 통해서 설문지를 전달하여 간접적으로 정보는 모으는 방법이다. </p>
+                    <p>시스템 개발 시 설문은 필요 시 면담의 보조적인 방법으로 사용된다. 설문을 사용할 필요가 있는 경우는 다음과 같다.</p>
+                    <ul class="list-unstyled">
+                        <li>사람들이 지역적으로 널리 분산되어 있는 경우</li>
+                        <li>시스템에 의해 많은 사람들이 영향을 받고, 다양한 기능에 대한 사용자들의 의견이 필요한 경우</li>
+                        <li>시스템에대한전체의사가필요한경우</li>
+                        <li>현재 시스템의 문제점을 파악하고 싶은 경우</li>
+                    </ul>
+                </div>
+
+                <h3>목적</h3>
+                <div class="content">
+                    <p>개발될 시스템의 사용자가 다수인 경우, 사용자의 시스템의 요구사항, 기대수준, 현행시스템의 불만족 사항 및 정도 등에 대한 전체적인 의견을 수립한다.</p>
+                    <p class="example-title">예제</p>
+                    <div class="example-survey">
+                        <ol>
+                            <li>
+                                <p>현재 XXX시스템을 하루에 몇 시간 사용하십니까 ?</p>
+                                <div class="content-des">
+                                    <ol class="ol-styled inline">
+                                        <li>1시간 이내</li>
+                                        <li>1~2시간</li>
+                                        <li>2~3시간</li>
+                                        <li>3시간 이상</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li>
+                                <p>현재 XXX시스템에 기능에 대하여 만족하십니까?</p>
+                                <div class="content-des">
+                                    <ul>
+                                        <li>□ 매우 만족</li>
+                                        <li>□ 대체로 만족</li>
+                                        <li>□ 보통</li>
+                                        <li>□ 약간 불만족</li>
+                                        <li>□ 매우 불만족</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <h2>설문처리 절차</h2>
+            <div class="content">
+                <p><strong>설문은 다음과 같은 절차로 수행한다.</strong></p>
+                <ol class="ol-styled">
+                    <li><strong>설문계획수립</strong>
+                        <ul class="list-unstyled">
+                            <li>설문 목적을 정의한다.</li>
+                            <li>설문 대상자 범위를 결정한다.</li>
+                            <li>설문의 목적에 맞추어 설문의 내용을 결정한다.</li>
+                            <li>설문 기간, 설문 방식(우편, 배포, 전화, 인터넷 등)을 결정한다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>설문지 작성</strong>
+                        <ul class="list-unstyled">
+                            <li>질문항목을 작성한다.</li>
+                            <li>질문의 명확성, 질문항목의 순서, 그룹핑 등을 검토한다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>설문지 우송 주소록 작성</strong></li>
+                    <li><strong>설문 발송</strong></li>
+                    <li><strong>설문 수거</strong></li>
+                    <li><strong>통계 처리</strong>
+                        <ul class="list-unstyled">
+                            <li>통계 패키지를 사용하여 통계 분석을 한다.</li>
+                            <li>필요한 경우 결과를 그래프, 차트 형태로 가시화한다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>결과 분석</strong>
+                        <ul class="list-unstyled">
+                            <li>통계 분석 결과를 의미를 검토하여 시스템 개발에 어떻게 반영할 지를 결정한다.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p class="refer">포스코 패밀리 대상으로 설문조사 시에는 “POSCO Way 설문조사시스템 ”을 사용하면 된다. 사용방법은 첨부2를 참조하면된다.</p>
+            </div>
+
+            <h2>설문지작성 절차</h2>
+            <div class="content">
+                <p><strong>설문지 작성은 다음과 같은 절차로 수행한다.</strong></p>
+                <p>설문지는 아무리 뛰어난 전문가라 하더라도 한 번 작성된 초안으로 의도된 자료를 얻을 수는 없다. </p>
+                <p>설문지를 작 성하기 위해서는 설문지를 작성하기 위한 단계를 정해놓고, 각 단계별로 수시로 문제점을 파악하여 수정 보완해 나가야 나중에 발생할 수 있는 문제점들을 미리 줄이거나 막을
+                    수 있게
+                    된다.</p>
+                <p><strong>설문지를 작성하기 위한 일반적인 단계는 다음과 같다.</strong></p>
+                <ol class="ol-styled">
+                    <li>필요한 정보의 결정</li>
+                    <li>자료수집방법의 결정</li>
+                    <li>개별항목의 내용결정</li>
+                    <li>질문형태의 결정</li>
+                    <li>개별문항의 완성</li>
+                    <li>질문의 수와 순서결정</li>
+                    <li>설문지의 외형결정</li>
+                    <li>설문지의 사전조사</li>
+                    <li>설문지 완성</li>
+                </ol>
+            </div>
+
+            <h2>질문 형식</h2>
+            <div class="content">
+                <p>설문지의 질문 형식은 다음과 같다.</p>
+                <ul class="list-unstyled">
+                    <li><strong>개방형 질문</strong>
+                        <div class="content-des">
+                            개방형 질문이란 응답에 대한 특정 구조를 제시하지 않고 응답자가 자유롭게 응답하는 것이 허용되는 질문이다.
+                            <p class="example-title">예) </p>
+                            <p>청소년 비행문제를 예방하기 위한 최선의 방안은 무엇이라고 생각합니까?</p>
+                        </div>
+                    </li>
+                    <li><strong>폐쇄형 질문</strong>
+                        <div class="content-des">
+                            <p>폐쇄형 질문이란 제시한 목록에서 응답자가 고르도록 하는 질문이다. 여기에는 선택형, 등급형, 서열형 등 크게 3가지 양식의 질문이 있다.</p>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <strong>선택형 양식</strong>
+                                    <div class="content-des">
+                                        <p>선택형 양식에는 양자택일형(예-아니오, 찬성-반대)과 다중택일형(세 개 이상의 항목 중에서 하나를 선택)이 있다. </p>
+                                        <p class="example-title">예1)</p>
+                                        <div class="inline-ex">
+                                            <p>여름 휴가 계획이 있습니까?</p>
+                                            <ol class="ol-styled inline">
+                                                <li>예</li>
+                                                <li>아니오</li>
+                                            </ol>
+                                        </div>
+                                        <p class="example-title">예2)</p>
+                                        <div class="inline-ex">
+                                            <p>여름 휴가는 어디로 갈 계획입니까?</p>
+                                            <ol class="ol-styled inline">
+                                                <li>바다</li>
+                                                <li>산</li>
+                                                <li>놀이동산</li>
+                                                <li>고급호텔</li>
+                                                <li>방콕</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>등급형 양식</strong>
+                                    <div class="content-des">
+                                        <p>등급형 양식은 주어진 질문에 대한 응답의 강도(매우 찬성-찬성-보통-반대-매우 반대)를 나타낼 수 있게 구성된 양식이다.</p>
+                                        <p class="example-title">예)</p>
+                                        <div class="inline-ex">
+                                            <p>여름휴가 대신 수당으로 지급하는 것에 대하여 어떻게 생각하십니까?</p>
+                                            <ol class="ol-styled inline">
+                                                <li>매우찬성</li>
+                                                <li>찬성</li>
+                                                <li>보통</li>
+                                                <li>반대</li>
+                                                <li>매우반대</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>순위형 양식</strong>
+                                    <div class="content-des">
+                                        <p>순위형 양식은 응답자들이 중요하다고 생각하는 정도나 좋아하는 정도를 알고자 할 때 사용되는 양식이다.</p>
+                                        <p>즉 여러 개의 항목들을 1순위, 2순위 등과 같이 순위를 매기도록 하는 방식이다.</p>
+                                        <p class="example-title">예)</p>
+                                        <div class="inline-ex">
+                                            <p>여름 휴가를 가지 원하는 날짜를 우선순위별로 2개만 선택하세요.</p>
+                                            <ol class="ol-styled inline">
+                                                <li>□ 7월중순</li>
+                                                <li>□ 7월하순</li>
+                                                <li>□ 8월초순</li>
+                                                <li>□ 8월중순</li>
+                                                <li>□ 8월하순</li>
+                                                <li>□ 8월하순</li>
+                                                <li>□ 아무때나 필요시</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>고려사항</h2>
+            <div class="content">
+
+                <h3>설문 작성 시 주의 사항</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>쉽게 표현 해야 한다. (응답자의 입장에서 생각하고 평가)</li>
+                        <li>애매모호한 표현을 피해야 한다. (업무 중 얼마나 자주 휴식을 합니까? 자주, 떄때로, 가끔)</li>
+                        <li>유도성 질문 금지 (응답자가 특정 대안을 선택하도록 유도하는 표현을 담고 있는 질문)</li>
+                        <li>설문 하나에 두개 이상의 질문을 하면 안된다. (점심에 먹은 라면과 김밥에 대한 만족도는?)</li>
+                        <li>응답 할 수없는 질문 (혼자 처음간 식당은?)</li>
+                        <li>가능한 모든 응답에대한 표시를 할 수 있게 해야하고, 응답이 중복되면 안된다.</li>
+                        <li>민감하게 반응할 가능성이 있는 질문은 가급적 우회적으로 해야 한다.</li>
+                        <li>부정적인 문항은 피해야 한다.</li>
+                        <li>질문은 짧을수록 좋고, 서술은 간결해야 한다.</li>
+                    </ul>
+                </div>
+
+                <h3>설문 순서의 결정</h3>
+                <div class="content">
+                    <ol class="ol-styled">
+                        <li><strong>오리엔테이션 질문을 가장 먼저 배열한다.</strong>
+                            <p>설문의 의도와 내용이 무엇인지를 대략적으로 전달하고 응답자 관심을 모으는데 초점을 둔 질문이다.</p>
+                        </li>
+                        <li><strong>가장 흥미 있는 문항을 앞 부분에 배열한다.</strong>
+                            <p>처음부터 지루함을 느끼거나 어렵다고 느끼면 응답을 거부할 가능성이 높기 때문이다.</p>
+                        </li>
+                        <li><strong>어렵고 지루한 질문은 설문의 가운데 부분에 배열한다.</strong>
+                            <p>이미 어느 정도 응답을 한 상태이므로 조금 지루하더라도 계속 응답을 할 가능성이 높기 때문이다.</p>
+                        </li>
+                        <li><strong>질문내용이 심각하거나 민감한 내용은 뒷 부분에 배열한다.</strong>
+                            <p>심각한 내용은 다음의 문항들에 대해 영향을 미칠 가능성이 크므로 뒷 부분에 배치함으로써 그 영향을 방지하는 것이 좋다.</p>
+                        </li>
+                        <li><strong>인구통계학적 배경질문이나 경제상태에 관한 질문은 맨 뒤에 배열한다.</strong>
+                            <p>개인적인 문제를 먼저 물으면 응답에 대한 불안감을 주고, 자존심을 상하게 할 우려가 있다.</p>
+                        </li>
+                        <li><strong>질문내용의 범위가 넓은 질문에서 범위가 좁은 질문 순으로 배열한다.</strong>
+                            <p>사고의 논리적인 연결이 가능하여 응답을 쉽게 해주기 때문이다.</p>
+                        </li>
+                        <li><strong>다음 문항에 미칠 영향을 고려하여 배열순서를 결정한다.</strong></li>
+                    </ol>
+                </div>
+            </div>
+
+            <h2>설문 Sample 1</h2>
+            <div class="content">
+                <div class="example-survey">
+                    <p class="title">제목 : 정보시스템 사용자 만족도 조사</p>
+                    <p>안녕하십니까?</p>
+                    <p>사업 수행팀은 20YY년 MM월 DD일부터 20YY년 MM4월 DD일까지 "OO차세대 정보시스템 구축을 위한 전략 수립" 을 수행하고 있습니다. </p>
+                    <p>본 정보시스템 구축 전략 수립의 목적은 현 정보시스템을 분석하여 향후 구축할 OOO포함)의 차세대정보시스템 과제를 정의하여 정보화 구축 전략을 수립하는데 있습니다. 바쁘신
+                        중에도 설문에 참여하여 주셔서 감사합니다. </p>
+                    <p>본 설문조사는 OOO정보시스템을 직접 사용하고 계시는 여러분의 의견을 모아 "OO차세대 정보시스템 구축을 위한 전략 수립” 시 보다 많은 부분에 반영하여 최상의 정보시스템을
+                        여러분에게 제공하는데 그 목적이 있습니다.</p>
+                    <p>설문에 답하신 여러분의 의견은 본 프로젝트 이외의 용도로 사용하는 일은 절대 없을 것입니다. </p>
+                    <p>본 설문의 의의와 중요성을 이해하시어 협조해 주신다면 대단히 고맙겠습니다.</p>
+                    <p>감사합니다.</p>
+                    <p class="sub-title">접수방법</p>
+                    <ul>
+                        <li>1) 제출기한 : 20YY년 MM월 DD일</li>
+                        <li>2) 설문방법 : 설문지 배포 후 설문 작성을 수거(오프라인 문서 형태) 3) 문의사항 : 정보시스톔 구축 전략 수립팀</li>
+                    </ul>
+                    <p class="sub-title">설문작성 방법</p>
+                    <ul>
+                        <li>1) 객관식
+                            <div class="content-des">
+                                객관식 서술항목에 따라 가장 적합한 내용을 표시 하시고, 이외 답변은 체크 리스트 항목에 따라 표시하시고 평가사유 작성 요청 시 구체적으로 기술하여 주십시오.
+                            </div>
+                        </li>
+                        <li>2) 주관식
+                            <div class="content-des">
+                                가능한 구체적 기술하여 주십시오.
+                            </div>
+                        </li>
+                        <li>3) 답할 수 없는 경우 답할 수 없는 사유를 서술하여 주십시오.</li>
+                    </ul>
+                    <p class="sub-title">Part I. 업무 환경 및 조직에 대한 설문</p>
+                    <ol>
+                        <li>귀하가 속한 조직의 비전과 목표를 정확하게 알고 있습니까? ( )
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하가 조직의 비전과 목표를 실현하기 위해 충분한 이해와 공감대를 가지고 노력하고 있습니까? ( )
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하는 업무수행 지침 및 절차를 정확히 파악하고 있습니까? ( )
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하의 업무수행을 위한 권한과 책임이 적절하게 주어져 있다고 생각합니까? ( )
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하는 현재의 업무수행 속도나 생산성에 대해 만족합니까? ( )
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하가 효율적 업무 수행을 위하여 개선해야 할 사항은 무엇이라 생각합니까? (우선순위를 기재)
+                            <div class="content-des">
+                                <ol class="ol-styled">
+                                    <li>정보시스템 부재 ( )</li>
+                                    <li>단순 업무 과다 및 업무처리 절차 복잡 ( )</li>
+                                    <li>업무에 대한 전문성 부족 ( )</li>
+                                    <li>법/제도의 한계성 ( )</li>
+                                    <li>부서간 업무협조 체계 미흡 ( )</li>
+                                    <li>기타 _____________________________ ( )</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하가 현재 업무처리 시 주로 사용하는 정보시스템 기능은 무엇입니까 ? (우선순위를 기재)
+                            <div class="content-des">
+                                <ol class="ol-styled">
+                                    <li>인터넷 등을 통한 정보 및 자료검색 ( )</li>
+                                    <li>문서 작성 및 저장 ( )</li>
+                                    <li>메일이나 문서의 전송 등 의사소통 ( )</li>
+                                    <li>정보시스템을 통한 일반업무처리 ( )</li>
+                                    <li>자료 분석 또는 통계처리 ( )</li>
+                                    <li>기타 _________________________ ( )</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하의 소속 부서장은 정보화와 관련하여 적극적 관심을 가지고 리더쉽을 발휘하고 있습니까?
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하가 속한 부서의 조직문화 중 가장 개선이 시급한 부분은 무엇입니까 ?
+                            <div class="content-des">
+                                <ol class="ol-styled">
+                                    <li>원활한 의사소통</li>
+                                    <li>부서간 긴밀한 업무협조</li>
+                                    <li>인사제도</li>
+                                    <li>경찰조직에 대한 자긍심 고취</li>
+                                    <li>기타 _________________________ ( )</li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ol>
+                    <p class="sub-title">Part II. 사용편의 측면</p>
+                    <ol>
+                        <li>귀하가 현재 사용 중인 정보시스템의 사용방법이 쉽고 명확합니까 ? ( )
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하가 사용하는 정보시스템의 화면 메뉴구성이 사용하기 쉽게 구성되어 있습니까 ?
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>데이터의 입력, 수정, 삭제를 위한 절차가 간편합니까 ? ( )
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>데이터의 입력오류를 방지 할 수 있는 오류 메시지 기능이 충분합니까 ? ( )
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>귀하가 사용하는 정보시스템에 대한 사용자 매뉴얼 및 도움말 기능이 충분합니까 ? ( )
+                            <div class="content-des">
+                                <ol class="ol-styled inline">
+                                    <li>매우 그렇지 않음</li>
+                                    <li>그렇지 않음</li>
+                                    <li>보통</li>
+                                    <li>그러함</li>
+                                    <li>매우 그러함</li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <h2>POSCO Way 설문조사시스템 사용매뉴얼</h2>
+            <div class="content">
+                <table class="table table-styled">
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>목차</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <ol>
+                                <li>설문조사 (설문 등록)</li>
+                                <li>설문조사 (작성 ~ 결재요청)</li>
+                                <li>설문조사 (설문결재)</li>
+                                <li>설문조사 (설문메일발송)</li>
+                                <li>설문조사 (설문결과분석)</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="img-box">
+                    <a href="../../../img/developmentGuide/requirement/13.png"
+                       data-lightbox="requirement-survey">
+                        <img width="526"
+                             src="../../../img/developmentGuide/requirement/13.png" alt=""/>
+                    </a>
+                </div>
+
+                <h3>설문조사 – 설문등록</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>홈화면 우측의 설문조사를 클릭한다.</li>
+                        <li>[설문관리] 탭 - [신규설문등록]을 클릭한다.</li>
+                        <li>설문명과 기간을 지정하고 기타 옵션을 지정한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/14.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/14.png" alt=""/>
+                        </a>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>[설문안내문구]탭을 선택하여 설문안내문구를 작성한다.</li>
+                        <li>[설문종료문구]탭을 선택하여 설문종료문구를 작성한다.</li>
+                        <li>하단의 [설문등록]을 클릭한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/15.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/15.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 – 설문작성</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>[설문관리] 탭의 등록된 설문의 제목을 클릭한다.</li>
+                        <li>설문지 작성을 위한 [설문지 관리]를 클릭한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/16.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/16.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 – 설문작성 (페이지추가)</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>[일반구성원]에 마우스 右버튼을 클릭하여 [제목 바꾸기]를 선택하여 제목을 바꾼다.</li>
+                        <li>일반구성원]에 마우스 右버튼을 클릭하여 [페이지 추가]를 클릭하여 페이지를 추가한다.</li>
+                        <li>추가된 [페이지]에 마우스 右버튼을 클릭하여 [제목 바꾸기]를 한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/17.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/17.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 설문작성 (문항추가 : 다중선택)</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>[페이지]에 마우스 右버튼을 클릭하여 [일반문항 추가]를 하여 설문내용 작성한다.</li>
+                        <li>문항질문을 입력하고 보기유형, 보기개수, 한줄보기개수를 지정한다.</li>
+                        <li>보기 자유입력을 하고 [보기등록]버튼을 클릭하여 확인후 [저장]버튼을 클릭한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/18.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/18.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 설문작성 (문항추가 : 단일선택)</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>다른 [페이지]에 마우스 右버튼을 클릭하여 [일반문항 추가]를 하여 설문내용 작성하여 [저장]한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/19.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/19.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 설문작성 (문항추가 : 순위형 선택)</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>다른 [페이지]에 마우스 右버튼을 클릭하여 [일반문항 추가]를 하여 설문내용 작성하여 [저장]한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/20.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/20.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 설문작성 (문항추가 : 서술형)</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>다른 [페이지]에 마우스 右버튼을 클릭하여 [일반문항 추가]를 하여 설문내용 작성하여 [저장]한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/21.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/21.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 순서바꾸기 및 문항 수정 · 삭제</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>설문지 상세보기의 [순서바꾸기] 메뉴를 클릭한다</li>
+                        <li>이동할 항목을 선택하여 순서을 이동하고 [닫기]를 클릭한다</li>
+                        <li>일반문항의 제목에 마우스 右버튼을 클릭하여 [일반문항 수정]을 클릭하여 편집할 수 있다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/22.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/22.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 단일선택 문항에 대한 SKIP</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>단일선택 문항(2번)을 선택하여 [Skip] 탭을 선택한다 ( ▶ 단일선택만 Skip 문항 지정 가능).</li>
+                        <li>응답이 1,2번인 경우 → Skip문항 3번 으로 지정.</li>
+                        <li>응답이 3,4번인 경우 → Skip문항 4번 으로 지정.</li>
+                        <li>[저장]버튼을 클릭하여 [미리보기] [설문테스트]를 클릭하여 확인한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/23.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/23.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 미리보기</h3>
+                <div class="content">
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/24.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/24.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 설문대상 등록</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>설문지 상세보기에서 [목록]버튼을 클릭하여 설문작성/진행관리 화면으로 돌아온다.</li>
+                        <li>아래의 [설문그룹지정]을 클릭하여 [설문대상 그룹지정]을 한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/25.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/25.png" alt=""/>
+                        </a>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>설문대상 그룹을 지정 [추가]하여 [저장]-[닫기]를 클릭한다.</li>
+                        <li>등록된 설문대상 그룹을 확인하고 [목록]버튼을 클릭한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/26.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/26.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 설문지의 결재요청</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>설문작성/진행관리 화면의 [결재선변경]을 클릭하여 결재자를 지정하고 [저장]-[닫기]한다.</li>
+                        <li>결재자 지정후 [결재요청]을 클릭하여 결재요청한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/27.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/27.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 설문결재 (결재자)</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>결재자는 설문결재요청에 대한 메일을 열어 아이콘을 클릭한다.</li>
+                        <li>[중략..] - [설문결재]탭의 설문 제목을 클릭한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/28.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/28.png" alt=""/>
+                        </a>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>결재자는 결재요청설문에 대한 [승인]을 클릭하여 승인처리를 한다.</li>
+                        <li>작성된 설문은 ‘작성중’에서 ‘진행중’ 상태로 변경된 것을 확인 할 수 있다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/29.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/29.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+                <h3>설문조사 - 설문대상자에게 메일 발송</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>[설문관리] – 설문대상에게 메일발송할 진행중인 설문 제목을 클릭한다.</li>
+                        <li>[메일그룹] 버튼을 클릭한다.</li>
+                    </ul>
+                    <div class="img-box">
+                        <a href="../../../img/developmentGuide/requirement/30.png"
+                           data-lightbox="requirement-survey">
+                            <img width="526"
+                                 src="../../../img/developmentGuide/requirement/30.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 최상단 이동 btn -->
+            <div>
+                    <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span
+                            class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+
+    </main>
+    <!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+<script src="../../../js/lightbox-plus-jquery.js"></script>
+</body>
+</html>

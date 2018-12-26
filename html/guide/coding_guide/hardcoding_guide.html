@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SW개발 품질가이드</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/lightbox.css">
+    <!-- For Include -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- HTML5SHIV -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/common.js"></script>
+    <script src="../../../js/lightbox-plus-jquery.js"></script>
+    <!-- Code Box Copy begin -->
+    <link href="../../../css/code-box-copy.css" rel="stylesheet">
+    <script src="../../../js/prism.min.js"></script>
+    <script src="../../../js/code-box-copy.js"></script>
+    <!-- Code Box Copy end -->
+</head>
+<body>
+<!-- START wrap -->
+<div id="wrap">
+
+    <!-- START header -->
+    <div id="header">
+        <!-- tablet에서만 나타나는 버튼 -->
+        <div class="menu-toggle-btn">
+            <span class="sr-only">메뉴버튼</span>
+        </div>
+        <span class="logo">
+            <a href="../../../index.html">
+                <img src="../../../img/posco-logo.png" alt="withPOSCO 로고">
+            </a>
+            <span class="logo-text point">swBasic</span><span class="logo-text">SW개발 품질가이드</span>
+        </span>
+
+        <!-- site-map -->
+        <div class="right-menu site-map">
+            <div class="site-map-btn">
+                <span class="sr-only">사이트 맵</span>
+            </div>
+
+            <div class="site-map-wrapper">
+                <div class="site-map-wrapper">
+                    <div class="btn close">
+                        <span class="sr-only">닫기</span>
+                    </div>
+                    <ul>
+                        <li class="title">INTRO                             <ul class="sub-menu">                                 <li><a href="../../intro/intro/intro.html">Intro</a></li>                             </ul>                         </li>
+
+                        <li class="title">SW개발을 위한 방법론
+                            <ul class="sub-menu">
+                                <li>swBasic 개발방법론
+                                    <ul>
+                                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/development/process00.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic 테스트방법론
+                                    <ul>
+                                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/test/process01.html">프로세스(단계)</a></li>
+                                    </ul>
+                                </li>
+                                <li>swBasic Agile 방법
+                                    <ul>
+                                        <li><a href="../../methodology/agile/summary01.html">개요</a></li>
+                                        <li><a href="../../methodology/agile/process01.html">프로세스(&프랙티스)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발 가이드
+                            <ul class="sub-menu">
+                                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                                <li>개발 기법
+                                    <ul>
+                                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                                    </ul>
+                                </li>
+                                <li>개발 Coding 가이드
+                                    <ul>
+                                        <li><a href="../../guide/coding_guide/java.html">Coding Style Guide<br/>(convention)</a></li>
+                                        <li><a href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용 Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding
+                                            Guide</a></li>
+                                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">개발도구
+                            <ul class="sub-menu">
+                                <li>개요
+                                    <ul>
+                                        <li><a href="../../tool/summary/summary01.html">개발 도구란</a></li>
+                                    </ul>
+                                </li>
+                                <li>프로젝트 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                                    </ul>
+                                </li>
+                                <li>요구사항 관리
+                                    <ul>
+                                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                                    </ul>
+                                </li>
+                                <li>설계/모델링
+                                    <ul>
+                                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                                    </ul>
+                                </li>
+                                <li>형상관리
+                                    <ul>
+                                        <li><a href="../../tool/all/git.html">Git</a></li>
+                                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                                    </ul>
+                                </li>
+                                <li>빌드
+                                    <ul>
+                                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                                    </ul>
+                                </li>
+                                <li>소스진단
+                                    <ul>
+                                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                                    </ul>
+                                </li>
+                                <li>단위테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                                    </ul>
+                                </li>
+                                <li>통합테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                                    </ul>
+                                </li>
+                                <li>부하테스트
+                                    <ul>
+                                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                                    </ul>
+                                </li>
+                                <li>지속통합/배포
+                                    <ul>
+                                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">품질관리
+                            <ul class="sub-menu">
+
+                                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                                <li>품질점검
+                                    <ul>
+                                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                                    </ul>
+                                </li>
+                                <li>품질지표
+                                    <ul>
+                                        <li><a href="../../quality/indicator/quality_indicator01.html">프로세스 품질지표</a></li>
+                                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="title">다운로드
+                            <ul class="sub-menu">
+                                <li>SW개발을 위한 방법론
+                                    <ul>
+                                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>사내 보유 방법론
+                                    <ul>
+                                        <li><a href="../../download/company/our_development.html">자체개발방법론</a></li>
+                                        <li><a href="../../download/company/international_development.html">대외SW개발방법론</a></li>
+                                        <li><a href="../../download/company/eic_development.html">EIC 전산개발방법론</a></li>
+                                        <li><a href="../../download/company/solution_development.html">솔루션개발방법론</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- START nav -->
+    <div id="nav">
+        <ul class="menu-list accordion active">
+            <!-- Intro -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">Intro</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../intro/intro/intro.html">Intro</a>
+            </ul>
+
+            <!-- 방법론 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">SW개발을 위한 방법론</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../methodology/development/summary01.html">swBasic 개발방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/development/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/development/process00.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/development/process00.html">요구정의</a>
+                                <li><a href="../../methodology/development/process01.html">분석</a>
+                                <li><a href="../../methodology/development/process02.html">아키텍처 설계</a>
+                                <li><a href="../../methodology/development/process03.html">설계</a>
+                                <li><a href="../../methodology/development/process04.html">구현</a>
+                                <li><a href="../../methodology/development/process05.html">테스트</a>
+                                <li><a href="../../methodology/development/process06.html">인도</a>
+                                <li><a href="../../methodology/development/process06.html">반복주기 관리</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/test/summary01.html">swBasic 테스트방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/test/summary01.html">개요</a></li>
+                        <li><a href="../../methodology/test/process01.html">프로세스(절차)</a>
+                            <ul class="sub-inner depth3">
+                                <li><a href="../../methodology/test/process01.html">테스트 계획</a></li>
+                                <li><a href="../../methodology/test/process02.html">테스트 설계</a></li>
+                                <li><a href="../../methodology/test/process03.html">테스트 실행</a></li>
+                                <li><a href="../../methodology/test/process04.html">테스트 평가</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../../methodology/agile/process01.html">swBasic Agile 방법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../methodology/agile/process01.html">프로세스 (&프랙티스)</a></li>
+                        <li><a href="../../methodology/agile/summary02.html">적용가이드</a></li>
+                        <li><a href="../../methodology/agile/summary01.html">Agile Manifesto</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발 가이드 -->
+            <li class="toggle accordion-toggle active-tab">
+                <a class="menu-link active" href="javascript:;">개발 가이드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu open" style="display: block">
+                <li><a href="../../guide/summary/summary01.html">개요</a></li>
+                <li><a href="../../guide/technique/summary01.html">개발 기법</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/technique/summary01.html">요구사항 도출</a></li>
+                        <li><a href="../../guide/technique/summary02.html">요구사항 분석</a></li>
+                        <li><a href="../../guide/technique/summary03.html">요구사항 명세</a></li>
+                        <li><a href="../../guide/technique/summary04.html">요구사항 검증</a></li>
+                        <li><a href="../../guide/technique/architecture_plan.html">아키텍처 설계</a></li>
+                        <li><a href="http://ux.posco.net:7091/html/main.html">UI/UX 표준 가이드</a></li>
+                        <li><a href="../../guide/technique/teststrategy_guide.html">테스트 계획</a></li>
+                        <li><a href="../../guide/technique/testcase_guide00.html">테스트 설계</a></li>
+                        <li><a href="../../guide/technique/unittest.html">테스트 수행</a></li>
+                    </ul>
+                </li>
+                <li><a class="active on" href="../../guide/coding_guide/java.html">개발 Coding 가이드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../guide/coding_guide/java.html">Coding Style
+                            Guide(convention)</a></li>
+                        <li><a class="active on" href="../../guide/coding_guide/hardcoding_guide.html">HardCoding 적용
+                            Guide</a></li>
+                        <li><a href="../../guide/coding_guide/security_weaknesses.html">Secure Coding Guide</a></li>
+                        <li><a href="../../guide/coding_guide/open_source.html">오픈소스 개발 가이드</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 개발도구 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">개발도구</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../tool/summary/summary01.html">개요</a><li>
+                <li><a href="../../tool/all/redmine.html">프로젝트 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/redmine.html">Redmine</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/osrmt.html">요구사항 관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/osrmt.html">OSRMT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/startuml.html">설계/모델링</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/startuml.html">StarUML</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/git.html">형상관리</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/git.html">Git</a></li>
+                        <li><a href="../../tool/all/nexus.html">Nexus</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/maven.html">빌드</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/maven.html">Maven</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/sonarqube.html">소스 진단</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/sonarqube.html">SonarQube</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/junit.html">단위테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/junit.html">Junit</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/fitnesse.html">통합테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/fitnesse.html">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jmeter.html">부하테스트</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jmeter.html">Jmeter</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../tool/all/jenkins.html">지속통합/배포</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../tool/all/jenkins.html">Jenkins</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 품질관리 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">품질관리</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+
+                <li><a href="../../quality/guide/guide.html">품질관리 가이드</a></li>
+                <li><a href="../../quality/assurance/testinspection_standard02.html">품질점검</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/assurance/testinspection_standard02.html">요구사항 체크리스트</a> </li> <li><a href="../../quality/assurance/testinspection_standard01.html">테스트 체크리스트</a> </li>
+                    </ul>
+                </li>
+                <li><a href="../../quality/indicator/quality_indicator01.html">품질지표</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../quality/indicator/quality_indicator01.html">프로젝트 품질지표</a></li>
+                        <li><a href="../../quality/indicator/quality_indicator02.html">프로덕트 품질지표</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 다운로드 -->
+            <li class="toggle accordion-toggle">
+                <a class="menu-link" href="javascript:;">다운로드</a>
+            </li>
+            <!-- accordion-content -->
+            <ul class=" accordion-content sub-menu">
+                <li><a href="../../download/methodology/development_template.html">SW개발을 위한 방법론</a>
+                    <ul class="sub-inner">
+                        <li><a href="../../download/methodology/development_template.html">swBasic 개발방법론</a></li>
+                        <li><a href="../../download/methodology/test_template.html">swBasic 테스트방법론</a></li>
+                        <li><a href="../../download/methodology/agile_template.html">swBasic Agile 방법</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../download/company/our_development.html">사내 보유 방법론</a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- END nav -->
+
+    <!-- START main -->
+    <main id="main">
+        <header class="page-header-wrap">
+            <div class="page-header">
+                <h1>HardCoding 적용 가이드</h1>
+                <!-- breadcrumb -->
+                <ol class="breadcrumb">
+                    <li><a href="../../intro/intro/intro.html"><span class="sr-only">Home</span></a></li>
+                    <li><a href="../../download/guide/technique.html">개발 가이드</a></li>
+                    <li><a href="../../guide/coding_guide/java.html">개발 Coding 가이드</a></li>
+                    <li class="active">HardCoding 적용 가이드</li>
+                </ol>
+            </div>
+        </header>
+
+        <!-- START container -->
+        <div class="container" style="margin-top: -50px;">
+            <h2 id="title1">개요</h2>
+            <div class="content">
+                <h3>UI 컴포넌트 적용 기술</h3>
+                <div class="content">
+                    <ul class="list-unstyled">
+                        <li>HardCoding이란 데이터를 코드 내부에 직접 입력하는 것. 기술적으로는 데이터가 실행 바이너리(exe 파일 등)에 합쳐져 있는 상태를 지칭합니다. 프로그램의
+                            소스 코드에 데이터를 직접 입력해서 저장한 경우, 즉 모든 '상수'는 하드코딩이라고 할 수 있습니다. '변수'의 초기값이나 기본값도 하드 코딩의 범주에 포함됩니다
+                        </li>
+                        <li>보안적인 측면에서의 HardCoding의 문제점과 가이드는 Secure Coding Guide 파트를 참조하면 되며, 보안적인 이슈외에도 프로그램의 유연성 등 문제가
+                            있을 수 있는 사항과 예외 적용에 대해서는 본 가이드를 참조하시면 됩니다
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 id="title2">Hard Coding 가이드</h2>
+            <div class="content">
+                <h3>1. 하드코딩가이드 1</h3>
+                <div class="content">
+                    <table class="table table-styled">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="17%">
+                            <col width="20%">
+                            <col width="45%">
+                            <col width="8%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>소스유형</th>
+                            <th>HardCoding 유형</th>
+                            <th>점검 대상</th>
+                            <th>설명</th>
+                            <th>비고</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>UI, SSS</td>
+                            <td>사용자 Message Hard Coding</td>
+                            <td>화면 Message(Java script 등)</td>
+                            <td>사용자 Message : alert, confirm, tooltip
+                                <ul class="list-unstyled">
+                                    <li>alert('비밀번호가 일치하지 않습니다.');</li>
+                                    <li>password = prompt('System 사용중 Layout No와 SCC의 사용중 Layout No가 다를 경우만 사용하는 기능입니다.
+                                        비밀번호를 입력해주세요.')
+                                    </li>
+                                    <li>objOption.text = 'Dummy 이적';</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>UI, SSS</td>
+                            <td>비지니스코드 Hard Coding</td>
+                            <td>항목코드 Value 정의</td>
+                            <td>표준항목의 Value를 정의하기 위해 처리한 유형
+                                <ul class="list-unstyled">
+                                    <li>사소구분 : public static FACTORY_CODE_PK[] = {'A', 'B','C'};</li>
+                                    <li>판매실적 Item 코드 : SaleItemCd = {'SS'};</li>
+                                    <li>지시 Error원인 코드 : ErrCauCd = {'HH'};</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>SSS</td>
+                            <td>비지니스코드 Hard Coding</td>
+                            <td>항목코드 Value 설정</td>
+                            <td>값을 설정하기 위해 처리한 유형
+                                <ul class="list-unstyled">
+                                    <li>재료상태구분 : setMatTp('A');</li>
+                                    <li>외형구분 : this.setShpTp('B');</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>UI, SSS</td>
+                            <td>비지니스코드 Hard Coding</td>
+                            <td>항목코드 코드 비교</td>
+                            <td>표준항목의 Value를 조건으로 판단 등을 처리한 유형
+                                <ul class="list-unstyled">
+                                    <li>공장코드 : if(!'A'.equals(facOpCd))</li>
+                                    <li>물류코드 : 'B'.equals(logiFlag)</li>
+                                    <li>원료구분 : if('19'.equals(geyRawFlag()))</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>SSS</td>
+                            <td>비지니스코드 Hard Coding</td>
+                            <td>조건 Check용</td>
+                            <td>분기 및 검색조건을 위해 사용한 경우. 아래 예의 경우, 'ABC'가 HardCoding임
+                                <ul class="list-unstyled">
+                                    <li>whereBuffer.append('FAC_CD = "ABC"');</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>2. 하드코딩가이드 2</h3>
+                <div class="content">
+                    <table class="table table-styled">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="17%">
+                            <col width="20%">
+                            <col width="45%">
+                            <col width="8%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>소스유형</th>
+                            <th>HardCoding 유형</th>
+                            <th>점검 대상</th>
+                            <th>설명</th>
+                            <th>비고</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>UI, SSS</td>
+                            <td>비지니스코드 Hard Coding</td>
+                            <td>공통코드(Master Code) 미사용 Case</td>
+                            <td>공통코드(Master Code)가 있는데 사용하지 않은 경우
+                                <ul class="list-unstyled">
+                                    <li>if('B7'.equals(deliveryLotStatus))</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>UI, SSS</td>
+                            <td>비지니스코드 Hard Coding</td>
+                            <td>공통코드(Master Code) 미적용</td>
+                            <td>비지니스코드를 공통/기준코드화(Master화)를 하지 않고 사용한 경우
+                                <ul class="list-unstyled">
+                                    <li>polCdNameMap.put('AA', '소재 두께이상');</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>UI</td>
+                            <td>비지니스코드 Hard Coding</td>
+                            <td>공통코드(Master Code) 미사용 Case</td>
+                            <td>화면 LOV에 값을 Load할때 코드/코드명을 Hard Coding
+                                <ul class="list-unstyled">
+                                    <li>테이블의 Data를 Select해서 Load해야 함</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>주) 1. UI: JSP, ADF, Forms 등 UI Side 소스코드, 2. SSS:JAVA, PL/SQL, Pro-c 등 Server Side Source
+                        Code</p>
+                    <p>주) 공통코드(Master Code): 비즈니스코드를 분류화해서 별도의 코드테이블에 관리하고 관련 프로그램에서 함께 사용하는 코드(표준항목 코드)이며 기준코드라고 부르는
+                        경우도 있음.</p>
+                </div>
+            </div>
+
+            <h2 id="title3">Hard Coding 예외 사항</h2>
+            <div class="content">
+                <h3>1. 하드 코딩 적용 예외 사항 가이드 1 </h3>
+                <div class="content">
+                    <table class="table table-styled">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="65%">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>유형</th>
+                            <th>설명</th>
+                            <th>비고</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>성능 목적</th>
+                            <td>성능상의 이유로 Hard Coding이 불가피한 경우
+                                <p>ex) 결산처리등 성능을 요하는 프로그램릉 Hard Coding 예외 인정</p>
+                                <ul class="list-unstyled">
+                                    <li>Concurrent Job에서 성능목적으로 Message를 Hard Coding 한 경우</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>ERP Extension의 경우, 고정불변의 Oracle Seed Data</th>
+                            <td>ERP Extension의 경우, 고정불변의 Oracle Seed Data를 Hard Coding한 경우
+                                <p>ex1) transaction_id, event_code등</p>
+                                <p>ex2)</p>
+                                <ul class="list-unstyled">
+                                    <li>입하/입고 : 'REC', 'DEL' 등</li>
+                                    <li>Order type: 'BLANK', 'STD'</li>
+                                </ul>
+                            </td>
+                            <td>ERP에만 해당</td>
+                        </tr>
+                        <tr>
+                            <th>업무적으로 고정불변의 비즈니스(표준항목) 코드</th>
+                            <td>업무적으로 향후 변경이 되지 않는 고정불변의 비즈니스(표준항목)코드를 HardCoding한 경우
+                                <ul class="list-unstyled">
+                                    <li>불편함을 증명해야 하므로 되도록 Hard Coding 제거를 권고함</li>
+                                    <li>개발팀은 관련 사항에 대한 기술적인 검토 후 적용을 권고함</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>단순 Flag</th>
+                            <td>단순 Flag인 'Y', 'N'등은 점검 제외
+                                <ul class="list-unstyled">
+                                    <li>Y/N, Yes/No, true/false 등</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>ERP Extension의 경우, Lookup Table 조회 조건</th>
+                            <td>Lookup Table에 비즈니스 코드를 저장해두고 사용하는 경우, 비즈니스코드를 select하기 위한 조회 조건은 Hard Coding 점검 대상 제외
+                                <p>ex1) LOOKUP_TYPE = 'TYPE_CD'</p>
+                                <p>ex2) where organization_id =
+                                    common_pkg.get_value_f('ORGANIZATION_TYPE', 'AB', '',
+                                    'cd_attribute')
+                            </td>
+                            <td>ERP에만 해당</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>2. 하드 코딩 적용 예외 사항 가이드 2 </h3>
+                <div class="content">
+                    <table class="table table-styled">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="70%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>유형</th>
+                            <th>설명</th>
+                            <th>비고</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>Select 문장안에 있는 Code</th>
+                            <td>Select 문장안에 있는 고정불변의 Code값은 점검제외
+                                <ul class="list-unstyled">
+                                    <li>QA가 판단하기 어려운 경우, 일단 HardCoding으로 분류 후 개발팁과 협의하여 판단</li>
+                                    <li>where절에 사용되는 Code값은 상수 선언해서 구현하거나 바인딩으로 처리.</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>상수 정의 파일 내의 HardCoding</th>
+                            <td>ConstantsIF.java, Constants.java, Constant.java, CostIF.java, Const.java, IF.java 파일 내에는
+                                HardCoding 체크하지 않음
+                                <ul class="list-unstyled">
+                                    <li>비즈니스 중복 정의 여부는 체크하며 ConstantsIF.java라는 접미사 사용 권고</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>기타 시스템 처리를 위한 고정불변값</th>
+                            <td>고정불변값인 Interface ID, TC, ID, 프로그램 순서제어, 프로그램 ID은 점검 제외
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Log Message</th>
+                            <td>Package(PL/SQL) 내 Log Message
+                                <ul class="list-unstyled">
+                                    <li>1회성 및 Biz 적으로 변경 요소가 없는 경우 점검대상 제외.<br/>단, 영문으로 체인안에서 통일된 형식(문구)를 사용 할 것</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Developer Log</th>
+                            <td>유지보수 용이성을 위한 개발자용 Log
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>html tag</th>
+                            <td>html tag는 HardCoding아님
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>변수초기화중 일부 유형</th>
+                            <td>변수 초기화중 아래는 HardCoding점검 제외
+                                <ul class="list-unstyled">
+                                    <li>ex) 변수명 = 0; 변수명 = ''; put(변수명, '');</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Java에서 Main Method내의 테스트용 HardCoding</th>
+                            <td>유지보수에 도움이 되며, HardCoding점검 제외
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>For 문의 Index 변수</th>
+                            <td>For문의 Index변수는 HardCoding이 아님
+                                <ul class="list-unstyled">
+                                    <li>ex) for i = 1 to 100 // i = 1 HardCoding이 아</li>
+                                </ul>
+                            </td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 최상단 이동 btn -->
+            <div>
+                <span id="topBtn"> <i class="glyphicon glyphicon-menu-up"></i><span class="sr-only">top</span></span>
+            </div>
+
+        </div>
+        <!-- END container -->
+
+    </main>
+    <!-- END main -->
+
+</div>
+<!-- END wrap -->
+
+<!-- Include script -->
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>
